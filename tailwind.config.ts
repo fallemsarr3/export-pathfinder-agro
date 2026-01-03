@@ -51,24 +51,43 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Palette principale (80%)
         olive: {
-          DEFAULT: "hsl(var(--primary))",
-          dark: "hsl(var(--olive-dark))",
+          DEFAULT: "hsl(var(--olive-deep))",
+          deep: "hsl(var(--olive-deep))",
           light: "hsl(var(--olive-light))",
         },
-        terracotta: {
-          DEFAULT: "hsl(var(--terracotta))",
-          light: "hsl(var(--terracotta-light))",
+        sand: {
+          DEFAULT: "hsl(var(--sand-warm))",
+          warm: "hsl(var(--sand-warm))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
+        charcoal: "hsl(var(--charcoal))",
+        sage: {
+          DEFAULT: "hsl(var(--sage-soft))",
+          soft: "hsl(var(--sage-soft))",
         },
-        cream: {
-          DEFAULT: "hsl(var(--cream))",
-          dark: "hsl(var(--cream-dark))",
+        spice: {
+          DEFAULT: "hsl(var(--spice-brown))",
+          brown: "hsl(var(--spice-brown))",
         },
-        stone: "hsl(var(--stone))",
+        cta: {
+          DEFAULT: "hsl(var(--cta-orange))",
+          orange: "hsl(var(--cta-orange))",
+          hover: "hsl(var(--cta-hover))",
+        },
+        // Palette accent (20%)
+        paprika: {
+          DEFAULT: "hsl(var(--paprika-red))",
+          red: "hsl(var(--paprika-red))",
+        },
+        ochre: {
+          DEFAULT: "hsl(var(--golden-ochre))",
+          golden: "hsl(var(--golden-ochre))",
+        },
+        cacao: {
+          DEFAULT: "hsl(var(--cacao-brown))",
+          brown: "hsl(var(--cacao-brown))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

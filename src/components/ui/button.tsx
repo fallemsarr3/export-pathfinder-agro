@@ -12,15 +12,18 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft hover:shadow-elegant",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-soft",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-cta-hover shadow-soft",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Custom variants for the B2B site
-        hero: "bg-primary text-primary-foreground hover:bg-olive-light text-base font-semibold px-8 py-4 h-auto shadow-elegant hover:shadow-lg transition-all duration-300",
-        cta: "bg-secondary text-secondary-foreground hover:bg-terracotta-light text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant transition-all duration-300",
+        hero: "bg-secondary text-secondary-foreground hover:bg-cta-hover text-base font-semibold px-8 py-4 h-auto shadow-elegant hover:shadow-lg transition-all duration-300",
+        cta: "bg-secondary text-secondary-foreground hover:bg-cta-hover text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant transition-all duration-300",
         "outline-hero": "border-2 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 text-base font-medium px-6 py-3 h-auto transition-all duration-300",
-        premium: "bg-gradient-to-r from-gold to-terracotta text-primary-foreground text-base font-semibold px-8 py-4 h-auto shadow-elegant hover:shadow-lg transition-all duration-300 hover:opacity-90",
+        premium: "bg-spice text-sand hover:bg-spice/90 text-base font-semibold px-8 py-4 h-auto shadow-elegant hover:shadow-lg transition-all duration-300",
         subtle: "bg-muted text-muted-foreground hover:bg-muted/80 font-medium",
+        // Segment-specific variants
+        afrique: "bg-paprika text-sand hover:bg-paprika/90 text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant transition-all duration-300",
+        europe: "bg-primary text-primary-foreground hover:bg-primary/90 text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",

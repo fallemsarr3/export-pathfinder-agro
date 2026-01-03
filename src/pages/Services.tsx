@@ -28,7 +28,7 @@ const Services = () => {
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-2 bg-paprika/10 text-paprika rounded-full text-sm font-medium mb-4">
                 Service Afrique de l'Ouest
               </span>
               <h2 className="text-foreground mb-6">
@@ -56,7 +56,7 @@ const Services = () => {
                     "Délais de livraison non respectés"
                   ].map((problem, i) => (
                     <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                      <AlertTriangle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      <AlertTriangle className="w-5 h-5 text-paprika mt-0.5 flex-shrink-0" />
                       {problem}
                     </li>
                   ))}
@@ -64,7 +64,7 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="bg-muted rounded-lg p-8">
+            <div className="bg-sage/30 rounded-lg p-8">
               <h3 className="text-lg font-heading font-semibold text-foreground mb-6">
                 Prestations incluses
               </h3>
@@ -76,7 +76,7 @@ const Services = () => {
                   "Suivi jusqu'au départ de la marchandise"
                 ].map((service, i) => (
                   <li key={i} className="flex items-start gap-3 text-foreground">
-                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-paprika mt-0.5 flex-shrink-0" />
                     {service}
                   </li>
                 ))}
@@ -100,7 +100,7 @@ const Services = () => {
                 </p>
               </div>
 
-              <Button asChild variant="secondary" className="w-full">
+              <Button asChild variant="afrique" className="w-full">
                 <Link to="/contact?type=afrique">
                   Demander un sourcing Afrique de l'Ouest
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -112,7 +112,7 @@ const Services = () => {
       </section>
 
       {/* Europe Service */}
-      <section id="europe" className="section-padding bg-muted scroll-mt-24">
+      <section id="europe" className="section-padding bg-sage/30 scroll-mt-24">
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
@@ -177,7 +177,7 @@ const Services = () => {
                 </div>
               </div>
 
-              <div className="mb-8 p-4 bg-muted rounded-lg">
+              <div className="mb-8 p-4 bg-sage/30 rounded-lg">
                 <h4 className="font-semibold text-foreground mb-2">Rémunération</h4>
                 <p className="text-muted-foreground text-sm">
                   Forfait de sourcing obligatoire, commission réduite ou optionnelle selon la mission.
@@ -190,7 +190,7 @@ const Services = () => {
                 </p>
               </div>
 
-              <Button asChild className="w-full">
+              <Button asChild variant="europe" className="w-full">
                 <Link to="/contact?type=europe">
                   Lancer un sourcing conforme UE
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -206,7 +206,7 @@ const Services = () => {
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
-              <span className="inline-block px-4 py-2 bg-accent/20 text-accent-foreground rounded-full text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-2 bg-spice/20 text-spice rounded-full text-sm font-medium mb-4">
                 Service Premium
               </span>
               <h2 className="text-foreground mb-6">
@@ -243,7 +243,7 @@ const Services = () => {
                     "Réduction du risque de dépendance fournisseur"
                   ].map((value, i) => (
                     <li key={i} className="flex items-start gap-3 text-muted-foreground">
-                      <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-spice mt-0.5 flex-shrink-0" />
                       {value}
                     </li>
                   ))}
@@ -251,7 +251,7 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary/5 to-accent/10 rounded-lg p-8 border border-border">
+            <div className="bg-gradient-to-br from-spice/5 to-ochre/10 rounded-lg p-8 border border-border">
               <h3 className="text-lg font-heading font-semibold text-foreground mb-6">
                 Modalités
               </h3>
@@ -273,7 +273,7 @@ const Services = () => {
                 </ul>
               </div>
 
-              <div className="mb-8 p-4 bg-accent/10 rounded-lg">
+              <div className="mb-8 p-4 bg-spice/10 rounded-lg">
                 <p className="text-sm text-foreground">
                   <strong>Processus :</strong> Chaque mission fait l'objet d'un cadrage préalable avec objectifs, périmètre et livrables définis avant démarrage.
                 </p>
@@ -299,7 +299,7 @@ const Services = () => {
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
             Choisissez le formulaire correspondant à votre zone d'importation pour nous transmettre votre demande qualifiée.
           </p>
-          <Button asChild variant="hero" className="bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button asChild variant="hero">
             <Link to="/contact">Accéder aux formulaires de contact</Link>
           </Button>
         </div>

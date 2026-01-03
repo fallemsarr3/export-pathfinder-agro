@@ -23,7 +23,7 @@ const Index = () => {
 
         <div className="container-page relative z-10 py-20">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-medium mb-6 animate-fade-in">
+            <span className="inline-block px-4 py-2 bg-ochre/20 text-ochre rounded-full text-sm font-medium mb-6 animate-fade-in">
               Agroalimentaire • Épices • Huiles
             </span>
             
@@ -109,7 +109,7 @@ const Index = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-sage/30">
         <div className="container-page">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-foreground mb-4">
@@ -123,9 +123,9 @@ const Index = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Afrique */}
             <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-elegant transition-all duration-300">
-              <div className="h-2 bg-secondary" />
+              <div className="h-2 bg-paprika" />
               <div className="p-8">
-                <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium mb-4">
+                <span className="inline-block px-3 py-1 bg-paprika/10 text-paprika rounded-full text-xs font-medium mb-4">
                   Afrique de l'Ouest
                 </span>
                 <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
@@ -136,19 +136,19 @@ const Index = () => {
                 </p>
                 <ul className="space-y-2 mb-8 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-paprika mt-0.5 flex-shrink-0" />
                     Sourcing et vérification fournisseurs
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-paprika mt-0.5 flex-shrink-0" />
                     Négociation prix et MOQ
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-paprika mt-0.5 flex-shrink-0" />
                     Coordination documentaire export
                   </li>
                 </ul>
-                <Button asChild variant="secondary" className="w-full">
+                <Button asChild variant="afrique" className="w-full">
                   <Link to="/contact?type=afrique">Demander un sourcing</Link>
                 </Button>
               </div>
@@ -181,7 +181,7 @@ const Index = () => {
                     Process strict avant commande
                   </li>
                 </ul>
-                <Button asChild className="w-full">
+                <Button asChild variant="europe" className="w-full">
                   <Link to="/contact?type=europe">Lancer un sourcing UE</Link>
                 </Button>
               </div>
@@ -189,9 +189,9 @@ const Index = () => {
 
             {/* Premium */}
             <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-elegant transition-all duration-300">
-              <div className="h-2 bg-gradient-to-r from-gold to-terracotta" />
+              <div className="h-2 bg-spice" />
               <div className="p-8">
-                <span className="inline-block px-3 py-1 bg-accent/10 text-accent-foreground rounded-full text-xs font-medium mb-4">
+                <span className="inline-block px-3 py-1 bg-spice/10 text-spice rounded-full text-xs font-medium mb-4">
                   Premium
                 </span>
                 <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
@@ -202,15 +202,15 @@ const Index = () => {
                 </p>
                 <ul className="space-y-2 mb-8 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-spice mt-0.5 flex-shrink-0" />
                     Fournisseurs alternatifs
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-spice mt-0.5 flex-shrink-0" />
                     Pré-filtrage conformité
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-spice mt-0.5 flex-shrink-0" />
                     Missions avec livrables
                   </li>
                 </ul>
@@ -251,7 +251,7 @@ const Index = () => {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {["Paprika", "Cumin", "Gingembre", "Curcuma", "Cannelle"].map((spice) => (
-                      <span key={spice} className="px-4 py-2 bg-secondary/10 text-secondary-foreground rounded-full text-sm">
+                      <span key={spice} className="px-4 py-2 bg-paprika/10 text-paprika rounded-full text-sm font-medium">
                         {spice}
                       </span>
                     ))}
@@ -264,7 +264,7 @@ const Index = () => {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {["Huile d'olive", "Huile d'argan alimentaire"].map((oil) => (
-                      <span key={oil} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm">
+                      <span key={oil} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                         {oil}
                       </span>
                     ))}
@@ -273,7 +273,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-muted rounded-lg p-8 lg:p-12">
+            <div className="bg-sage/30 rounded-lg p-8 lg:p-12">
               <h3 className="text-xl font-heading font-semibold text-foreground mb-6">
                 Ce que nous ne faisons pas
               </h3>
@@ -315,7 +315,7 @@ const Index = () => {
             Sélectionnez votre zone d'importation et accédez au formulaire de contact adapté à votre profil.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild variant="hero" className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button asChild variant="hero">
               <Link to="/contact">Accéder aux formulaires de contact</Link>
             </Button>
             <Button asChild variant="outline-hero">

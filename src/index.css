@@ -6,111 +6,121 @@
 
 @layer base {
   :root {
-    /* Moroccan Export Professional Palette */
-    --background: 40 30% 97%;
-    --foreground: 30 15% 15%;
-
-    --card: 40 25% 99%;
-    --card-foreground: 30 15% 15%;
-
-    --popover: 40 25% 99%;
-    --popover-foreground: 30 15% 15%;
-
-    /* Deep Olive - Primary brand color (expertise, agriculture) */
-    --primary: 75 35% 25%;
-    --primary-foreground: 40 30% 97%;
-
-    /* Warm Terracotta - Secondary (Morocco, spices, warmth) */
-    --secondary: 18 55% 45%;
-    --secondary-foreground: 40 30% 97%;
-
-    /* Muted cream tones */
-    --muted: 40 20% 92%;
-    --muted-foreground: 30 10% 45%;
-
-    /* Gold accent (premium, oils) */
-    --accent: 42 75% 50%;
-    --accent-foreground: 30 15% 15%;
+    /* AGRO PREMIUM EXPORT PALETTE */
+    
+    /* Vert olive profond #2F5D50 → hsl(163, 33%, 27%) - Primary */
+    --primary: 163 33% 27%;
+    --primary-foreground: 30 31% 94%;
+    
+    /* Beige sable chaud #F4EFEA → hsl(30, 31%, 94%) - Background */
+    --background: 30 31% 94%;
+    --foreground: 0 0% 18%;
+    
+    /* Card surfaces - lighter cream */
+    --card: 30 25% 97%;
+    --card-foreground: 0 0% 18%;
+    
+    --popover: 30 25% 97%;
+    --popover-foreground: 0 0% 18%;
+    
+    /* CTA principal #C96A3B → hsl(22, 55%, 51%) - Secondary */
+    --secondary: 22 55% 51%;
+    --secondary-foreground: 30 31% 94%;
+    
+    /* Muted - Vert sauge doux #A9C4B8 → hsl(153, 20%, 71%) */
+    --muted: 153 20% 85%;
+    --muted-foreground: 0 0% 35%;
+    
+    /* Accent - Ocre doré #D9A441 → hsl(41, 65%, 55%) */
+    --accent: 41 65% 55%;
+    --accent-foreground: 0 0% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
-    --ring: 75 35% 25%;
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 163 33% 27%;
 
     --radius: 0.375rem;
 
-    /* Custom tokens */
-    --olive-dark: 75 40% 18%;
-    --olive-light: 75 25% 35%;
-    --terracotta: 18 55% 45%;
-    --terracotta-light: 18 45% 55%;
-    --gold: 42 75% 50%;
-    --gold-light: 42 65% 65%;
-    --cream: 40 30% 97%;
-    --cream-dark: 40 25% 93%;
-    --stone: 30 10% 45%;
+    /* Custom semantic tokens */
+    
+    /* Palette principale (80%) */
+    --olive-deep: 163 33% 27%;       /* #2F5D50 - Vert olive profond */
+    --olive-light: 163 25% 35%;
+    --sand-warm: 30 31% 94%;          /* #F4EFEA - Beige sable chaud */
+    --charcoal: 0 0% 18%;             /* #2E2E2E - Gris charbon */
+    --sage-soft: 153 20% 71%;         /* #A9C4B8 - Vert sauge doux */
+    --spice-brown: 26 40% 39%;        /* #8B5E3C - Brun épices */
+    --cta-orange: 22 55% 51%;         /* #C96A3B - CTA principal */
+    --cta-hover: 26 40% 39%;          /* #8B5E3C - Hover CTA */
+    
+    /* Palette accent (20%) */
+    --paprika-red: 0 57% 39%;         /* #9E2A2B - Rouge paprika */
+    --golden-ochre: 41 65% 55%;       /* #D9A441 - Ocre doré */
+    --cacao-brown: 21 41% 21%;        /* #4A2E1F - Brun cacao */
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(75 35% 25%) 0%, hsl(75 25% 35%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(42 75% 50%) 0%, hsl(18 55% 45%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(40 30% 97%) 0%, hsl(40 25% 93%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(163 33% 27%) 0%, hsl(163 25% 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(41 65% 55%) 0%, hsl(22 55% 51%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(30 31% 94%) 0%, hsl(30 25% 90%) 100%);
+    --gradient-premium: linear-gradient(135deg, hsl(26 40% 39%) 0%, hsl(41 65% 55%) 100%);
 
     /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(30 15% 15% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(30 15% 15% / 0.07), 0 2px 4px -2px hsl(30 15% 15% / 0.05);
-    --shadow-lg: 0 10px 15px -3px hsl(30 15% 15% / 0.08), 0 4px 6px -4px hsl(30 15% 15% / 0.05);
-    --shadow-elegant: 0 20px 40px -15px hsl(75 35% 25% / 0.15);
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 18% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 18% / 0.07), 0 2px 4px -2px hsl(0 0% 18% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 18% / 0.08), 0 4px 6px -4px hsl(0 0% 18% / 0.05);
+    --shadow-elegant: 0 20px 40px -15px hsl(163 33% 27% / 0.15);
 
     /* Sidebar tokens */
-    --sidebar-background: 40 25% 99%;
-    --sidebar-foreground: 30 15% 15%;
-    --sidebar-primary: 75 35% 25%;
-    --sidebar-primary-foreground: 40 30% 97%;
-    --sidebar-accent: 40 20% 92%;
-    --sidebar-accent-foreground: 30 15% 15%;
-    --sidebar-border: 40 20% 88%;
-    --sidebar-ring: 75 35% 25%;
+    --sidebar-background: 30 25% 97%;
+    --sidebar-foreground: 0 0% 18%;
+    --sidebar-primary: 163 33% 27%;
+    --sidebar-primary-foreground: 30 31% 94%;
+    --sidebar-accent: 153 20% 85%;
+    --sidebar-accent-foreground: 0 0% 18%;
+    --sidebar-border: 30 15% 85%;
+    --sidebar-ring: 163 33% 27%;
   }
 
   .dark {
-    --background: 30 15% 10%;
-    --foreground: 40 25% 95%;
+    --background: 0 0% 12%;
+    --foreground: 30 25% 95%;
 
-    --card: 30 15% 12%;
-    --card-foreground: 40 25% 95%;
+    --card: 0 0% 14%;
+    --card-foreground: 30 25% 95%;
 
-    --popover: 30 15% 12%;
-    --popover-foreground: 40 25% 95%;
+    --popover: 0 0% 14%;
+    --popover-foreground: 30 25% 95%;
 
-    --primary: 75 30% 45%;
-    --primary-foreground: 30 15% 10%;
+    --primary: 163 30% 45%;
+    --primary-foreground: 0 0% 12%;
 
-    --secondary: 18 45% 55%;
-    --secondary-foreground: 30 15% 10%;
+    --secondary: 22 45% 55%;
+    --secondary-foreground: 0 0% 12%;
 
-    --muted: 30 10% 20%;
-    --muted-foreground: 40 15% 65%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 30 15% 65%;
 
-    --accent: 42 65% 55%;
-    --accent-foreground: 30 15% 10%;
+    --accent: 41 55% 55%;
+    --accent-foreground: 0 0% 12%;
 
     --destructive: 0 62.8% 50%;
-    --destructive-foreground: 40 25% 95%;
+    --destructive-foreground: 30 25% 95%;
 
-    --border: 30 10% 20%;
-    --input: 30 10% 20%;
-    --ring: 75 30% 45%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 163 30% 45%;
 
-    --sidebar-background: 30 15% 12%;
-    --sidebar-foreground: 40 25% 95%;
-    --sidebar-primary: 75 30% 45%;
-    --sidebar-primary-foreground: 30 15% 10%;
-    --sidebar-accent: 30 10% 20%;
-    --sidebar-accent-foreground: 40 25% 95%;
-    --sidebar-border: 30 10% 20%;
-    --sidebar-ring: 75 30% 45%;
+    --sidebar-background: 0 0% 14%;
+    --sidebar-foreground: 30 25% 95%;
+    --sidebar-primary: 163 30% 45%;
+    --sidebar-primary-foreground: 0 0% 12%;
+    --sidebar-accent: 0 0% 20%;
+    --sidebar-accent-foreground: 30 25% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 163 30% 45%;
   }
 }
 
