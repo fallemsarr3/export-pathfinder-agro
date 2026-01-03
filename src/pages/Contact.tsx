@@ -38,9 +38,9 @@ const Contact = () => {
   };
 
   const formTabs = [
-    { id: "afrique" as FormType, label: "Afrique de l'Ouest", icon: MapPin, color: "secondary" },
-    { id: "europe" as FormType, label: "Europe", icon: Building2, color: "primary" },
-    { id: "premium" as FormType, label: "Premium", icon: Crown, color: "accent" },
+    { id: "afrique" as FormType, label: "Afrique de l'Ouest", icon: MapPin },
+    { id: "europe" as FormType, label: "Europe", icon: Building2 },
+    { id: "premium" as FormType, label: "Premium", icon: Crown },
   ];
 
   return (
@@ -67,7 +67,7 @@ const Contact = () => {
         <div className="container-page">
           <div className="max-w-4xl mx-auto">
             {/* Form Tabs */}
-            <div className="flex flex-wrap gap-2 mb-8 p-2 bg-muted rounded-lg">
+            <div className="flex flex-wrap gap-2 mb-8 p-2 bg-sage/30 rounded-lg">
               {formTabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -87,7 +87,7 @@ const Contact = () => {
             {/* Afrique Form */}
             {activeForm === "afrique" && (
               <div className="bg-card border border-border rounded-lg overflow-hidden">
-                <div className="h-2 bg-secondary" />
+                <div className="h-2 bg-paprika" />
                 <div className="p-8">
                   <div className="mb-8">
                     <h2 className="text-2xl font-heading font-semibold text-foreground mb-2">
@@ -153,7 +153,7 @@ const Contact = () => {
                       <Input id="af-delai" required placeholder="Ex: Sous 30 jours" />
                     </div>
 
-                    <div className="flex items-start space-x-3 p-4 bg-muted rounded-lg">
+                    <div className="flex items-start space-x-3 p-4 bg-sage/30 rounded-lg">
                       <Checkbox id="af-forfait" required />
                       <div className="space-y-1">
                         <Label htmlFor="af-forfait" className="font-medium cursor-pointer">
@@ -174,7 +174,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" variant="secondary" size="lg" className="w-full">
+                    <Button type="submit" variant="afrique" size="lg" className="w-full">
                       Envoyer la demande Afrique
                     </Button>
                   </form>
@@ -259,7 +259,7 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-start space-x-3 p-4 bg-muted rounded-lg">
+                    <div className="flex items-start space-x-3 p-4 bg-sage/30 rounded-lg">
                       <Checkbox id="eu-forfait" required />
                       <div className="space-y-1">
                         <Label htmlFor="eu-forfait" className="font-medium cursor-pointer">
@@ -280,7 +280,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
+                    <Button type="submit" variant="europe" size="lg" className="w-full">
                       Envoyer la demande Europe
                     </Button>
                   </form>
@@ -291,7 +291,7 @@ const Contact = () => {
             {/* Premium Form */}
             {activeForm === "premium" && (
               <div className="bg-card border border-border rounded-lg overflow-hidden">
-                <div className="h-2 bg-gradient-to-r from-gold to-terracotta" />
+                <div className="h-2 bg-spice" />
                 <div className="p-8">
                   <div className="mb-8">
                     <h2 className="text-2xl font-heading font-semibold text-foreground mb-2">
@@ -372,31 +372,63 @@ const Contact = () => {
                       />
                     </div>
 
-                    <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
+                    <div className="p-4 bg-spice/10 rounded-lg border border-spice/20">
                       <p className="text-sm text-foreground">
-                        <strong>Note :</strong> Les missions stratégiques font l'objet d'un cadrage préalable détaillé. 
-                        Les demandes incomplètes ou sans cohérence avec notre périmètre ne seront pas traitées.
+                        <strong>Note :</strong> Les missions premium font l'objet d'un entretien préalable. Nous vous contacterons pour un échange avant toute proposition.
                       </p>
                     </div>
 
                     <Button type="submit" variant="premium" size="lg" className="w-full">
-                      Soumettre la demande stratégique
+                      Envoyer la demande Premium
                     </Button>
                   </form>
                 </div>
               </div>
             )}
+          </div>
+        </div>
+      </section>
 
-            {/* Info note */}
-            <div className="mt-8 p-6 bg-muted rounded-lg">
-              <h3 className="font-heading font-semibold text-foreground mb-2">
-                Traitement des demandes
-              </h3>
-              <p className="text-muted-foreground text-sm">
-                Toutes les demandes sont analysées individuellement. Seules les demandes compatibles avec notre périmètre 
-                (épices et huiles alimentaires) et notre zone de couverture (Afrique de l'Ouest et Europe) seront traitées. 
-                Nous ne répondons pas aux demandes génériques ou incomplètes.
-              </p>
+      {/* Info Section */}
+      <section className="section-padding bg-sage/30">
+        <div className="container-page">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full bg-paprika/10 flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-paprika" />
+                </div>
+                <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                  Afrique de l'Ouest
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Sénégal, Côte d'Ivoire et région ouest-africaine
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <Building2 className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                  Europe
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  France, Belgique et importateurs européens structurés
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-full bg-spice/10 flex items-center justify-center mx-auto mb-4">
+                  <Crown className="w-6 h-6 text-spice" />
+                </div>
+                <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                  Premium
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  Gros importateurs, industriels et distributeurs
+                </p>
+              </div>
             </div>
           </div>
         </div>
