@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { CheckCircle, ArrowRight, Shield, FileCheck, Users } from "lucide-react";
 import heroImage from "@/assets/hero-spices.jpg";
+import spicesDisplay from "@/assets/spices-display.jpg";
+import oilsDisplay from "@/assets/oils-display.jpg";
 
 const Index = () => {
   return (
@@ -235,71 +237,82 @@ const Index = () => {
       {/* Products Section */}
       <section className="section-padding bg-background">
         <div className="container-page">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-foreground mb-6">
-                Épices et huiles alimentaires du Maroc
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8">
-                Périmètre produit volontairement limité pour garantir une expertise approfondie et une connaissance fine des fournisseurs marocains.
-              </p>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-heading font-semibold text-foreground mb-3">
-                    Épices
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {["Paprika", "Cumin", "Gingembre", "Curcuma", "Cannelle"].map((spice) => (
-                      <span key={spice} className="px-4 py-2 bg-paprika/10 text-paprika rounded-full text-sm font-medium">
-                        {spice}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-heading font-semibold text-foreground mb-3">
-                    Huiles alimentaires
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {["Huile d'olive", "Huile d'argan alimentaire"].map((oil) => (
-                      <span key={oil} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                        {oil}
-                      </span>
-                    ))}
-                  </div>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-foreground mb-4">
+              Épices et huiles alimentaires du Maroc
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Périmètre produit volontairement limité pour garantir une expertise approfondie et une connaissance fine des fournisseurs marocains.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+            {/* Spices */}
+            <div className="relative rounded-lg overflow-hidden group">
+              <img 
+                src={spicesDisplay} 
+                alt="Épices marocaines d'export - paprika, cumin, gingembre, curcuma"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-cacao/90 via-cacao/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <h3 className="text-xl font-heading font-semibold text-primary-foreground mb-3">
+                  Épices
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Paprika", "Cumin", "Gingembre", "Curcuma", "Cannelle"].map((spice) => (
+                    <span key={spice} className="px-3 py-1 bg-paprika/80 text-white rounded-full text-sm font-medium">
+                      {spice}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
 
-            <div className="bg-sage/30 rounded-lg p-8 lg:p-12">
-              <h3 className="text-xl font-heading font-semibold text-foreground mb-6">
-                Ce que nous ne faisons pas
-              </h3>
-              <ul className="space-y-4 text-muted-foreground">
-                <li className="flex items-start gap-3">
-                  <span className="text-destructive font-bold">✕</span>
-                  <span>Nous ne vendons pas de marchandises</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-destructive font-bold">✕</span>
-                  <span>Nous ne finançons pas les commandes</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-destructive font-bold">✕</span>
-                  <span>Nous ne gérons pas de stock</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-destructive font-bold">✕</span>
-                  <span>Nous ne travaillons pas sur tous les produits</span>
-                </li>
-              </ul>
-              <div className="mt-8 pt-6 border-t border-border">
-                <p className="text-foreground font-medium">
-                  Nous accompagnons les importateurs dans leurs décisions de sourcing avec un process clair et documenté.
-                </p>
+            {/* Oils */}
+            <div className="relative rounded-lg overflow-hidden group">
+              <img 
+                src={oilsDisplay} 
+                alt="Huiles alimentaires marocaines - huile d'olive, huile d'argan"
+                className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <h3 className="text-xl font-heading font-semibold text-primary-foreground mb-3">
+                  Huiles alimentaires
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {["Huile d'olive", "Huile d'argan alimentaire"].map((oil) => (
+                    <span key={oil} className="px-3 py-1 bg-ochre/80 text-white rounded-full text-sm font-medium">
+                      {oil}
+                    </span>
+                  ))}
+                </div>
               </div>
+            </div>
+          </div>
+
+          <div className="bg-sage/30 rounded-lg p-8 lg:p-12 max-w-3xl mx-auto">
+            <h3 className="text-xl font-heading font-semibold text-foreground mb-6 text-center">
+              Ce que nous ne faisons pas
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Nous ne vendons pas de marchandises",
+                "Nous ne finançons pas les commandes",
+                "Nous ne gérons pas de stock",
+                "Nous ne travaillons pas sur tous les produits"
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3 text-muted-foreground">
+                  <span className="text-destructive font-bold">✕</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 pt-6 border-t border-border text-center">
+              <p className="text-foreground font-medium">
+                Nous accompagnons les importateurs dans leurs décisions de sourcing avec un process clair et documenté.
+              </p>
             </div>
           </div>
         </div>
