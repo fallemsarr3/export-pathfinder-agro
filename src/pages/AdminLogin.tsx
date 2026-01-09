@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -150,16 +150,28 @@ const AdminLogin = () => {
             </Button>
           </form>
 
-          <div className="mt-6 text-center">
-            <button
-              type="button"
-              onClick={() => setIsSignUp(!isSignUp)}
-              className="text-sm text-primary hover:underline"
-            >
-              {isSignUp
-                ? "Déjà un compte ? Se connecter"
-                : "Pas encore de compte ? S'inscrire"}
-            </button>
+          <div className="mt-6 space-y-3 text-center">
+            {!isSignUp && (
+              <div>
+                <Link
+                  to="/admin/reset-password"
+                  className="text-sm text-muted-foreground hover:text-primary hover:underline"
+                >
+                  Mot de passe oublié ?
+                </Link>
+              </div>
+            )}
+            <div>
+              <button
+                type="button"
+                onClick={() => setIsSignUp(!isSignUp)}
+                className="text-sm text-primary hover:underline"
+              >
+                {isSignUp
+                  ? "Déjà un compte ? Se connecter"
+                  : "Pas encore de compte ? S'inscrire"}
+              </button>
+            </div>
           </div>
         </div>
       </div>
