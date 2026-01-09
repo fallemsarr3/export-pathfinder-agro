@@ -20,28 +20,43 @@ export function useAuth(): UseAuthReturn {
 
   useEffect(() => {
     let mounted = true;
+    let timeoutId: NodeJS.Timeout;
 
     const checkAdminRole = async (userId: string): Promise<boolean> => {
       try {
-        const { data } = await supabase
+        console.log("Checking admin role for:", userId);
+        const { data, error } = await supabase
           .from("user_roles")
           .select("role")
           .eq("user_id", userId)
           .eq("role", "admin")
           .maybeSingle();
         
+        if (error) {
+          console.error("Error checking admin role:", error);
+          return false;
+        }
+        
+        console.log("Admin role check result:", !!data);
         return !!data;
       } catch (error) {
-        console.error("Error checking admin role:", error);
+        console.error("Exception checking admin role:", error);
         return false;
       }
     };
 
     const initialize = async () => {
+      console.log("useAuth: initializing...");
       try {
-        const { data: { session } } = await supabase.auth.getSession();
+        const { data: { session }, error } = await supabase.auth.getSession();
+        
+        if (error) {
+          console.error("getSession error:", error);
+        }
         
         if (!mounted) return;
+        
+        console.log("useAuth: session found:", session?.user?.email);
         
         setSession(session);
         setUser(session?.user ?? null);
@@ -50,10 +65,23 @@ export function useAuth(): UseAuthReturn {
           const admin = await checkAdminRole(session.user.id);
           if (mounted) setIsAdmin(admin);
         }
+      } catch (error) {
+        console.error("useAuth init error:", error);
       } finally {
-        if (mounted) setIsLoading(false);
+        if (mounted) {
+          console.log("useAuth: setting isLoading to false");
+          setIsLoading(false);
+        }
       }
     };
+
+    // Fallback timeout - force loading to false after 5 seconds
+    timeoutId = setTimeout(() => {
+      if (mounted && isLoading) {
+        console.warn("useAuth: timeout reached, forcing isLoading to false");
+        setIsLoading(false);
+      }
+    }, 5000);
 
     initialize();
 
@@ -78,6 +106,7 @@ export function useAuth(): UseAuthReturn {
 
     return () => {
       mounted = false;
+      clearTimeout(timeoutId);
       subscription.unsubscribe();
     };
   }, []);
