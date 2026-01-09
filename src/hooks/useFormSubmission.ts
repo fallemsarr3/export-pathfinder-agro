@@ -9,11 +9,11 @@ const formSubmissionSchema = z.object({
   company_name: z.string().trim().min(1, "Nom d'entreprise requis").max(200),
   contact_name: z.string().trim().min(1, "Nom du contact requis").max(200),
   email: z.string().trim().email("Email invalide").max(255),
-  phone: z.string().trim().max(50).optional(),
-  country: z.string().trim().max(100).optional(),
+  phone: z.string().trim().max(50).optional().nullable(),
+  country: z.string().trim().max(100).optional().nullable(),
   products: z.string().trim().min(1, "Produit requis").max(500),
-  volume: z.string().trim().max(200).optional(),
-  message: z.string().trim().max(2000).optional(),
+  volume: z.string().trim().max(200).optional().nullable(),
+  message: z.string().trim().max(2000).optional().nullable(),
 });
 
 interface UseFormSubmissionReturn {
