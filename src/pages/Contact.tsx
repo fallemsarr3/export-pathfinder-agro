@@ -7,16 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { useFormspree } from "@/hooks/useFormspree";
+import { useFormSubmission, type FormType } from "@/hooks/useFormSubmission";
 import { MapPin, Building2, Crown, Loader2 } from "lucide-react";
-
-type FormType = "afrique" | "europe" | "premium";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const [activeForm, setActiveForm] = useState<FormType>("afrique");
   const { toast } = useToast();
-  const { submit, isSubmitting, error } = useFormspree();
+  const { submit, isSubmitting, error } = useFormSubmission();
 
   useEffect(() => {
     const type = searchParams.get("type") as FormType;
