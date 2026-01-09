@@ -21,10 +21,19 @@ const AdminLogin = () => {
     if (!isLoading) {
       console.log("AdminLogin check:", { user: user?.email, isAdmin });
       if (user && isAdmin) {
+        setIsSubmitting(false); // Reset before redirect
         navigate("/admin", { replace: true });
+      } else if (user && !isAdmin) {
+        // User is logged in but not admin - stop loading and show message
+        setIsSubmitting(false);
+        toast({
+          title: "Accès refusé",
+          description: "Vous n'avez pas les droits administrateur.",
+          variant: "destructive",
+        });
       }
     }
-  }, [user, isAdmin, isLoading, navigate]);
+  }, [user, isAdmin, isLoading, navigate, toast]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,6 +65,8 @@ const AdminLogin = () => {
         });
         setIsSubmitting(false);
       }
+      // Note: Don't set isSubmitting to false here on success
+      // The useEffect above will handle it when isAdmin is confirmed
     }
   };
 
