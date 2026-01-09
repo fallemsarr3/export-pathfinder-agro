@@ -17,8 +17,12 @@ const AdminLogin = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isLoading && user && isAdmin) {
-      navigate("/admin");
+    // Only redirect if we have finished loading AND user is logged in AND is admin
+    if (!isLoading) {
+      console.log("AdminLogin check:", { user: user?.email, isAdmin });
+      if (user && isAdmin) {
+        navigate("/admin", { replace: true });
+      }
     }
   }, [user, isAdmin, isLoading, navigate]);
 
