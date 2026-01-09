@@ -9,6 +9,8 @@ import ZonesExport from "./pages/ZonesExport";
 import Methode from "./pages/Methode";
 import APropos from "./pages/APropos";
 import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/methode" element={<Methode />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
