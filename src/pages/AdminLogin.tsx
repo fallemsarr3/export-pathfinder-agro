@@ -5,13 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
-import { Loader2, Lock } from "lucide-react";
+import { Loader2, Lock, UserPlus, LogIn } from "lucide-react";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { signIn, user, isAdmin, isLoading } = useAuth();
+  const [isSignUp, setIsSignUp] = useState(false);
+  const { signIn, signUp, user, isAdmin, isLoading } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
 
@@ -25,17 +26,33 @@ const AdminLogin = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const { error } = await signIn(email, password);
-
-    if (error) {
-      toast({
-        title: "Erreur de connexion",
-        description: error.message,
-        variant: "destructive",
-      });
+    if (isSignUp) {
+      const { error } = await signUp(email, password);
+      if (error) {
+        toast({
+          title: "Erreur d'inscription",
+          description: error.message,
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Compte créé",
+          description: "Votre compte a été créé. Vous pouvez maintenant vous connecter.",
+        });
+        setIsSignUp(false);
+      }
       setIsSubmitting(false);
+    } else {
+      const { error } = await signIn(email, password);
+      if (error) {
+        toast({
+          title: "Erreur de connexion",
+          description: error.message,
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+      }
     }
-    // Navigation handled by useEffect when isAdmin becomes true
   };
 
   if (isLoading) {
@@ -52,13 +69,19 @@ const AdminLogin = () => {
         <div className="bg-card border border-border rounded-lg shadow-soft p-8">
           <div className="text-center mb-8">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Lock className="w-6 h-6 text-primary" />
+              {isSignUp ? (
+                <UserPlus className="w-6 h-6 text-primary" />
+              ) : (
+                <Lock className="w-6 h-6 text-primary" />
+              )}
             </div>
             <h1 className="text-2xl font-heading font-semibold text-foreground">
-              Espace Administrateur
+              {isSignUp ? "Créer un compte" : "Espace Administrateur"}
             </h1>
             <p className="text-muted-foreground mt-2">
-              Connectez-vous pour accéder au tableau de bord
+              {isSignUp
+                ? "Inscrivez-vous pour accéder à l'espace admin"
+                : "Connectez-vous pour accéder au tableau de bord"}
             </p>
           </div>
 
@@ -84,6 +107,7 @@ const AdminLogin = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
                 required
+                minLength={6}
               />
             </div>
 
@@ -91,13 +115,37 @@ const AdminLogin = () => {
               {isSubmitting ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Connexion...
+                  {isSignUp ? "Inscription..." : "Connexion..."}
                 </>
               ) : (
-                "Se connecter"
+                <>
+                  {isSignUp ? (
+                    <>
+                      <UserPlus className="mr-2 h-4 w-4" />
+                      S'inscrire
+                    </>
+                  ) : (
+                    <>
+                      <LogIn className="mr-2 h-4 w-4" />
+                      Se connecter
+                    </>
+                  )}
+                </>
               )}
             </Button>
           </form>
+
+          <div className="mt-6 text-center">
+            <button
+              type="button"
+              onClick={() => setIsSignUp(!isSignUp)}
+              className="text-sm text-primary hover:underline"
+            >
+              {isSignUp
+                ? "Déjà un compte ? Se connecter"
+                : "Pas encore de compte ? S'inscrire"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
