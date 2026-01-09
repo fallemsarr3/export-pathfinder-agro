@@ -54,37 +54,43 @@ const UpdatePassword = () => {
 
     setIsSubmitting(true);
 
-    try {
-      const { error } = await supabase.auth.updateUser({
-        password: password,
-      });
+    const { error } = await supabase.auth.updateUser({
+      password: password,
+    });
 
-      if (error) {
-        toast({
-          title: "Erreur",
-          description: error.message,
-          variant: "destructive",
-        });
-      } else {
-        setIsSuccess(true);
-        toast({
-          title: "Mot de passe mis à jour",
-          description: "Votre mot de passe a été modifié avec succès.",
-        });
-        // Redirect to login after 3 seconds
-        setTimeout(() => {
-          navigate("/admin/login");
-        }, 3000);
+    if (error) {
+      console.error("Password update error:", error);
+      let errorMessage = error.message;
+      
+      // Translate common error messages
+      if (error.message.includes("should be different")) {
+        errorMessage = "Le nouveau mot de passe doit être différent de l'ancien.";
+      } else if (error.message.includes("weak")) {
+        errorMessage = "Le mot de passe est trop faible. Utilisez au moins 6 caractères.";
+      } else if (error.message.includes("session")) {
+        errorMessage = "Session expirée. Veuillez demander un nouveau lien de réinitialisation.";
       }
-    } catch (error) {
+      
       toast({
         title: "Erreur",
-        description: "Une erreur inattendue s'est produite.",
+        description: errorMessage,
         variant: "destructive",
       });
-    } finally {
       setIsSubmitting(false);
+      return;
     }
+    
+    setIsSuccess(true);
+    toast({
+      title: "Mot de passe mis à jour",
+      description: "Votre mot de passe a été modifié avec succès.",
+    });
+    setIsSubmitting(false);
+    
+    // Redirect to login after 3 seconds
+    setTimeout(() => {
+      navigate("/admin/login");
+    }, 3000);
   };
 
   if (isSuccess) {
