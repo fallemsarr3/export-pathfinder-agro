@@ -12,24 +12,46 @@ const UpdatePassword = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isReady, setIsReady] = useState(false);
   const { toast } = useToast();
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if we have a valid session from the reset link
-    const checkSession = async () => {
+    // Handle the password recovery event from the URL
+    const handleRecovery = async () => {
+      // Listen for auth state change from recovery link
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(
+        async (event, session) => {
+          console.log("Auth event:", event, session);
+          if (event === "PASSWORD_RECOVERY" || (event === "SIGNED_IN" && session)) {
+            setIsReady(true);
+          } else if (event === "SIGNED_OUT" || !session) {
+            // Only redirect if we never got a valid session
+            if (!isReady) {
+              toast({
+                title: "Lien invalide ou expiré",
+                description: "Veuillez demander un nouveau lien de réinitialisation.",
+                variant: "destructive",
+              });
+              navigate("/admin/reset-password");
+            }
+          }
+        }
+      );
+
+      // Also check current session (user might have clicked link and session exists)
       const { data: { session } } = await supabase.auth.getSession();
-      if (!session) {
-        toast({
-          title: "Lien invalide ou expiré",
-          description: "Veuillez demander un nouveau lien de réinitialisation.",
-          variant: "destructive",
-        });
-        navigate("/admin/reset-password");
+      if (session) {
+        setIsReady(true);
       }
+
+      return () => {
+        subscription.unsubscribe();
+      };
     };
-    checkSession();
-  }, [navigate, toast]);
+
+    handleRecovery();
+  }, [navigate, toast, isReady]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -107,6 +129,23 @@ const UpdatePassword = () => {
               </h1>
               <p className="text-muted-foreground">
                 Redirection vers la page de connexion...
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isReady) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-sage/20 px-4">
+        <div className="w-full max-w-md">
+          <div className="bg-card border border-border rounded-lg shadow-soft p-8">
+            <div className="text-center">
+              <Loader2 className="w-8 h-8 animate-spin text-primary mx-auto mb-4" />
+              <p className="text-muted-foreground">
+                Vérification du lien...
               </p>
             </div>
           </div>
