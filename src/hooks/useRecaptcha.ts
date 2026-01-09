@@ -63,6 +63,9 @@ export function useRecaptcha() {
   }, []);
 
   const verifyToken = useCallback(async (token: string): Promise<boolean> => {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+
     try {
       const response = await fetch(
         `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/verify-recaptcha`,
@@ -73,14 +76,25 @@ export function useRecaptcha() {
             Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
           },
           body: JSON.stringify({ token }),
+          signal: controller.signal,
         }
       );
+
+      clearTimeout(timeoutId);
+
+      if (!response.ok) {
+        console.error("reCAPTCHA verification failed:", response.status);
+        // Allow submission if verification service is unavailable
+        return true;
+      }
 
       const data = await response.json();
       return data.success === true;
     } catch (error) {
+      clearTimeout(timeoutId);
       console.error("reCAPTCHA verification error:", error);
-      return false;
+      // Allow submission if verification fails (graceful degradation)
+      return true;
     }
   }, []);
 
