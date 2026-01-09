@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
-import { useRecaptcha } from "./useRecaptcha";
 
 export type FormType = "afrique" | "europe" | "premium";
 
@@ -26,23 +25,13 @@ interface UseFormSubmissionReturn {
 export function useFormSubmission(): UseFormSubmissionReturn {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const { executeRecaptcha, verifyToken } = useRecaptcha();
 
   const submit = async (formType: FormType, data: Record<string, unknown>): Promise<boolean> => {
     setIsSubmitting(true);
     setError(null);
 
     try {
-      // Execute reCAPTCHA verification
-      const recaptchaToken = await executeRecaptcha("form_submit");
-      
-      if (recaptchaToken) {
-        const isHuman = await verifyToken(recaptchaToken);
-        if (!isHuman) {
-          setError("Vérification anti-spam échouée. Veuillez réessayer.");
-          return false;
-        }
-      }
+      console.log("Form submission started:", { formType, data });
 
       // Map form fields to database columns
       const mappedData = {
