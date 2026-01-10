@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight, Globe, Shield, Users, TrendingUp } from "lucide-react";
+import africaMarket from "@/assets/africa-market.jpg";
+import europeWarehouse from "@/assets/europe-warehouse.jpg";
 
 const ZonesExport = () => {
   return (
@@ -29,11 +31,19 @@ const ZonesExport = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Afrique */}
             <div className="bg-card border border-border rounded-lg overflow-hidden">
-              <div className="h-3 bg-secondary" />
+              <div className="h-2 bg-paprika" />
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={africaMarket} 
+                  alt="Marché africain avec épices et produits alimentaires" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+              </div>
               <div className="p-8 lg:p-10">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-secondary" />
+                  <div className="w-12 h-12 rounded-lg bg-paprika/10 flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-paprika" />
                   </div>
                   <div>
                     <h2 className="text-2xl font-heading font-semibold text-foreground">
@@ -58,19 +68,19 @@ const ZonesExport = () => {
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary">•</span>
+                      <span className="text-paprika">•</span>
                       Approvisionnement régulier, volumes flexibles
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary">•</span>
+                      <span className="text-paprika">•</span>
                       Exigences documentaires export maîtrisées
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary">•</span>
+                      <span className="text-paprika">•</span>
                       Relations commerciales directes
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-secondary">•</span>
+                      <span className="text-paprika">•</span>
                       Réactivité et adaptation aux besoins
                     </li>
                   </ul>
@@ -78,13 +88,13 @@ const ZonesExport = () => {
 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {["Sénégal", "Côte d'Ivoire"].map((country) => (
-                    <span key={country} className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                    <span key={country} className="px-4 py-2 bg-paprika/10 text-paprika rounded-full text-sm font-medium">
                       {country}
                     </span>
                   ))}
                 </div>
 
-                <Button asChild variant="secondary" className="w-full">
+                <Button asChild variant="afrique" className="w-full">
                   <Link to="/contact?type=afrique">
                     Demander un sourcing pour l'Afrique
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -95,7 +105,15 @@ const ZonesExport = () => {
 
             {/* Europe */}
             <div className="bg-card border border-border rounded-lg overflow-hidden">
-              <div className="h-3 bg-primary" />
+              <div className="h-2 bg-primary" />
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={europeWarehouse} 
+                  alt="Entrepôt logistique européen moderne" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+              </div>
               <div className="p-8 lg:p-10">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -150,7 +168,7 @@ const ZonesExport = () => {
                   ))}
                 </div>
 
-                <Button asChild className="w-full">
+                <Button asChild variant="europe" className="w-full">
                   <Link to="/contact?type=europe">
                     Lancer un sourcing pour l'Europe
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -169,25 +187,31 @@ const ZonesExport = () => {
             <h2 className="text-foreground mb-6">
               Pourquoi le Maroc comme base de sourcing ?
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-12 leading-relaxed">
               Le Maroc dispose d'une industrie agroalimentaire structurée, d'une position géographique stratégique entre l'Afrique et l'Europe, et d'accords commerciaux facilitant l'export vers les deux zones.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
+                  icon: Globe,
                   title: "Position stratégique",
                   description: "Porte d'entrée vers l'Afrique et proximité avec l'Europe méditerranéenne."
                 },
                 {
+                  icon: TrendingUp,
                   title: "Industrie structurée",
                   description: "Filières agroalimentaires établies avec des exportateurs expérimentés."
                 },
                 {
+                  icon: Shield,
                   title: "Accords commerciaux",
                   description: "Accords bilatéraux facilitant l'export vers l'Afrique et l'Union Européenne."
                 }
               ].map((item, i) => (
-                <div key={i} className="text-left">
+                <div key={i} className="text-left bg-card border border-border rounded-lg p-6">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
                   <h3 className="font-heading font-semibold text-foreground mb-2">
                     {item.title}
                   </h3>
