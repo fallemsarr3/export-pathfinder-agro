@@ -56,16 +56,16 @@ const AdminDashboard = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    if (!authLoading && (!user || !isAdmin)) {
-      navigate("/admin/login");
+    // Only redirect if we're sure the user is not an admin
+    // Wait for auth to be fully loaded AND isAdmin check to complete
+    if (!authLoading) {
+      if (!user) {
+        navigate("/admin/login");
+      } else if (isAdmin) {
+        fetchSubmissions();
+      }
     }
   }, [user, isAdmin, authLoading, navigate]);
-
-  useEffect(() => {
-    if (isAdmin) {
-      fetchSubmissions();
-    }
-  }, [isAdmin]);
 
   useEffect(() => {
     let filtered = submissions;
@@ -163,12 +163,25 @@ const AdminDashboard = () => {
     link.click();
   };
 
-  if (authLoading || loading) {
+  // Show loading while auth is loading or we have a user but haven't confirmed admin status yet
+  if (authLoading || loading || (user && !isAdmin && !authLoading)) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <RefreshCw className="w-8 h-8 text-primary animate-spin mx-auto mb-4" />
           <p className="text-muted-foreground">Chargement...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Redirect non-admins to login
+  if (!user || !isAdmin) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-muted-foreground mb-4">Accès non autorisé</p>
+          <Button onClick={() => navigate("/admin/login")}>Retour à la connexion</Button>
         </div>
       </div>
     );
