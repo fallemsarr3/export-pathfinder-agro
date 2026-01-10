@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import spicesDisplay from "@/assets/spices-display.jpg";
+import oilsDisplay from "@/assets/oils-display.jpg";
 
 const APropos = () => {
   return (
@@ -43,6 +45,32 @@ const APropos = () => {
                   Notre positionnement est celui d'un intermédiaire qualifié entre les importateurs et les fournisseurs marocains. Nous n'achetons pas de marchandises, nous ne gérons pas de stock, nous ne finançons pas les commandes. Notre valeur réside dans notre capacité à identifier, vérifier et coordonner les bonnes relations commerciales.
                 </p>
 
+                {/* Product Images */}
+                <div className="grid md:grid-cols-2 gap-6 my-12">
+                  <div className="rounded-lg overflow-hidden">
+                    <img 
+                      src={spicesDisplay} 
+                      alt="Épices marocaines premium - paprika, cumin, gingembre" 
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="bg-sage/30 p-4">
+                      <h4 className="font-heading font-semibold text-foreground text-sm mb-1">Épices marocaines</h4>
+                      <p className="text-muted-foreground text-xs">Paprika, cumin, gingembre</p>
+                    </div>
+                  </div>
+                  <div className="rounded-lg overflow-hidden">
+                    <img 
+                      src={oilsDisplay} 
+                      alt="Huiles alimentaires marocaines - olive et argan" 
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="bg-sage/30 p-4">
+                      <h4 className="font-heading font-semibold text-foreground text-sm mb-1">Huiles alimentaires</h4>
+                      <p className="text-muted-foreground text-xs">Huile d'olive, huile d'argan</p>
+                    </div>
+                  </div>
+                </div>
+
                 <h3 className="font-heading text-foreground mt-12">
                   Une approche orientée fiabilité et conformité
                 </h3>
@@ -69,7 +97,7 @@ const APropos = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-28 space-y-8">
                 {/* What we do */}
-                <div className="bg-muted rounded-lg p-6">
+                <div className="bg-sage/30 rounded-lg p-6">
                   <h3 className="font-heading font-semibold text-foreground mb-4">
                     Ce que nous faisons
                   </h3>
@@ -119,7 +147,7 @@ const APropos = () => {
                       <h4 className="text-sm font-medium text-foreground mb-2">Épices</h4>
                       <div className="flex flex-wrap gap-1">
                         {["Paprika", "Cumin", "Gingembre"].map((spice) => (
-                          <span key={spice} className="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded">
+                          <span key={spice} className="px-2 py-1 bg-paprika/10 text-paprika text-xs rounded">
                             {spice}
                           </span>
                         ))}

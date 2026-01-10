@@ -6,15 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/hooks/use-toast";
 import { MapPin, Building2, Crown } from "lucide-react";
-
-type FormType = "afrique" | "europe" | "premium";
+import { useFormSubmission, FormType } from "@/hooks/useFormSubmission";
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const [activeForm, setActiveForm] = useState<FormType>("afrique");
-  const { toast } = useToast();
+  const { submitForm, isSubmitting } = useFormSubmission();
 
   useEffect(() => {
     const type = searchParams.get("type") as FormType;
@@ -23,18 +21,59 @@ const Contact = () => {
     }
   }, [searchParams]);
 
-  const handleSubmit = (e: React.FormEvent, formType: string) => {
+  const handleAfriqueSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const messages: Record<string, string> = {
-      afrique: "Votre demande a bien été reçue. Seuls les projets compatibles seront contactés.",
-      europe: "Les demandes compatibles sont traitées sous 48 à 72 heures.",
-      premium: "Les demandes stratégiques sont étudiées individuellement."
-    };
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     
-    toast({
-      title: "Demande envoyée",
-      description: messages[formType],
+    const success = await submitForm("afrique", {
+      company_name: formData.get("af-entreprise") as string,
+      contact_name: formData.get("af-nom") as string,
+      email: formData.get("af-email") as string,
+      products: formData.get("af-produit") as string,
+      phone: formData.get("af-telephone") as string,
+      country: formData.get("af-pays") as string,
+      volume: formData.get("af-volume") as string,
+      message: formData.get("af-message") as string,
     });
+
+    if (success) form.reset();
+  };
+
+  const handleEuropeSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    const success = await submitForm("europe", {
+      company_name: formData.get("eu-entreprise") as string,
+      contact_name: formData.get("eu-nom") as string,
+      email: formData.get("eu-email") as string,
+      products: formData.get("eu-produit") as string,
+      country: formData.get("eu-pays") as string,
+      volume: formData.get("eu-volume") as string,
+      message: formData.get("eu-message") as string,
+    });
+
+    if (success) form.reset();
+  };
+
+  const handlePremiumSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    const success = await submitForm("premium", {
+      company_name: formData.get("pr-entreprise") as string,
+      contact_name: formData.get("pr-fonction") as string,
+      email: formData.get("pr-email") as string,
+      products: formData.get("pr-objectif") as string,
+      country: formData.get("pr-pays") as string,
+      volume: formData.get("pr-volume") as string,
+      message: formData.get("pr-message") as string,
+    });
+
+    if (success) form.reset();
   };
 
   const formTabs = [
@@ -98,59 +137,59 @@ const Contact = () => {
                     </p>
                   </div>
 
-                  <form onSubmit={(e) => handleSubmit(e, "afrique")} className="space-y-6">
+                  <form onSubmit={handleAfriqueSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="af-entreprise">Nom de l'entreprise *</Label>
-                        <Input id="af-entreprise" required placeholder="Votre entreprise" />
+                        <Input name="af-entreprise" id="af-entreprise" required placeholder="Votre entreprise" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="af-pays">Pays *</Label>
-                        <Input id="af-pays" required placeholder="Ex: Sénégal" />
+                        <Input name="af-pays" id="af-pays" required placeholder="Ex: Sénégal" />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="af-nom">Nom et fonction *</Label>
-                        <Input id="af-nom" required placeholder="Votre nom et fonction" />
+                        <Input name="af-nom" id="af-nom" required placeholder="Votre nom et fonction" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="af-email">Email professionnel *</Label>
-                        <Input id="af-email" type="email" required placeholder="email@entreprise.com" />
+                        <Input name="af-email" id="af-email" type="email" required placeholder="email@entreprise.com" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="af-telephone">Téléphone / WhatsApp *</Label>
-                      <Input id="af-telephone" required placeholder="+221..." />
+                      <Input name="af-telephone" id="af-telephone" required placeholder="+221..." />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="af-produit">Produit recherché *</Label>
-                        <Input id="af-produit" required placeholder="Ex: Paprika, Huile d'olive" />
+                        <Input name="af-produit" id="af-produit" required placeholder="Ex: Paprika, Huile d'olive" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="af-volume">Volume estimé *</Label>
-                        <Input id="af-volume" required placeholder="Ex: 5 tonnes/mois" />
+                        <Input name="af-volume" id="af-volume" required placeholder="Ex: 5 tonnes/mois" />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="af-conditionnement">Conditionnement souhaité *</Label>
-                        <Input id="af-conditionnement" required placeholder="Ex: Sacs 25kg" />
+                        <Input name="af-conditionnement" id="af-conditionnement" required placeholder="Ex: Sacs 25kg" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="af-frequence">Fréquence d'achat *</Label>
-                        <Input id="af-frequence" required placeholder="Ex: Mensuel" />
+                        <Input name="af-frequence" id="af-frequence" required placeholder="Ex: Mensuel" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="af-delai">Délai souhaité *</Label>
-                      <Input id="af-delai" required placeholder="Ex: Sous 30 jours" />
+                      <Input name="af-delai" id="af-delai" required placeholder="Ex: Sous 30 jours" />
                     </div>
 
                     <div className="flex items-start space-x-3 p-4 bg-sage/30 rounded-lg">
@@ -168,14 +207,15 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="af-message">Message complémentaire</Label>
                       <Textarea
+                        name="af-message"
                         id="af-message"
                         rows={4}
                         placeholder="Informations supplémentaires sur votre projet..."
                       />
                     </div>
 
-                    <Button type="submit" variant="afrique" size="lg" className="w-full">
-                      Envoyer la demande Afrique
+                    <Button type="submit" variant="afrique" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Envoi en cours..." : "Envoyer la demande Afrique"}
                     </Button>
                   </form>
                 </div>
@@ -196,21 +236,21 @@ const Contact = () => {
                     </p>
                   </div>
 
-                  <form onSubmit={(e) => handleSubmit(e, "europe")} className="space-y-6">
+                  <form onSubmit={handleEuropeSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="eu-entreprise">Nom de l'entreprise *</Label>
-                        <Input id="eu-entreprise" required placeholder="Votre entreprise" />
+                        <Input name="eu-entreprise" id="eu-entreprise" required placeholder="Votre entreprise" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="eu-pays">Pays *</Label>
-                        <Input id="eu-pays" required placeholder="Ex: France" />
+                        <Input name="eu-pays" id="eu-pays" required placeholder="Ex: France" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="eu-site">Site web de l'entreprise *</Label>
-                      <Input id="eu-site" type="url" required placeholder="https://www.votreentreprise.com" />
+                      <Input name="eu-site" id="eu-site" type="url" required placeholder="https://www.votreentreprise.com" />
                       <p className="text-xs text-muted-foreground">
                         Un site web professionnel est requis pour les demandes Europe.
                       </p>
@@ -219,22 +259,22 @@ const Contact = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="eu-nom">Nom et fonction *</Label>
-                        <Input id="eu-nom" required placeholder="Votre nom et fonction" />
+                        <Input name="eu-nom" id="eu-nom" required placeholder="Votre nom et fonction" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="eu-email">Email professionnel *</Label>
-                        <Input id="eu-email" type="email" required placeholder="email@entreprise.com" />
+                        <Input name="eu-email" id="eu-email" type="email" required placeholder="email@entreprise.com" />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="eu-produit">Produit recherché *</Label>
-                        <Input id="eu-produit" required placeholder="Ex: Huile d'olive vrac" />
+                        <Input name="eu-produit" id="eu-produit" required placeholder="Ex: Huile d'olive vrac" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="eu-volume">Volume annuel estimé *</Label>
-                        <Input id="eu-volume" required placeholder="Ex: 50 tonnes/an" />
+                        <Input name="eu-volume" id="eu-volume" required placeholder="Ex: 50 tonnes/an" />
                       </div>
                     </div>
 
@@ -274,14 +314,15 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="eu-message">Message complémentaire</Label>
                       <Textarea
+                        name="eu-message"
                         id="eu-message"
                         rows={4}
                         placeholder="Précisions sur vos exigences de conformité..."
                       />
                     </div>
 
-                    <Button type="submit" variant="europe" size="lg" className="w-full">
-                      Envoyer la demande Europe
+                    <Button type="submit" variant="europe" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Envoi en cours..." : "Envoyer la demande Europe"}
                     </Button>
                   </form>
                 </div>
@@ -302,43 +343,44 @@ const Contact = () => {
                     </p>
                   </div>
 
-                  <form onSubmit={(e) => handleSubmit(e, "premium")} className="space-y-6">
+                  <form onSubmit={handlePremiumSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="pr-entreprise">Nom de l'entreprise *</Label>
-                        <Input id="pr-entreprise" required placeholder="Votre entreprise" />
+                        <Input name="pr-entreprise" id="pr-entreprise" required placeholder="Votre entreprise" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="pr-pays">Pays *</Label>
-                        <Input id="pr-pays" required placeholder="Pays du siège" />
+                        <Input name="pr-pays" id="pr-pays" required placeholder="Pays du siège" />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="pr-site">Site web *</Label>
-                        <Input id="pr-site" type="url" required placeholder="https://www.votreentreprise.com" />
+                        <Input name="pr-site" id="pr-site" type="url" required placeholder="https://www.votreentreprise.com" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="pr-taille">Taille de l'entreprise *</Label>
-                        <Input id="pr-taille" required placeholder="Ex: 50-200 employés" />
+                        <Input name="pr-taille" id="pr-taille" required placeholder="Ex: 50-200 employés" />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="pr-fonction">Fonction du contact *</Label>
-                        <Input id="pr-fonction" required placeholder="Ex: Directeur des achats" />
+                        <Input name="pr-fonction" id="pr-fonction" required placeholder="Ex: Directeur des achats" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="pr-email">Email professionnel *</Label>
-                        <Input id="pr-email" type="email" required placeholder="email@entreprise.com" />
+                        <Input name="pr-email" id="pr-email" type="email" required placeholder="email@entreprise.com" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="pr-objectif">Objectif stratégique *</Label>
                       <Textarea
+                        name="pr-objectif"
                         id="pr-objectif"
                         rows={3}
                         required
@@ -349,22 +391,23 @@ const Contact = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="pr-volume">Volume annuel *</Label>
-                        <Input id="pr-volume" required placeholder="Ex: 200+ tonnes/an" />
+                        <Input name="pr-volume" id="pr-volume" required placeholder="Ex: 200+ tonnes/an" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="pr-mode">Mode de collaboration souhaité *</Label>
-                        <Input id="pr-mode" required placeholder="Ex: Mission ponctuelle, Partenariat" />
+                        <Input name="pr-mode" id="pr-mode" required placeholder="Ex: Mission ponctuelle, Partenariat" />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="pr-budget">Budget estimé pour la mission *</Label>
-                      <Input id="pr-budget" required placeholder="Ex: 5 000 - 10 000 EUR" />
+                      <Input name="pr-budget" id="pr-budget" required placeholder="Ex: 5 000 - 10 000 EUR" />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="pr-message">Message stratégique *</Label>
                       <Textarea
+                        name="pr-message"
                         id="pr-message"
                         rows={5}
                         required
@@ -374,12 +417,12 @@ const Contact = () => {
 
                     <div className="p-4 bg-spice/10 rounded-lg border border-spice/20">
                       <p className="text-sm text-foreground">
-                        <strong>Note :</strong> Les missions premium font l'objet d'un entretien préalable. Nous vous contacterons pour un échange avant toute proposition.
+                        <strong>Note :</strong> Les missions Premium sont étudiées individuellement. Un premier échange téléphonique ou visio sera proposé pour qualifier précisément votre besoin.
                       </p>
                     </div>
 
-                    <Button type="submit" variant="premium" size="lg" className="w-full">
-                      Envoyer la demande Premium
+                    <Button type="submit" variant="premium" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Envoi en cours..." : "Envoyer la demande Premium"}
                     </Button>
                   </form>
                 </div>
@@ -390,43 +433,35 @@ const Contact = () => {
       </section>
 
       {/* Info Section */}
-      <section className="section-padding bg-sage/30">
+      <section className="section-padding bg-muted">
         <div className="container-page">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-paprika/10 flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-6 h-6 text-paprika" />
-                </div>
-                <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
-                  Afrique de l'Ouest
-                </h3>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-foreground mb-6">
+              Pourquoi des formulaires différents ?
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              Chaque marché a ses propres exigences. Les informations demandées sont adaptées pour qualifier précisément votre besoin et vous proposer un accompagnement sur mesure.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 text-left">
+              <div className="bg-card border border-border rounded-lg p-6">
+                <div className="w-2 h-2 rounded-full bg-paprika mb-3" />
+                <h3 className="font-heading font-semibold text-foreground mb-2">Afrique de l'Ouest</h3>
                 <p className="text-muted-foreground text-sm">
-                  Sénégal, Côte d'Ivoire et région ouest-africaine
+                  Focus sur les volumes, la fréquence et les délais de livraison adaptés au marché africain.
                 </p>
               </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Building2 className="w-6 h-6 text-primary" />
-                </div>
-                <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
-                  Europe
-                </h3>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <div className="w-2 h-2 rounded-full bg-primary mb-3" />
+                <h3 className="font-heading font-semibold text-foreground mb-2">Europe</h3>
                 <p className="text-muted-foreground text-sm">
-                  France, Belgique et importateurs européens structurés
+                  Accent sur la conformité UE, la documentation technique et les certifications requises.
                 </p>
               </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-spice/10 flex items-center justify-center mx-auto mb-4">
-                  <Crown className="w-6 h-6 text-spice" />
-                </div>
-                <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
-                  Premium
-                </h3>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <div className="w-2 h-2 rounded-full bg-spice mb-3" />
+                <h3 className="font-heading font-semibold text-foreground mb-2">Premium</h3>
                 <p className="text-muted-foreground text-sm">
-                  Gros importateurs, industriels et distributeurs
+                  Approche stratégique pour les gros volumes et les partenariats structurés.
                 </p>
               </div>
             </div>
