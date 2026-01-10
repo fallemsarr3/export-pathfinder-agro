@@ -83,13 +83,6 @@ const ZonesExport = () => {
                   </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {["Sénégal", "Côte d'Ivoire"].map((country) => (
-                    <span key={country} className="px-4 py-2 bg-paprika/10 text-paprika rounded-full text-sm font-medium">
-                      {country}
-                    </span>
-                  ))}
-                </div>
 
                 <Button asChild variant="afrique" className="w-full">
                   <Link to="/contact?type=afrique">
@@ -154,13 +147,6 @@ const ZonesExport = () => {
                   </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {["France", "Belgique"].map((country) => (
-                    <span key={country} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                      {country}
-                    </span>
-                  ))}
-                </div>
 
                 <Button asChild variant="europe" className="w-full">
                   <Link to="/contact?type=europe">
