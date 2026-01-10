@@ -45,12 +45,9 @@ const ZonesExport = () => {
                   <div className="w-12 h-12 rounded-lg bg-paprika/10 flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-paprika" />
                   </div>
-                  <div>
-                    <h2 className="text-2xl font-heading font-semibold text-foreground">
-                      Afrique de l'Ouest
-                    </h2>
-                    <p className="text-muted-foreground text-sm">Sénégal, Côte d'Ivoire</p>
-                  </div>
+                  <h2 className="text-2xl font-heading font-semibold text-foreground">
+                    Afrique de l'Ouest
+                  </h2>
                 </div>
 
                 <div className="prose prose-muted max-w-none mb-8">
@@ -119,12 +116,9 @@ const ZonesExport = () => {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
-                  <div>
-                    <h2 className="text-2xl font-heading font-semibold text-foreground">
-                      Europe
-                    </h2>
-                    <p className="text-muted-foreground text-sm">France, Belgique</p>
-                  </div>
+                  <h2 className="text-2xl font-heading font-semibold text-foreground">
+                    Europe
+                  </h2>
                 </div>
 
                 <div className="prose prose-muted max-w-none mb-8">
