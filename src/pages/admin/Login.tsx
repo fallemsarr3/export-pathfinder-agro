@@ -39,7 +39,8 @@ const AdminLogin = () => {
               title: "Connexion réussie",
               description: "Bienvenue dans l'espace administration.",
             });
-            navigate("/admin/dashboard");
+            // Force navigation with replace to ensure state is updated
+            window.location.href = "/admin/dashboard";
           } else {
             toast({
               title: "Accès refusé",
