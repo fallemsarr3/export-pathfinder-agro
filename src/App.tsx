@@ -15,6 +15,7 @@ import AdminLogin from "./pages/admin/Login";
 import AdminDashboard from "./pages/admin/Dashboard";
 import ResetPassword from "./pages/ResetPassword";
 import UpdatePassword from "./pages/UpdatePassword";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -25,6 +26,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
