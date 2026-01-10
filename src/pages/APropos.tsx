@@ -119,7 +119,7 @@ const APropos = () => {
                       <h4 className="text-sm font-medium text-foreground mb-2">Épices</h4>
                       <div className="flex flex-wrap gap-1">
                         {["Paprika", "Cumin", "Gingembre"].map((spice) => (
-                          <span key={spice} className="px-2 py-1 bg-paprika/10 text-paprika text-xs rounded">
+                          <span key={spice} className="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded">
                             {spice}
                           </span>
                         ))}
@@ -129,7 +129,7 @@ const APropos = () => {
                       <h4 className="text-sm font-medium text-foreground mb-2">Huiles</h4>
                       <div className="flex flex-wrap gap-1">
                         {["Huile d'olive", "Huile d'argan"].map((oil) => (
-                          <span key={oil} className="px-2 py-1 bg-ochre/10 text-ochre text-xs rounded">
+                          <span key={oil} className="px-2 py-1 bg-primary/10 text-primary text-xs rounded">
                             {oil}
                           </span>
                         ))}

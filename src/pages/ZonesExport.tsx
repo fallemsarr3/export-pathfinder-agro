@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { MapPin, ArrowRight } from "lucide-react";
-import africaMarket from "@/assets/africa-market.jpg";
-import europeWarehouse from "@/assets/europe-warehouse.jpg";
 
 const ZonesExport = () => {
   return (
@@ -31,61 +29,62 @@ const ZonesExport = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Afrique */}
             <div className="bg-card border border-border rounded-lg overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={africaMarket} 
-                  alt="Marché africain - Sénégal et Côte d'Ivoire"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-paprika/80 to-transparent" />
-                <div className="absolute bottom-4 left-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-white" />
+              <div className="h-3 bg-secondary" />
+              <div className="p-8 lg:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-heading font-semibold text-white">
+                    <h2 className="text-2xl font-heading font-semibold text-foreground">
                       Afrique de l'Ouest
                     </h2>
-                    <p className="text-white/80 text-sm">Sénégal, Côte d'Ivoire</p>
+                    <p className="text-muted-foreground text-sm">Sénégal, Côte d'Ivoire</p>
                   </div>
                 </div>
-              </div>
-              <div className="p-8">
-                <div className="prose prose-muted max-w-none mb-6">
+
+                <div className="prose prose-muted max-w-none mb-8">
                   <p className="text-muted-foreground leading-relaxed">
-                    Zone prioritaire pour le sourcing agroalimentaire depuis le Maroc. Les importateurs ouest-africains bénéficient d'une proximité géographique favorable et d'une demande régulière pour les épices et huiles alimentaires marocaines.
+                    Zone prioritaire pour le sourcing agroalimentaire depuis le Maroc. Les importateurs ouest-africains bénéficient d'une proximité géographique favorable, de coûts logistiques compétitifs et d'une demande régulière pour les épices et huiles alimentaires marocaines.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Notre connaissance des exigences documentaires locales et des pratiques commerciales de la région permet un accompagnement adapté, des premiers échanges jusqu'au départ de la marchandise.
                   </p>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-8">
                   <h3 className="font-heading font-semibold text-foreground mb-3">
                     Caractéristiques du marché
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
-                      <span className="text-paprika">•</span>
+                      <span className="text-secondary">•</span>
                       Approvisionnement régulier, volumes flexibles
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-paprika">•</span>
+                      <span className="text-secondary">•</span>
                       Exigences documentaires export maîtrisées
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-paprika">•</span>
+                      <span className="text-secondary">•</span>
                       Relations commerciales directes
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Réactivité et adaptation aux besoins
                     </li>
                   </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {["Sénégal", "Côte d'Ivoire"].map((country) => (
-                    <span key={country} className="px-4 py-2 bg-paprika/10 text-paprika rounded-full text-sm font-medium">
+                    <span key={country} className="px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
                       {country}
                     </span>
                   ))}
                 </div>
 
-                <Button asChild variant="afrique" className="w-full">
+                <Button asChild variant="secondary" className="w-full">
                   <Link to="/contact?type=afrique">
                     Demander un sourcing pour l'Afrique
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -96,33 +95,30 @@ const ZonesExport = () => {
 
             {/* Europe */}
             <div className="bg-card border border-border rounded-lg overflow-hidden">
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={europeWarehouse} 
-                  alt="Entrepôt européen - France et Belgique"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
-                <div className="absolute bottom-4 left-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-white" />
+              <div className="h-3 bg-primary" />
+              <div className="p-8 lg:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h2 className="text-xl font-heading font-semibold text-white">
+                    <h2 className="text-2xl font-heading font-semibold text-foreground">
                       Europe
                     </h2>
-                    <p className="text-white/80 text-sm">France, Belgique</p>
+                    <p className="text-muted-foreground text-sm">France, Belgique</p>
                   </div>
                 </div>
-              </div>
-              <div className="p-8">
-                <div className="prose prose-muted max-w-none mb-6">
+
+                <div className="prose prose-muted max-w-none mb-8">
                   <p className="text-muted-foreground leading-relaxed">
-                    Le marché européen impose des exigences de conformité élevées : réglementation UE, traçabilité complète et documentation technique. Notre service Europe est conçu pour répondre à ces standards.
+                    Le marché européen impose des exigences de conformité élevées : réglementation UE, traçabilité complète, documentation technique et analyses de laboratoire. Notre service Europe est conçu pour répondre à ces standards.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Nous travaillons exclusivement avec des fournisseurs marocains capables de répondre aux exigences des importateurs européens structurés, avec une documentation contrôlée et des processus auditables.
                   </p>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-8">
                   <h3 className="font-heading font-semibold text-foreground mb-3">
                     Caractéristiques du marché
                   </h3>
@@ -139,10 +135,14 @@ const ZonesExport = () => {
                       <span className="text-primary">•</span>
                       Dossier technique avant engagement
                     </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      Process strict de validation
+                    </li>
                   </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-8">
                   {["France", "Belgique"].map((country) => (
                     <span key={country} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                       {country}
@@ -150,7 +150,7 @@ const ZonesExport = () => {
                   ))}
                 </div>
 
-                <Button asChild variant="europe" className="w-full">
+                <Button asChild className="w-full">
                   <Link to="/contact?type=europe">
                     Lancer un sourcing pour l'Europe
                     <ArrowRight className="ml-2 h-4 w-4" />

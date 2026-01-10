@@ -1,4 +1,0 @@
-project_id = "ztrtsrrwcnhwrjrmlaaw"
-
-[functions.verify-recaptcha]
-verify_jwt = false
