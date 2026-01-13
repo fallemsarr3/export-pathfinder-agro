@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
@@ -6,6 +7,10 @@ import { CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
 const Services = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Services sourcing Maroc – Afrique, Europe, Premium</title>
+        <meta name="description" content="Agent de sourcing export Maroc : services adaptés pour importateurs Afrique de l'Ouest, Europe et missions stratégiques Premium. Fournisseurs vérifiés." />
+      </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
         <div className="container-page">

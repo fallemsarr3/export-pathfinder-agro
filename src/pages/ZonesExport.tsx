@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import { MapPin, ArrowRight, Globe, Shield, Users, TrendingUp } from "lucide-react";
+import { MapPin, ArrowRight, Globe, Shield, TrendingUp } from "lucide-react";
 import africaMarket from "@/assets/africa-market.jpg";
 import europeWarehouse from "@/assets/europe-warehouse.jpg";
 
 const ZonesExport = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Zones export Maroc – Afrique de l'Ouest et Europe</title>
+        <meta name="description" content="Sourcing export depuis le Maroc vers l'Afrique de l'Ouest et l'Europe. Approche adaptée à chaque zone, fournisseurs vérifiés, conformité documentaire." />
+      </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
         <div className="container-page">
