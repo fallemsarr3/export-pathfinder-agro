@@ -80,7 +80,7 @@ const Methode = () => {
               Une méthode claire pour sécuriser vos importations
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              Processus de sourcing export structuré et documenté. Chaque étape est définie pour garantir la transparence et la maîtrise du risque.
+              Processus de sourcing export structuré et documenté. Chaque étape est définie pour garantir la transparence et la maîtrise du risque. Nos <Link to="/services" className="underline hover:no-underline">services de sourcing</Link> s'appuient sur cette méthode.
             </p>
           </div>
         </div>
@@ -138,7 +138,8 @@ const Methode = () => {
                 Nos engagements
               </h2>
               <p className="text-muted-foreground text-lg">
-                Des principes clairs qui guident chaque mission de sourcing.
+                Des principes clairs qui guident chaque mission de sourcing, que ce soit pour <Link to="/zones-export#afrique" className="text-primary hover:underline">l'Afrique de l'Ouest</Link> ou <Link to="/zones-export#europe" className="text-primary hover:underline">l'Europe</Link>.
+                
               </p>
             </div>
 

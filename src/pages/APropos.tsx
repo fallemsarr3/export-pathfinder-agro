@@ -36,7 +36,7 @@ const APropos = () => {
                   Agent de sourcing agroalimentaire au Maroc
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nous sommes un agent de sourcing export basé au Maroc, spécialisé exclusivement dans le secteur agroalimentaire. Notre activité se concentre sur un périmètre produit volontairement limité : les épices et les huiles alimentaires marocaines destinées à l'export.
+                  Nous sommes un agent de sourcing export basé au Maroc, spécialisé exclusivement dans le secteur agroalimentaire. Notre activité se concentre sur un périmètre produit volontairement limité : les épices et les huiles alimentaires marocaines destinées à l'export. Découvrez nos <Link to="/services" className="text-primary hover:underline">services de sourcing</Link> adaptés à chaque marché.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Cette spécialisation nous permet de développer une connaissance approfondie des fournisseurs, des standards de qualité et des exigences réglementaires propres à ce secteur. Plutôt que de couvrir un large spectre de produits, nous avons fait le choix de l'expertise et de la maîtrise.
@@ -75,20 +75,20 @@ const APropos = () => {
                   Une approche orientée fiabilité et conformité
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  L'import-export agroalimentaire comporte des risques significatifs : fournisseurs peu fiables, qualité inconstante, documentation incomplète, délais non respectés. Notre rôle est de réduire ces risques en amont, avant que les problèmes ne surviennent.
+                  L'import-export agroalimentaire comporte des risques significatifs : fournisseurs peu fiables, qualité inconstante, documentation incomplète, délais non respectés. Notre rôle est de réduire ces risques en amont, avant que les problèmes ne surviennent. Notre <Link to="/methode" className="text-primary hover:underline">méthodologie structurée</Link> garantit transparence et rigueur à chaque étape.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Pour les marchés européens, nous accordons une attention particulière à la conformité réglementaire UE. Chaque fournisseur avec lequel nous travaillons pour ce marché doit être capable de fournir une documentation complète et vérifiable.
+                  Pour les <Link to="/zones-export#europe" className="text-primary hover:underline">marchés européens</Link>, nous accordons une attention particulière à la conformité réglementaire UE. Chaque fournisseur avec lequel nous travaillons pour ce marché doit être capable de fournir une documentation complète et vérifiable.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Pour les marchés africains, nous nous concentrons sur la régularité des approvisionnements, la fiabilité des partenaires et la maîtrise des exigences documentaires export.
+                  Pour les <Link to="/zones-export#afrique" className="text-primary hover:underline">marchés africains</Link>, nous nous concentrons sur la régularité des approvisionnements, la fiabilité des partenaires et la maîtrise des exigences documentaires export.
                 </p>
 
                 <h3 className="font-heading text-foreground mt-12">
                   Zones d'intervention
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Nous accompagnons actuellement les importateurs basés en Afrique de l'Ouest (Sénégal, Côte d'Ivoire) et en Europe (France, Belgique). Ces deux zones représentent des marchés avec des exigences différentes, mais une même attente de fiabilité et de professionnalisme.
+                  Nous accompagnons actuellement les importateurs basés en <Link to="/zones-export#afrique" className="text-primary hover:underline">Afrique de l'Ouest</Link> (Sénégal, Côte d'Ivoire) et en <Link to="/zones-export#europe" className="text-primary hover:underline">Europe</Link> (France, Belgique). Ces deux zones représentent des marchés avec des exigences différentes, mais une même attente de fiabilité et de professionnalisme. Consultez nos <Link to="/contact" className="text-primary hover:underline">formulaires de contact</Link> adaptés à chaque zone.
                 </p>
               </div>
             </div>

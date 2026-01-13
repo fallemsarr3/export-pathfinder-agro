@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -133,7 +133,7 @@ const Contact = () => {
                       Demande de sourcing – Afrique de l'Ouest
                     </h2>
                     <p className="text-muted-foreground">
-                      Formulaire pour importateurs basés au Sénégal, Côte d'Ivoire et Afrique de l'Ouest.
+                      Formulaire pour importateurs basés au Sénégal, Côte d'Ivoire et Afrique de l'Ouest. En savoir plus sur <Link to="/services#afrique" className="text-paprika hover:underline">notre service Afrique</Link> et les <Link to="/zones-export#afrique" className="text-paprika hover:underline">spécificités de ce marché</Link>.
                     </p>
                   </div>
 
@@ -232,7 +232,7 @@ const Contact = () => {
                       Demande de sourcing conforme – Europe
                     </h2>
                     <p className="text-muted-foreground">
-                      Formulaire pour importateurs européens avec exigences de conformité UE.
+                      Formulaire pour importateurs européens avec exigences de conformité UE. Consultez <Link to="/services#europe" className="text-primary hover:underline">notre service Europe</Link> et les <Link to="/zones-export#europe" className="text-primary hover:underline">exigences réglementaires</Link>.
                     </p>
                   </div>
 
@@ -339,7 +339,7 @@ const Contact = () => {
                       Mission de sourcing stratégique – Premium
                     </h2>
                     <p className="text-muted-foreground">
-                      Formulaire pour gros importateurs, industriels et distributeurs structurés.
+                      Formulaire pour gros importateurs, industriels et distributeurs structurés. Découvrez notre <Link to="/services#premium" className="text-spice hover:underline">service Premium</Link> et <Link to="/methode" className="text-spice hover:underline">notre méthodologie</Link>.
                     </p>
                   </div>
 
