@@ -4,12 +4,65 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
 
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Services de sourcing export Maroc",
+  "description": "Prestations de sourcing agroalimentaire pour importateurs Afrique de l'Ouest et Europe",
+  "itemListElement": [
+    {
+      "@type": "Service",
+      "position": 1,
+      "name": "Sourcing export Maroc → Afrique de l'Ouest",
+      "description": "Sourcing et vérification de fournisseurs marocains d'épices et huiles alimentaires pour importateurs ouest-africains. Coordination documentaire export, suivi logistique FOB/CFR.",
+      "serviceType": "Sourcing agroalimentaire",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Afrique de l'Ouest"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Sourcing Maroc Export"
+      }
+    },
+    {
+      "@type": "Service",
+      "position": 2,
+      "name": "Sourcing conforme UE depuis le Maroc",
+      "description": "Sourcing de fournisseurs marocains conformes aux normes européennes (HACCP, LMR). Dossier technique complet, analyses laboratoire, certifications BRC/IFS.",
+      "serviceType": "Sourcing agroalimentaire conforme UE",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Europe"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Sourcing Maroc Export"
+      }
+    },
+    {
+      "@type": "Service",
+      "position": 3,
+      "name": "Missions stratégiques de sourcing et gestion du risque fournisseur",
+      "description": "Audit de fournisseurs, recherche de sources alternatives, due diligence et sécurisation de la supply chain pour industriels agroalimentaires.",
+      "serviceType": "Conseil sourcing stratégique",
+      "provider": {
+        "@type": "Organization",
+        "name": "Sourcing Maroc Export"
+      }
+    }
+  ]
+};
+
 const Services = () => {
   return (
     <Layout>
       <Helmet>
         <title>Services sourcing Maroc – Afrique, Europe, Premium</title>
         <meta name="description" content="Agent de sourcing export Maroc : services adaptés pour importateurs Afrique de l'Ouest, Europe et missions stratégiques Premium. Fournisseurs vérifiés." />
+        <script type="application/ld+json">
+          {JSON.stringify(servicesSchema)}
+        </script>
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
