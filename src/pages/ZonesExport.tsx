@@ -46,7 +46,7 @@ const ZonesExport = () => {
                     <MapPin className="w-6 h-6 text-paprika" />
                   </div>
                   <h2 className="text-2xl font-heading font-semibold text-foreground">
-                    Afrique de l'Ouest
+                    Sourcing export vers l'Afrique de l'Ouest
                   </h2>
                 </div>
 
@@ -110,7 +110,7 @@ const ZonesExport = () => {
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <h2 className="text-2xl font-heading font-semibold text-foreground">
-                    Europe
+                    Sourcing conforme vers l'Europe
                   </h2>
                 </div>
 
@@ -165,7 +165,7 @@ const ZonesExport = () => {
         <div className="container-page">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-foreground mb-6">
-              Pourquoi le Maroc comme base de sourcing ?
+              Avantages du sourcing depuis le Maroc
             </h2>
             <p className="text-muted-foreground text-lg mb-12 leading-relaxed">
               Le Maroc dispose d'une industrie agroalimentaire structurée, d'une position géographique stratégique entre l'Afrique et l'Europe, et d'accords commerciaux facilitant l'export vers les deux zones.
@@ -208,9 +208,9 @@ const ZonesExport = () => {
       {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container-page text-center">
-          <h2 className="text-primary-foreground mb-6">
-            Vous importez depuis une autre zone ?
-          </h2>
+            <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-6">
+              Vous importez depuis une autre zone ?
+            </h3>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
             Nous concentrons actuellement nos services sur l'Afrique de l'Ouest et l'Europe. Si vous êtes basé dans une autre région, contactez-nous pour évaluer la faisabilité.
           </p>

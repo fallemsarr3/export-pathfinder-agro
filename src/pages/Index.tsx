@@ -96,7 +96,7 @@ const Index = () => {
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-heading font-semibold text-foreground mb-2">
+                <h3 className="text-lg font-heading font-semibold text-foreground mb-2" aria-label={item.title}>
                   {item.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -275,7 +275,7 @@ const Index = () => {
 
             <div className="bg-sage/30 rounded-lg p-8 lg:p-12">
               <h3 className="text-xl font-heading font-semibold text-foreground mb-6">
-                Ce que nous ne faisons pas
+                Périmètre d'intervention
               </h3>
               <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-3">
@@ -308,9 +308,9 @@ const Index = () => {
       {/* CTA Section */}
       <section className="section-padding bg-primary">
         <div className="container-page text-center">
-          <h2 className="text-primary-foreground mb-6">
-            Prêt à sécuriser votre sourcing au Maroc ?
-          </h2>
+            <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-6">
+              Prêt à sécuriser votre sourcing au Maroc ?
+            </h3>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
             Sélectionnez votre zone d'importation et accédez au formulaire de contact adapté à votre profil.
           </p>
