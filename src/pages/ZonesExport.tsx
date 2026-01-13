@@ -57,35 +57,44 @@ const ZonesExport = () => {
 
                 <div className="prose prose-muted max-w-none mb-8">
                   <p className="text-muted-foreground leading-relaxed">
-                    Zone prioritaire pour le sourcing agroalimentaire depuis le Maroc. Les importateurs ouest-africains bénéficient d'une proximité géographique favorable, de coûts logistiques compétitifs et d'une demande régulière pour les épices et huiles alimentaires marocaines.
+                    Zone prioritaire pour le sourcing agroalimentaire depuis le Maroc. Les importateurs ouest-africains – grossistes, distributeurs et industriels agroalimentaires – bénéficient d'une proximité géographique favorable, de coûts logistiques compétitifs via les ports de Casablanca et Tanger Med, et d'une demande régulière pour les <Link to="/services#afrique" className="text-paprika hover:underline">épices et huiles alimentaires marocaines</Link>.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Notre connaissance des exigences documentaires locales et des pratiques commerciales de la région permet un accompagnement adapté, des premiers échanges jusqu'au départ de la marchandise.
+                    Notre connaissance des exigences documentaires locales (certificat d'origine, certificat sanitaire, facture commerciale) et des pratiques commerciales de la région permet un accompagnement adapté, des premiers échanges jusqu'au départ FOB ou CFR de la marchandise.
                   </p>
                 </div>
 
                 <div className="mb-8">
                   <h3 className="font-heading font-semibold text-foreground mb-3">
-                    Caractéristiques du marché
+                    Caractéristiques du marché ouest-africain
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-paprika">•</span>
-                      Approvisionnement régulier, volumes flexibles
+                      Approvisionnement régulier, MOQ (quantités minimales) flexibles
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-paprika">•</span>
-                      Exigences documentaires export maîtrisées
+                      Documents export maîtrisés : certificat d'origine, phytosanitaire, liste de colisage
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-paprika">•</span>
-                      Relations commerciales directes
+                      Incoterms adaptés : FOB Casablanca, CFR Dakar, CFR Abidjan
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-paprika">•</span>
-                      Réactivité et adaptation aux besoins
+                      Réactivité et adaptation aux besoins des acheteurs locaux
                     </li>
                   </ul>
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold text-foreground mb-3">
+                    Profil des acheteurs ciblés
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Grossistes alimentaires, distributeurs régionaux, transformateurs agroalimentaires et centrales d'achat basés au Sénégal, en Côte d'Ivoire, au Mali, en Guinée et dans la région CEDEAO.
+                  </p>
                 </div>
 
 
@@ -121,35 +130,44 @@ const ZonesExport = () => {
 
                 <div className="prose prose-muted max-w-none mb-8">
                   <p className="text-muted-foreground leading-relaxed">
-                    Le marché européen impose des exigences de conformité élevées : réglementation UE, traçabilité complète, documentation technique et analyses de laboratoire. Notre service Europe est conçu pour répondre à ces standards.
+                    Le marché européen impose des exigences de conformité élevées : réglementation UE (règlement CE 178/2002), traçabilité complète lot par lot, fiches techniques détaillées, bulletins d'analyse de laboratoire accrédité et conformité aux LMR (limites maximales de résidus). Notre <Link to="/services#europe" className="text-primary hover:underline">service Europe</Link> est conçu pour répondre à ces standards.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Nous travaillons exclusivement avec des fournisseurs marocains capables de répondre aux exigences des importateurs européens structurés, avec une documentation contrôlée et des processus auditables.
+                    Nous travaillons exclusivement avec des fournisseurs marocains capables de répondre aux exigences des importateurs européens structurés – négociants, transformateurs et distributeurs spécialisés – avec une documentation contrôlée, des processus auditables et une capacité d'export en incoterms CIF ou DAP.
                   </p>
                 </div>
 
                 <div className="mb-8">
                   <h3 className="font-heading font-semibold text-foreground mb-3">
-                    Caractéristiques du marché
+                    Exigences du marché européen
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Sourcing conforme aux normes UE
+                      Conformité réglementaire UE : HACCP, traçabilité, étiquetage
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Fournisseurs auditables et documentation contrôlée
+                      Fournisseurs auditables avec certifications (ISO, BRC, IFS selon produit)
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Dossier technique avant engagement
+                      Dossier technique complet : fiche produit, CoA, analyses pesticides/métaux lourds
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary">•</span>
-                      Process strict de validation
+                      Validation stricte avant contractualisation : échantillons et contre-analyses
                     </li>
                   </ul>
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold text-foreground mb-3">
+                    Profil des acheteurs ciblés
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Importateurs structurés, négociants en épices et huiles, transformateurs agroalimentaires et distributeurs spécialisés basés en France, Belgique, Espagne, Pays-Bas et dans l'espace Schengen.
+                  </p>
                 </div>
 
 
@@ -173,24 +191,24 @@ const ZonesExport = () => {
               Avantages du sourcing depuis le Maroc
             </h2>
             <p className="text-muted-foreground text-lg mb-12 leading-relaxed">
-              Le Maroc dispose d'une industrie agroalimentaire structurée, d'une position géographique stratégique entre l'Afrique et l'Europe, et d'accords commerciaux facilitant l'export vers les deux zones.
+              Le Maroc dispose d'une industrie agroalimentaire structurée, d'une position géographique stratégique entre l'Afrique et l'Europe, et d'accords commerciaux préférentiels (accord d'association UE-Maroc, accords CEDEAO) facilitant l'export vers les deux zones. Découvrez <Link to="/methode" className="text-primary hover:underline">notre méthode de sourcing</Link> pour en savoir plus.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
                   icon: Globe,
-                  title: "Position stratégique",
-                  description: "Porte d'entrée vers l'Afrique et proximité avec l'Europe méditerranéenne."
+                  title: "Hub logistique stratégique",
+                  description: "Ports de Tanger Med et Casablanca : connexions maritimes directes vers Dakar, Abidjan, Anvers, Rotterdam et Marseille."
                 },
                 {
                   icon: TrendingUp,
-                  title: "Industrie structurée",
-                  description: "Filières agroalimentaires établies avec des exportateurs expérimentés."
+                  title: "Filières export structurées",
+                  description: "Exportateurs expérimentés, certifications qualité (ISO, HACCP) et capacité de production industrielle."
                 },
                 {
                   icon: Shield,
-                  title: "Accords commerciaux",
-                  description: "Accords bilatéraux facilitant l'export vers l'Afrique et l'Union Européenne."
+                  title: "Cadre réglementaire favorable",
+                  description: "Accord d'association UE-Maroc, accords bilatéraux africains et procédures douanières maîtrisées."
                 }
               ].map((item, i) => (
                 <div key={i} className="text-left bg-card border border-border rounded-lg p-6">
