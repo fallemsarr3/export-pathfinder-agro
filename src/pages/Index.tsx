@@ -71,27 +71,32 @@ const Index = () => {
               {
                 icon: CheckCircle,
                 title: "Fournisseurs vérifiés",
-                description: "Sélection rigoureuse des producteurs et exportateurs marocains, vérification qualité et capacité."
+                description: "Sélection rigoureuse des producteurs et exportateurs marocains, vérification qualité et capacité.",
+                link: "/a-propos"
               },
               {
                 icon: Shield,
                 title: "Périmètre limité",
-                description: "Focus exclusif sur les épices et huiles alimentaires pour une expertise approfondie."
+                description: "Focus exclusif sur les épices et huiles alimentaires pour une expertise approfondie.",
+                link: "/zones-export"
               },
               {
                 icon: FileCheck,
                 title: "Process documenté",
-                description: "Méthodologie claire de sourcing, négociation et coordination export."
+                description: "Méthodologie claire de sourcing, négociation et coordination export.",
+                link: "/methode"
               },
               {
                 icon: Users,
                 title: "Zéro stock",
-                description: "Aucun financement de marchandise, aucune gestion de stock. Service de sourcing pur."
+                description: "Aucun financement de marchandise, aucune gestion de stock. Service de sourcing pur.",
+                link: "/services"
               }
             ].map((item, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-card border border-border rounded-lg p-6 hover:shadow-elegant transition-all duration-300"
+                to={item.link}
+                className="bg-card border border-border rounded-lg p-6 hover:shadow-elegant transition-all duration-300 block"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-primary" />
@@ -102,7 +107,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {item.description}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
