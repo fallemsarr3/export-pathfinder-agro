@@ -293,9 +293,9 @@ const Services = () => {
       {/* CTA */}
       <section className="section-padding bg-primary">
         <div className="container-page text-center">
-          <h2 className="text-primary-foreground mb-6">
-            Besoin d'un sourcing adapté à votre situation ?
-          </h2>
+            <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-6">
+              Besoin d'un sourcing adapté à votre situation ?
+            </h3>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
             Choisissez le formulaire correspondant à votre zone d'importation pour nous transmettre votre demande qualifiée.
           </p>
