@@ -19,10 +19,10 @@ const Services = () => {
               Nos prestations
             </span>
             <h1 className="text-primary-foreground mb-6">
-              Services de sourcing export au Maroc
+              Services de sourcing export depuis le Maroc
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              Chaque marché a ses propres exigences. Nos services sont adaptés à votre zone d'importation et à votre niveau de maturité.
+              Chaque marché a ses propres exigences en termes de volumes, de qualité et de conformité documentaire. Nos prestations de sourcing sont adaptées à votre zone d'importation et à votre niveau de maturité opérationnelle.
             </p>
           </div>
         </div>
@@ -37,7 +37,7 @@ const Services = () => {
                 Service Afrique de l'Ouest
               </span>
               <h2 className="text-foreground mb-6">
-                Sourcing Maroc → Afrique de l'Ouest
+                Sourcing export Maroc → Afrique de l'Ouest
               </h2>
               
               <div className="mb-8">
@@ -45,7 +45,7 @@ const Services = () => {
                   Cible
                 </h3>
                 <p className="text-muted-foreground">
-                  Importateurs alimentaires, grossistes et distributeurs basés au Sénégal, en Côte d'Ivoire et dans la région ouest-africaine.
+                  Importateurs alimentaires, grossistes et distributeurs de la région ouest-africaine recherchant un approvisionnement régulier en épices et huiles depuis le Maroc, avec des conditions FOB ou CFR adaptées à leurs flux logistiques.
                 </p>
               </div>
 
@@ -55,10 +55,10 @@ const Services = () => {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Fournisseurs peu fiables ou difficilement joignables",
-                    "Qualité inconstante d'une commande à l'autre",
-                    "Documents export incomplets ou non conformes",
-                    "Délais de livraison non respectés"
+                    "Fournisseurs peu fiables ou difficilement joignables pour le suivi des commandes",
+                    "Qualité inconstante d'un lot à l'autre : granulométrie, taux d'humidité, pureté",
+                    "Documents export incomplets : certificat d'origine, facture consulaire, phytosanitaire",
+                    "Délais de livraison non respectés impactant la rotation des stocks"
                   ].map((problem, i) => (
                     <li key={i} className="flex items-start gap-3 text-muted-foreground">
                       <AlertTriangle className="w-5 h-5 text-paprika mt-0.5 flex-shrink-0" />
@@ -75,10 +75,10 @@ const Services = () => {
               </h3>
               <ul className="space-y-4 mb-8">
                 {[
-                  "Sourcing et vérification de fournisseurs marocains",
-                  "Négociation des prix et quantités minimales (MOQ)",
-                  "Coordination documentaire export",
-                  "Suivi jusqu'au départ de la marchandise"
+                  "Sourcing et vérification terrain de fournisseurs marocains (capacité, régularité, références)",
+                  "Négociation des prix et quantités minimales (MOQ) adaptées à vos volumes",
+                  "Coordination documentaire export : factures, certificats d'origine, documents douaniers",
+                  "Suivi logistique jusqu'au départ FOB/CFR depuis les ports marocains"
                 ].map((service, i) => (
                   <li key={i} className="flex items-start gap-3 text-foreground">
                     <CheckCircle className="w-5 h-5 text-paprika mt-0.5 flex-shrink-0" />
@@ -101,9 +101,13 @@ const Services = () => {
               <div className="mb-8 p-4 bg-background rounded-lg border border-border">
                 <h4 className="font-semibold text-foreground mb-2">Rémunération</h4>
                 <p className="text-muted-foreground text-sm">
-                  Forfait de sourcing + commission uniquement si commande confirmée
+                  Forfait de sourcing initial + commission uniquement sur commande confirmée. Modèle transparent, sans frais cachés.
                 </p>
               </div>
+
+              <p className="text-sm text-muted-foreground mb-6">
+                Découvrez notre <Link to="/methode" className="text-paprika hover:underline">méthodologie de travail</Link> et les <Link to="/zones-export#afrique" className="text-paprika hover:underline">spécificités du marché ouest-africain</Link>.
+              </p>
 
               <Button asChild variant="afrique" className="w-full">
                 <Link to="/contact?type=afrique">
@@ -125,7 +129,7 @@ const Services = () => {
                 Service Europe
               </span>
               <h2 className="text-foreground mb-6">
-                Sourcing conforme Maroc → Europe
+                Sourcing conforme UE depuis le Maroc
               </h2>
               
               <div className="mb-8">
@@ -133,7 +137,7 @@ const Services = () => {
                   Positionnement
                 </h3>
                 <p className="text-muted-foreground">
-                  Conformité réglementaire UE, traçabilité complète et maîtrise du risque fournisseur pour les importateurs européens structurés.
+                  Conformité réglementaire européenne, traçabilité complète et maîtrise du risque fournisseur. Respect des normes HACCP, limites LMR et exigences documentaires pour l'import alimentaire en UE.
                 </p>
               </div>
 
@@ -142,7 +146,7 @@ const Services = () => {
                   Cible
                 </h3>
                 <p className="text-muted-foreground">
-                  Importateurs européens structurés (France, Belgique) avec exigences de conformité élevées et processus d'achat formalisés.
+                  Importateurs européens structurés avec exigences de conformité élevées, processus d'achat formalisés et volumes récurrents nécessitant des Incoterms DAP ou CIF.
                 </p>
               </div>
 
@@ -152,10 +156,10 @@ const Services = () => {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Dossier technique prioritaire avant tout engagement",
-                    "Échantillons et analyses de laboratoire si requis",
-                    "Process strict de validation avant toute commande",
-                    "Fournisseurs auditables et documentation contrôlée"
+                    "Dossier technique complet (fiche produit, CoA, fiches de sécurité) avant engagement",
+                    "Échantillons et analyses de laboratoire accrédité si requis (pesticides, métaux lourds)",
+                    "Process strict de validation qualité avant toute commande : spécifications, contrôle lot",
+                    "Fournisseurs auditables avec certifications BRC, IFS ou équivalent"
                   ].map((spec, i) => (
                     <li key={i} className="flex items-start gap-3 text-muted-foreground">
                       <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -185,13 +189,13 @@ const Services = () => {
               <div className="mb-8 p-4 bg-sage/30 rounded-lg">
                 <h4 className="font-semibold text-foreground mb-2">Rémunération</h4>
                 <p className="text-muted-foreground text-sm">
-                  Forfait de sourcing obligatoire, commission réduite ou optionnelle selon la mission.
+                  Forfait de sourcing obligatoire couvrant l'audit fournisseur et la constitution du dossier technique. Commission réduite ou optionnelle selon le périmètre de la mission.
                 </p>
               </div>
 
               <div className="mb-8 p-4 bg-primary/5 rounded-lg border border-primary/20">
                 <p className="text-sm text-foreground">
-                  <strong>Note :</strong> Les demandes sans site web professionnel ou sans engagement sur le forfait ne sont pas traitées.
+                  <strong>Note :</strong> Les demandes sans site web professionnel ou sans engagement sur le forfait ne sont pas traitées. Consultez notre <Link to="/methode" className="text-primary hover:underline">méthodologie</Link> et les <Link to="/zones-export#europe" className="text-primary hover:underline">exigences du marché européen</Link>.
                 </p>
               </div>
 
@@ -215,7 +219,7 @@ const Services = () => {
                 Service Premium
               </span>
               <h2 className="text-foreground mb-6">
-                Sourcing stratégique et réduction du risque fournisseur
+                Missions stratégiques de sourcing et gestion du risque fournisseur
               </h2>
               
               <div className="mb-8">
@@ -223,7 +227,7 @@ const Services = () => {
                   Positionnement
                 </h3>
                 <p className="text-muted-foreground">
-                  Nous ne sommes pas un courtier. Nous agissons comme un filtre de fournisseurs et un réducteur de risque pour les entreprises structurées.
+                  Nous ne sommes pas un courtier. Nous intervenons comme filtre de fournisseurs et réducteur de risque pour les entreprises structurées avec des enjeux de supply chain, de conformité qualité et de continuité d'approvisionnement.
                 </p>
               </div>
 
@@ -232,7 +236,7 @@ const Services = () => {
                   Cible
                 </h3>
                 <p className="text-muted-foreground">
-                  Gros importateurs, industriels agroalimentaires et distributeurs structurés recherchant des fournisseurs alternatifs ou une sécurisation de leur chaîne d'approvisionnement.
+                  Gros importateurs, industriels agroalimentaires et distributeurs structurés recherchant des fournisseurs alternatifs, une diversification des sources ou une sécurisation de leur chaîne d'approvisionnement sur le long terme.
                 </p>
               </div>
 
@@ -242,10 +246,10 @@ const Services = () => {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Identification de fournisseurs alternatifs qualifiés",
-                    "Pré-filtrage conformité et régularité des fournisseurs",
-                    "Missions cadrées avec livrables définis",
-                    "Réduction du risque de dépendance fournisseur"
+                    "Identification et qualification de fournisseurs alternatifs (capacité, certifications, historique)",
+                    "Pré-filtrage conformité : audits documentaires, vérification des process qualité",
+                    "Missions cadrées avec livrables définis : shortlist, scoring, rapport de due diligence",
+                    "Réduction du risque de dépendance fournisseur et sécurisation de la supply chain"
                   ].map((value, i) => (
                     <li key={i} className="flex items-start gap-3 text-muted-foreground">
                       <CheckCircle className="w-5 h-5 text-spice mt-0.5 flex-shrink-0" />
@@ -271,16 +275,16 @@ const Services = () => {
               <div className="mb-8">
                 <h4 className="font-semibold text-foreground mb-3">Format des missions</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>• Audit de fournisseurs existants</li>
-                  <li>• Recherche de fournisseurs alternatifs</li>
-                  <li>• Benchmark qualité / prix sur un périmètre défini</li>
-                  <li>• Due diligence avant contractualisation</li>
+                  <li>• Audit de fournisseurs existants : conformité, capacité, fiabilité</li>
+                  <li>• Recherche de fournisseurs alternatifs avec scoring multicritères</li>
+                  <li>• Benchmark qualité / prix sur un périmètre défini (produit, volume, spécifications)</li>
+                  <li>• Due diligence fournisseur avant contractualisation ou renouvellement</li>
                 </ul>
               </div>
 
               <div className="mb-8 p-4 bg-spice/10 rounded-lg">
                 <p className="text-sm text-foreground">
-                  <strong>Processus :</strong> Chaque mission fait l'objet d'un cadrage préalable avec objectifs, périmètre et livrables définis avant démarrage.
+                  <strong>Processus :</strong> Chaque mission fait l'objet d'un cadrage préalable avec objectifs, périmètre et livrables définis. Découvrez notre <Link to="/methode" className="text-spice hover:underline">méthodologie structurée</Link>.
                 </p>
               </div>
 
@@ -299,10 +303,10 @@ const Services = () => {
       <section className="section-padding bg-primary">
         <div className="container-page text-center">
             <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-6">
-              Besoin d'un sourcing adapté à votre situation ?
+              Besoin d'un accompagnement sourcing adapté à vos enjeux ?
             </h3>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
-            Choisissez le formulaire correspondant à votre zone d'importation pour nous transmettre votre demande qualifiée.
+            Choisissez le formulaire correspondant à votre zone d'importation et à vos volumes pour nous transmettre votre demande qualifiée.
           </p>
           <Button asChild variant="hero">
             <Link to="/contact">Accéder aux formulaires de contact</Link>
