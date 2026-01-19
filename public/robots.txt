@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://sourcing-maroc-export.com/sitemap.xml
+Sitemap: https://www.sarrtradelink.com/sitemap.xml
