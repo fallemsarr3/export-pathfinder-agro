@@ -13,6 +13,39 @@ const ZonesExport = () => {
         <title>Zones export Maroc – Afrique de l'Ouest et Europe</title>
         <meta name="description" content="Sourcing export depuis le Maroc vers l'Afrique de l'Ouest et l'Europe. Approche adaptée à chaque zone, fournisseurs vérifiés, conformité documentaire." />
         <link rel="canonical" href="https://www.sarrtradelink.com/zones-export" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Travaillez-vous uniquement avec l'Afrique et l'Europe ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Actuellement, notre activité de sourcing export depuis le Maroc se concentre sur deux zones : l'Afrique de l'Ouest (Sénégal, Côte d'Ivoire, Mali, Guinée) et l'Europe (France, Belgique, Espagne, Pays-Bas). Ces marchés représentent les débouchés les plus structurés pour les épices et huiles alimentaires marocaines. Si vous êtes importateur dans une autre région, nous pouvons évaluer la faisabilité d'un sourcing adapté à votre zone sur demande." }
+              },
+              {
+                "@type": "Question",
+                "name": "Le sourcing export vers l'Europe est-il conforme aux normes UE ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Chaque fournisseur marocain que nous référençons pour le marché européen est vérifié sur sa capacité à répondre aux exigences réglementaires de l'Union européenne : traçabilité lot par lot, conformité HACCP, fiches techniques détaillées, bulletins d'analyse de laboratoire accrédité et respect des limites maximales de résidus (LMR). Nous contrôlons l'ensemble du dossier documentaire avant toute expédition, afin de garantir une conformité totale aux standards du marché européen." }
+              },
+              {
+                "@type": "Question",
+                "name": "Comment sélectionnez-vous les fournisseurs marocains ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Notre processus de sélection repose sur une vérification terrain approfondie. Chaque fournisseur marocain est évalué sur sa capacité de production, ses certifications qualité (ISO, BRC, IFS selon le produit), la traçabilité de ses matières premières, et sa conformité documentaire à l'export. Nous réalisons des visites d'usine, demandons des échantillons et vérifions les références commerciales avant d'intégrer un fournisseur dans notre réseau de sourcing." }
+              },
+              {
+                "@type": "Question",
+                "name": "Accompagnez-vous les importateurs africains débutants ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Notre service de sourcing export depuis le Maroc est conçu pour accompagner aussi bien les importateurs expérimentés que ceux qui débutent dans l'approvisionnement international. Pour les acheteurs africains qui découvrent le sourcing depuis le Maroc, nous proposons un accompagnement complet : identification des fournisseurs adaptés, négociation des conditions, préparation des documents export (certificat d'origine, phytosanitaire) et coordination logistique FOB ou CFR." }
+              },
+              {
+                "@type": "Question",
+                "name": "Pourquoi passer par un agent de sourcing au Maroc plutôt que traiter directement avec un fournisseur ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Traiter directement avec un fournisseur marocain sans intermédiaire expose l'importateur à plusieurs risques : qualité non conforme, retards de livraison, documentation incomplète ou litiges commerciaux difficiles à résoudre à distance. Un agent de sourcing export au Maroc comme Sarr Trade Link sécurise l'opération en vérifiant les fournisseurs en amont, en contrôlant la qualité et la conformité documentaire, et en assurant la coordination entre toutes les parties prenantes." }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
@@ -22,10 +55,13 @@ const ZonesExport = () => {
               Couverture géographique
             </span>
             <h1 className="text-primary-foreground mb-6">
-              Zones d'export couvertes
+              Sourcing export depuis le Maroc vers l'Afrique et l'Europe
             </h1>
             <p className="text-xl text-primary-foreground/80">
               Agent de sourcing export au Maroc pour l'Afrique de l'Ouest et l'Europe. Deux zones, deux approches adaptées aux exigences locales.
+            </p>
+            <p className="text-primary-foreground/70 mt-6 leading-relaxed max-w-2xl">
+              Sarr Trade Link est un agent de sourcing export basé au Maroc, spécialisé dans les épices, les huiles alimentaires et les produits agroalimentaires à forte valeur ajoutée. Notre rôle est de connecter les importateurs africains et européens avec des fournisseurs marocains rigoureusement sélectionnés. Contrairement à un négociant ou un trader, nous n'achetons ni ne revendons de marchandise : nous intervenons comme intermédiaire indépendant, chargé de la recherche de fournisseurs, de la vérification qualité, du contrôle documentaire et de la coordination logistique. Notre mission est de sécuriser chaque opération d'approvisionnement en réduisant les risques liés au sourcing international, tout en garantissant la conformité aux exigences réglementaires de chaque zone de destination – <Link to="/services#afrique" className="text-primary-foreground underline">Afrique de l'Ouest</Link> comme <Link to="/services#europe" className="text-primary-foreground underline">Union européenne</Link>.
             </p>
           </div>
         </div>
@@ -224,6 +260,64 @@ const ZonesExport = () => {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding bg-background">
+        <div className="container-page">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-foreground mb-10 text-center">
+              Questions fréquentes sur nos zones d'export
+            </h2>
+
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">
+                  Travaillez-vous uniquement avec l'Afrique et l'Europe ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Actuellement, notre activité de sourcing export depuis le Maroc se concentre sur deux zones prioritaires : l'Afrique de l'Ouest (Sénégal, Côte d'Ivoire, Mali, Guinée) et l'Europe (France, Belgique, Espagne, Pays-Bas). Ces marchés représentent les débouchés les plus structurés pour les épices et huiles alimentaires marocaines, avec des flux commerciaux réguliers et des cadres réglementaires que nous maîtrisons. Si vous êtes importateur dans une autre région, nous pouvons évaluer la faisabilité d'un sourcing adapté à votre zone sur demande.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">
+                  Le sourcing export vers l'Europe est-il conforme aux normes UE ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Oui. Chaque fournisseur marocain que nous référençons pour le marché européen est vérifié sur sa capacité à répondre aux exigences réglementaires de l'Union européenne : traçabilité lot par lot, conformité HACCP, fiches techniques détaillées, bulletins d'analyse de laboratoire accrédité et respect des limites maximales de résidus (LMR). Nous contrôlons l'ensemble du dossier documentaire avant toute expédition, afin de garantir une conformité totale aux standards du marché européen pour chaque opération de sourcing export.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">
+                  Comment sélectionnez-vous les fournisseurs marocains ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Notre processus de sélection repose sur une vérification terrain approfondie. Chaque fournisseur marocain est évalué sur sa capacité de production, ses certifications qualité (ISO, BRC, IFS selon le produit), la traçabilité de ses matières premières, et sa conformité documentaire à l'export. Nous réalisons des visites d'usine, demandons des échantillons et vérifions les références commerciales avant d'intégrer un fournisseur dans notre réseau de sourcing au Maroc.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">
+                  Accompagnez-vous les importateurs africains débutants ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Oui. Notre service de sourcing export depuis le Maroc est conçu pour accompagner aussi bien les importateurs expérimentés que ceux qui débutent dans l'approvisionnement international. Pour les acheteurs africains qui découvrent le sourcing depuis le Maroc, nous proposons un accompagnement complet : identification des fournisseurs adaptés, négociation des conditions commerciales, préparation des documents export (certificat d'origine, certificat phytosanitaire) et coordination logistique en incoterms FOB ou CFR.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-foreground mb-3">
+                  Pourquoi passer par un agent de sourcing au Maroc plutôt que traiter directement avec un fournisseur ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Traiter directement avec un fournisseur marocain sans intermédiaire expose l'importateur à plusieurs risques : qualité non conforme, retards de livraison, documentation incomplète ou litiges commerciaux difficiles à résoudre à distance. Un agent de sourcing export au Maroc comme Sarr Trade Link sécurise l'opération en vérifiant les fournisseurs en amont, en contrôlant la qualité et la conformité documentaire, et en assurant la coordination entre toutes les parties prenantes de la chaîne d'approvisionnement.
+                </p>
+              </div>
             </div>
           </div>
         </div>
