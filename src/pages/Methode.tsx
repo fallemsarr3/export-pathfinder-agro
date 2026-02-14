@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { CheckCircle, ArrowRight } from "lucide-react";
@@ -69,6 +70,11 @@ const Methode = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Méthode de sourcing export – Process structuré</title>
+        <meta name="description" content="Processus de sourcing export structuré et documenté. 6 étapes claires pour sécuriser vos importations d'épices et huiles alimentaires depuis le Maroc." />
+        <link rel="canonical" href="https://sarrtradelink.com/methode" />
+      </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
         <div className="container-page">

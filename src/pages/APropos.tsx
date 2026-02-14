@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { CheckCircle, ArrowRight } from "lucide-react";
@@ -8,6 +9,11 @@ import oilsDisplay from "@/assets/oils-display.jpg";
 const APropos = () => {
   return (
     <Layout>
+      <Helmet>
+        <title>À propos – Agent de sourcing agroalimentaire au Maroc</title>
+        <meta name="description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés pour importateurs Afrique et Europe." />
+        <link rel="canonical" href="https://sarrtradelink.com/a-propos" />
+      </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
         <div className="container-page">
