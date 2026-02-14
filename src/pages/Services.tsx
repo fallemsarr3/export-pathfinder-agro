@@ -4,6 +4,46 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
 
+const faqData = [
+  {
+    question: "Qu'est-ce qu'un agent de sourcing export au Maroc ?",
+    answer: "Un agent de sourcing export au Maroc est un intermédiaire professionnel qui identifie, vérifie et qualifie des fournisseurs marocains pour le compte d'importateurs étrangers. Contrairement à un négociant, il n'achète ni ne revend de marchandises. Son rôle est de sécuriser la chaîne d'approvisionnement en sélectionnant des fournisseurs fiables, en coordonnant la documentation export et en assurant un suivi qualité rigoureux. Ce service est particulièrement utile pour les importateurs d'épices et d'huiles alimentaires qui souhaitent réduire les risques liés au sourcing international."
+  },
+  {
+    question: "Quelle est la différence entre un négociant et un agent de sourcing ?",
+    answer: "Un négociant achète des produits pour les revendre avec une marge commerciale, tandis qu'un agent de sourcing export agit exclusivement comme intermédiaire entre l'importateur et le fournisseur marocain. L'agent ne prend jamais possession de la marchandise. Sa valeur réside dans la vérification terrain des fournisseurs, la négociation des conditions d'achat, la coordination documentaire et le suivi logistique. Ce positionnement garantit une totale transparence sur les prix et les conditions, ce qui est essentiel dans le commerce B2B d'épices et d'huiles alimentaires."
+  },
+  {
+    question: "Travaillez-vous directement avec des producteurs marocains ?",
+    answer: "Oui, nous travaillons avec des producteurs, des coopératives et des transformateurs marocains vérifiés. Chaque fournisseur fait l'objet d'un processus de qualification rigoureux : visite terrain, contrôle de capacité de production, vérification des certifications et analyse de la régularité qualité. Cette approche de sourcing export au Maroc nous permet de proposer à chaque importateur des fournisseurs adaptés à ses volumes, ses exigences qualité et sa zone d'importation, qu'il s'agisse d'épices comme le paprika et le cumin ou d'huiles alimentaires."
+  },
+  {
+    question: "Intervenez-vous pour des importateurs en Afrique et en Europe ?",
+    answer: "Nous accompagnons des importateurs sur deux zones principales : l'Afrique de l'Ouest et l'Europe. Pour les importateurs ouest-africains, nous proposons un sourcing export adapté avec des conditions FOB ou CFR et une documentation conforme aux exigences douanières régionales. Pour les importateurs européens, nous assurons la conformité réglementaire UE : normes HACCP, limites LMR, certifications BRC/IFS et dossier technique complet. Chaque service est calibré selon les spécificités du marché cible et le profil du fournisseur marocain sélectionné."
+  },
+  {
+    question: "Quels types de produits agroalimentaires sourcez-vous ?",
+    answer: "Notre activité de sourcing export au Maroc se concentre sur deux familles de produits agroalimentaires à forte demande internationale : les épices (paprika, cumin, gingembre) et les huiles alimentaires (huile d'olive vierge extra, huile d'argan alimentaire). Ce positionnement volontairement ciblé nous permet de maîtriser les spécificités de chaque filière : saisonnalité, normes qualité, circuits de production et exigences documentaires. Nous ne dispersons pas notre expertise pour garantir un niveau de service optimal à chaque importateur."
+  },
+  {
+    question: "Comment est calculée votre rémunération ?",
+    answer: "Notre modèle de rémunération est transparent et adapté à chaque type de mission. Pour le sourcing Afrique de l'Ouest, nous appliquons un forfait initial de sourcing complété par une commission sur commande confirmée. Pour le service Europe, un forfait obligatoire couvre l'audit fournisseur et la constitution du dossier technique. Pour les missions stratégiques Premium, des honoraires fixes sont définis en amont du projet. Dans tous les cas, il n'y a aucun frais caché : les conditions sont formalisées avant tout engagement avec le fournisseur marocain."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+
 const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
@@ -63,6 +103,9 @@ const Services = () => {
         <link rel="canonical" href="https://www.sarrtradelink.com/services" />
         <script type="application/ld+json">
           {JSON.stringify(servicesSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
         </script>
       </Helmet>
       {/* Hero */}
@@ -348,6 +391,29 @@ const Services = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding bg-sage/30">
+        <div className="container-page">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-foreground mb-12 text-center">
+              Questions fréquentes sur nos services de sourcing export au Maroc
+            </h2>
+            <div className="space-y-8">
+              {faqData.map((item, i) => (
+                <div key={i} className="bg-card rounded-lg p-6 border border-border">
+                  <h3 className="text-lg font-heading font-semibold text-foreground mb-3">
+                    {item.question}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.answer}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
