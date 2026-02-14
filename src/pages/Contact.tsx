@@ -88,7 +88,7 @@ const Contact = () => {
       <Helmet>
         <title>Contact sourcing export Maroc – Demande de sourcing</title>
         <meta name="description" content="Contactez votre agent de sourcing export au Maroc. Formulaires adaptés par zone : Afrique de l'Ouest, Europe, missions Premium." />
-        <link rel="canonical" href="https://sarrtradelink.com/contact" />
+        <link rel="canonical" href="https://www.sarrtradelink.com/contact" />
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://sarrtradelink.com/sitemap.xml
+Sitemap: https://www.sarrtradelink.com/sitemap.xml

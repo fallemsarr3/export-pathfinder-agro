@@ -12,7 +12,7 @@ const ZonesExport = () => {
       <Helmet>
         <title>Zones export Maroc – Afrique de l'Ouest et Europe</title>
         <meta name="description" content="Sourcing export depuis le Maroc vers l'Afrique de l'Ouest et l'Europe. Approche adaptée à chaque zone, fournisseurs vérifiés, conformité documentaire." />
-        <link rel="canonical" href="https://sarrtradelink.com/zones-export" />
+        <link rel="canonical" href="https://www.sarrtradelink.com/zones-export" />
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">

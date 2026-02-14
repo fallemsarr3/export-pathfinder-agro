@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <Layout>
       <Helmet>
-        <link rel="canonical" href="https://sarrtradelink.com/" />
+        <link rel="canonical" href="https://www.sarrtradelink.com/" />
       </Helmet>
       
       {/* Hero Section */}
