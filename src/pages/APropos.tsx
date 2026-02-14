@@ -12,7 +12,7 @@ const APropos = () => {
       <Helmet>
         <title>À propos – Agent de sourcing agroalimentaire au Maroc</title>
         <meta name="description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés pour importateurs Afrique et Europe." />
-        <link rel="canonical" href="https://sarrtradelink.com/a-propos" />
+        <link rel="canonical" href="https://www.sarrtradelink.com/a-propos" />
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">

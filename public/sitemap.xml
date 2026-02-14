@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sarrtradelink.com/</loc>
+    <loc>https://www.sarrtradelink.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sarrtradelink.com/services</loc>
+    <loc>https://www.sarrtradelink.com/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sarrtradelink.com/zones-export</loc>
+    <loc>https://www.sarrtradelink.com/zones-export</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sarrtradelink.com/methode</loc>
+    <loc>https://www.sarrtradelink.com/methode</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sarrtradelink.com/a-propos</loc>
+    <loc>https://www.sarrtradelink.com/a-propos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sarrtradelink.com/contact</loc>
+    <loc>https://www.sarrtradelink.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

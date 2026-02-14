@@ -73,7 +73,7 @@ const Methode = () => {
       <Helmet>
         <title>Méthode de sourcing export – Process structuré</title>
         <meta name="description" content="Processus de sourcing export structuré et documenté. 6 étapes claires pour sécuriser vos importations d'épices et huiles alimentaires depuis le Maroc." />
-        <link rel="canonical" href="https://sarrtradelink.com/methode" />
+        <link rel="canonical" href="https://www.sarrtradelink.com/methode" />
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
