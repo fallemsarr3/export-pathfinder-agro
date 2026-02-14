@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
 import { CheckCircle, ArrowRight, Shield, FileCheck, Users } from "lucide-react";
@@ -7,7 +8,9 @@ import heroImage from "@/assets/hero-spices.jpg";
 const Index = () => {
   return (
     <Layout>
-      {/* SEO Meta Tags are handled via index.html and React Helmet would be added for dynamic pages */}
+      <Helmet>
+        <link rel="canonical" href="https://sarrtradelink.com/" />
+      </Helmet>
       
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center">

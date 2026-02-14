@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -84,6 +85,11 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <title>Contact sourcing export Maroc – Demande de sourcing</title>
+        <meta name="description" content="Contactez votre agent de sourcing export au Maroc. Formulaires adaptés par zone : Afrique de l'Ouest, Europe, missions Premium." />
+        <link rel="canonical" href="https://sarrtradelink.com/contact" />
+      </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
         <div className="container-page">
