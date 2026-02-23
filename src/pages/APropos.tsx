@@ -10,9 +10,42 @@ const APropos = () => {
   return (
     <Layout>
       <Helmet>
-        <title>À propos – Agent de sourcing agroalimentaire au Maroc</title>
+        <title>À propos – Agent de sourcing export agroalimentaire au Maroc</title>
         <meta name="description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés pour importateurs Afrique et Europe." />
         <link rel="canonical" href="https://www.sarrtradelink.com/a-propos" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Qu'est-ce qui différencie un agent de sourcing d'un négociant ou d'un trader ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Un négociant achète et revend des marchandises avec sa propre marge commerciale. Un agent de sourcing export au Maroc, en revanche, n'achète jamais la marchandise et n'intervient pas dans la transaction financière entre l'importateur et le fournisseur marocain. Notre rôle est de sécuriser le processus en amont : identification des fournisseurs, vérification de leur fiabilité, négociation des conditions et coordination documentaire export. Cette indépendance garantit une transparence totale sur les prix et les conditions d'achat." }
+              },
+              {
+                "@type": "Question",
+                "name": "Pourquoi vous êtes-vous spécialisé uniquement dans les épices et les huiles alimentaires ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Le choix de limiter notre périmètre aux épices et aux huiles alimentaires marocaines est une décision stratégique. En concentrant notre expertise sur ces deux familles de produits agroalimentaires, nous maîtrisons les circuits de production, les certifications qualité nécessaires, les normes réglementaires à l'export et les fournisseurs marocains de référence. Cette spécialisation nous permet d'offrir un niveau de service supérieur à celui d'un agent généraliste qui couvrirait des dizaines de catégories sans expertise approfondie." }
+              },
+              {
+                "@type": "Question",
+                "name": "Travaillez-vous avec tous les types d'importateurs ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nous accompagnons principalement des importateurs professionnels B2B : grossistes alimentaires, distributeurs régionaux, transformateurs agroalimentaires et centrales d'achat. Notre service de sourcing export au Maroc est calibré pour des volumes récurrents et des relations commerciales structurées. Les demandes ponctuelles ou les volumes très faibles ne correspondent pas à notre modèle opérationnel. Chaque mission démarre par une qualification du besoin pour vérifier la compatibilité entre le profil de l'importateur et notre périmètre d'intervention." }
+              },
+              {
+                "@type": "Question",
+                "name": "Comment garantissez-vous la fiabilité des fournisseurs marocains ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "La fiabilité des fournisseurs marocains est au cœur de notre valeur ajoutée. Chaque fournisseur intégré à notre réseau fait l'objet d'un processus de vérification rigoureux : évaluation de la capacité de production, contrôle des certifications qualité (HACCP, BRC, IFS selon le produit), analyse de l'historique d'export et vérification de la conformité documentaire. Nous effectuons des visites terrain et demandons des échantillons avant toute recommandation à un importateur. Aucun fournisseur n'est proposé sans validation préalable." }
+              },
+              {
+                "@type": "Question",
+                "name": "Quel est votre modèle de rémunération en tant qu'agent de sourcing ?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Notre modèle de rémunération est transparent et formalisé avant tout engagement. Selon le type de mission – sourcing Afrique de l'Ouest, sourcing conforme Europe ou mission stratégique Premium –, nous appliquons un forfait de sourcing initial qui couvre la recherche et la qualification des fournisseurs marocains. Une commission sur commande confirmée peut s'ajouter selon le périmètre de la mission. Il n'y a aucun frais caché : les conditions sont définies contractuellement avant le démarrage de toute opération de sourcing export." }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
@@ -22,7 +55,7 @@ const APropos = () => {
               Qui sommes-nous
             </span>
             <h1 className="text-primary-foreground mb-6">
-              À propos
+              À propos – Agent de sourcing export agroalimentaire au Maroc
             </h1>
             <p className="text-xl text-primary-foreground/80">
               Agent de sourcing export basé au Maroc, spécialisé dans l'agroalimentaire avec un focus sur les épices et huiles alimentaires.
@@ -171,6 +204,64 @@ const APropos = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section-padding bg-background">
+        <div className="container-page">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-foreground mb-10 text-center">
+              Questions fréquentes sur notre activité de sourcing
+            </h2>
+
+            <div className="space-y-8">
+              <div>
+                <h3 className="font-heading font-semibold text-foreground text-lg mb-3">
+                  Qu'est-ce qui différencie un agent de sourcing d'un négociant ou d'un trader ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Un négociant achète et revend des marchandises avec sa propre marge commerciale. Un agent de sourcing export au Maroc, en revanche, n'achète jamais la marchandise et n'intervient pas dans la transaction financière entre l'importateur et le fournisseur marocain. Notre rôle est de sécuriser le processus en amont : identification des fournisseurs, vérification de leur fiabilité, négociation des conditions et coordination documentaire export. Cette indépendance garantit une transparence totale sur les prix et les conditions d'achat.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-foreground text-lg mb-3">
+                  Pourquoi vous êtes-vous spécialisé uniquement dans les épices et les huiles alimentaires ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Le choix de limiter notre périmètre aux épices et aux huiles alimentaires marocaines est une décision stratégique. En concentrant notre expertise sur ces deux familles de produits agroalimentaires, nous maîtrisons les circuits de production, les certifications qualité nécessaires, les normes réglementaires à l'export et les fournisseurs marocains de référence. Cette spécialisation nous permet d'offrir un niveau de service supérieur à celui d'un agent généraliste qui couvrirait des dizaines de catégories sans expertise approfondie.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-foreground text-lg mb-3">
+                  Travaillez-vous avec tous les types d'importateurs ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Nous accompagnons principalement des importateurs professionnels B2B : grossistes alimentaires, distributeurs régionaux, transformateurs agroalimentaires et centrales d'achat. Notre service de sourcing export au Maroc est calibré pour des volumes récurrents et des relations commerciales structurées. Les demandes ponctuelles ou les volumes très faibles ne correspondent pas à notre modèle opérationnel. Chaque mission démarre par une qualification du besoin pour vérifier la compatibilité entre le profil de l'importateur et notre périmètre d'intervention.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-foreground text-lg mb-3">
+                  Comment garantissez-vous la fiabilité des fournisseurs marocains ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  La fiabilité des fournisseurs marocains est au cœur de notre valeur ajoutée. Chaque fournisseur intégré à notre réseau fait l'objet d'un processus de vérification rigoureux : évaluation de la capacité de production, contrôle des certifications qualité (HACCP, BRC, IFS selon le produit), analyse de l'historique d'export et vérification de la conformité documentaire. Nous effectuons des visites terrain et demandons des échantillons avant toute recommandation à un importateur. Aucun fournisseur n'est proposé sans validation préalable.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-foreground text-lg mb-3">
+                  Quel est votre modèle de rémunération en tant qu'agent de sourcing ?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Notre modèle de rémunération est transparent et formalisé avant tout engagement. Selon le type de mission – sourcing Afrique de l'Ouest, sourcing conforme Europe ou mission stratégique Premium –, nous appliquons un forfait de sourcing initial qui couvre la recherche et la qualification des fournisseurs marocains. Une commission sur commande confirmée peut s'ajouter selon le périmètre de la mission. Il n'y a aucun frais caché : les conditions sont définies contractuellement avant le démarrage de toute opération de sourcing export.
+                </p>
               </div>
             </div>
           </div>
