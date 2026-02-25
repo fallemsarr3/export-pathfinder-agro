@@ -74,6 +74,13 @@ const Methode = () => {
         <title>Méthode de sourcing export au Maroc – Process structuré</title>
         <meta name="description" content="Méthode de sourcing export structurée au Maroc. 6 étapes claires pour sécuriser vos importations d'épices et huiles alimentaires vers l'Afrique et l'Europe." />
         <link rel="canonical" href="https://www.sarrtradelink.com/methode" />
+        <meta property="og:title" content="Méthode de sourcing export au Maroc – Process structuré | Sarr Trade Link" />
+        <meta property="og:description" content="6 étapes claires pour sécuriser vos importations d'épices et huiles alimentaires depuis le Maroc." />
+        <meta property="og:url" content="https://www.sarrtradelink.com/methode" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Méthode de sourcing export au Maroc – Process structuré | Sarr Trade Link" />
+        <meta name="twitter:description" content="6 étapes claires pour sécuriser vos importations d'épices et huiles alimentaires depuis le Maroc." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

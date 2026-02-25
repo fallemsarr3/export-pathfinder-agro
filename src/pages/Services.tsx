@@ -101,6 +101,13 @@ const Services = () => {
         <title>Services sourcing Maroc – Afrique, Europe, Premium</title>
         <meta name="description" content="Agent de sourcing export Maroc : services adaptés pour importateurs Afrique de l'Ouest, Europe et missions stratégiques Premium. Fournisseurs vérifiés." />
         <link rel="canonical" href="https://www.sarrtradelink.com/services" />
+        <meta property="og:title" content="Services sourcing Maroc – Afrique, Europe, Premium | Sarr Trade Link" />
+        <meta property="og:description" content="Agent de sourcing export Maroc : services adaptés pour importateurs Afrique de l'Ouest, Europe et missions stratégiques Premium." />
+        <meta property="og:url" content="https://www.sarrtradelink.com/services" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Services sourcing Maroc – Afrique, Europe, Premium | Sarr Trade Link" />
+        <meta name="twitter:description" content="Agent de sourcing export Maroc : services adaptés pour importateurs Afrique de l'Ouest, Europe et missions stratégiques Premium." />
         <script type="application/ld+json">
           {JSON.stringify(servicesSchema)}
         </script>
