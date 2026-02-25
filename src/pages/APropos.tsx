@@ -13,6 +13,13 @@ const APropos = () => {
         <title>À propos – Agent de sourcing export agroalimentaire au Maroc</title>
         <meta name="description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés pour importateurs Afrique et Europe." />
         <link rel="canonical" href="https://www.sarrtradelink.com/a-propos" />
+        <meta property="og:title" content="À propos – Agent de sourcing export agroalimentaire au Maroc | Sarr Trade Link" />
+        <meta property="og:description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés." />
+        <meta property="og:url" content="https://www.sarrtradelink.com/a-propos" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="À propos – Agent de sourcing export agroalimentaire au Maroc | Sarr Trade Link" />
+        <meta name="twitter:description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

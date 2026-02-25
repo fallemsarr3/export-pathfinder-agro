@@ -89,6 +89,13 @@ const Contact = () => {
         <title>Contact sourcing export Maroc – Demande de sourcing</title>
         <meta name="description" content="Contactez votre agent de sourcing export au Maroc. Formulaires adaptés par zone : Afrique de l'Ouest, Europe, missions Premium." />
         <link rel="canonical" href="https://www.sarrtradelink.com/contact" />
+        <meta property="og:title" content="Contact sourcing export Maroc – Demande de sourcing | Sarr Trade Link" />
+        <meta property="og:description" content="Contactez votre agent de sourcing export au Maroc. Formulaires adaptés par zone." />
+        <meta property="og:url" content="https://www.sarrtradelink.com/contact" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact sourcing export Maroc – Demande de sourcing | Sarr Trade Link" />
+        <meta name="twitter:description" content="Contactez votre agent de sourcing export au Maroc. Formulaires adaptés par zone." />
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">

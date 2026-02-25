@@ -13,6 +13,13 @@ const ZonesExport = () => {
         <title>Zones export Maroc – Afrique de l'Ouest et Europe</title>
         <meta name="description" content="Sourcing export depuis le Maroc vers l'Afrique de l'Ouest et l'Europe. Approche adaptée à chaque zone, fournisseurs vérifiés, conformité documentaire." />
         <link rel="canonical" href="https://www.sarrtradelink.com/zones-export" />
+        <meta property="og:title" content="Zones export Maroc – Afrique de l'Ouest et Europe | Sarr Trade Link" />
+        <meta property="og:description" content="Sourcing export depuis le Maroc vers l'Afrique de l'Ouest et l'Europe. Fournisseurs vérifiés, conformité documentaire." />
+        <meta property="og:url" content="https://www.sarrtradelink.com/zones-export" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zones export Maroc – Afrique de l'Ouest et Europe | Sarr Trade Link" />
+        <meta name="twitter:description" content="Sourcing export depuis le Maroc vers l'Afrique de l'Ouest et l'Europe. Fournisseurs vérifiés, conformité documentaire." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -28,21 +35,6 @@ const ZonesExport = () => {
                 "name": "Le sourcing export vers l'Europe est-il conforme aux normes UE ?",
                 "acceptedAnswer": { "@type": "Answer", "text": "Oui. Chaque fournisseur marocain que nous référençons pour le marché européen est vérifié sur sa capacité à répondre aux exigences réglementaires de l'Union européenne : traçabilité lot par lot, conformité HACCP, fiches techniques détaillées, bulletins d'analyse de laboratoire accrédité et respect des limites maximales de résidus (LMR). Nous contrôlons l'ensemble du dossier documentaire avant toute expédition, afin de garantir une conformité totale aux standards du marché européen." }
               },
-              {
-                "@type": "Question",
-                "name": "Comment sélectionnez-vous les fournisseurs marocains ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Notre processus de sélection repose sur une vérification terrain approfondie. Chaque fournisseur marocain est évalué sur sa capacité de production, ses certifications qualité (ISO, BRC, IFS selon le produit), la traçabilité de ses matières premières, et sa conformité documentaire à l'export. Nous réalisons des visites d'usine, demandons des échantillons et vérifions les références commerciales avant d'intégrer un fournisseur dans notre réseau de sourcing." }
-              },
-              {
-                "@type": "Question",
-                "name": "Accompagnez-vous les importateurs africains débutants ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Oui. Notre service de sourcing export depuis le Maroc est conçu pour accompagner aussi bien les importateurs expérimentés que ceux qui débutent dans l'approvisionnement international. Pour les acheteurs africains qui découvrent le sourcing depuis le Maroc, nous proposons un accompagnement complet : identification des fournisseurs adaptés, négociation des conditions, préparation des documents export (certificat d'origine, phytosanitaire) et coordination logistique FOB ou CFR." }
-              },
-              {
-                "@type": "Question",
-                "name": "Pourquoi passer par un agent de sourcing au Maroc plutôt que traiter directement avec un fournisseur ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Traiter directement avec un fournisseur marocain sans intermédiaire expose l'importateur à plusieurs risques : qualité non conforme, retards de livraison, documentation incomplète ou litiges commerciaux difficiles à résoudre à distance. Un agent de sourcing export au Maroc comme Sarr Trade Link sécurise l'opération en vérifiant les fournisseurs en amont, en contrôlant la qualité et la conformité documentaire, et en assurant la coordination entre toutes les parties prenantes." }
-              }
             ]
           })}
         </script>
