@@ -10,7 +10,9 @@ const ServicesOverview = () => (
           Services adaptés à votre zone d'importation
         </h2>
         <p className="text-muted-foreground text-lg">
-          Chaque marché a ses propres exigences. Nos services sont structurés selon votre zone géographique et votre niveau de maturité.
+          Chaque marché a ses propres exigences. Nos services sont structurés selon votre{" "}
+          <Link to="/zones-export" className="text-secondary underline hover:no-underline">zone géographique</Link>{" "}
+          et votre niveau de maturité.
         </p>
       </div>
 
@@ -26,7 +28,10 @@ const ServicesOverview = () => (
               Sourcing Maroc → Afrique
             </h3>
             <p className="text-muted-foreground mb-6">
-              Approvisionnement régulier pour importateurs alimentaires, grossistes et distributeurs. Volumes flexibles et exigences documentaires maîtrisées.
+              Approvisionnement régulier en{" "}
+              <Link to="/produits/cumin-maroc" className="text-secondary hover:underline">cumin</Link>,{" "}
+              <Link to="/produits/gingembre-poudre" className="text-secondary hover:underline">gingembre</Link>{" "}
+              et autres épices pour importateurs alimentaires et grossistes.
             </p>
             <ul className="space-y-2 mb-8 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
@@ -59,7 +64,11 @@ const ServicesOverview = () => (
               Sourcing conforme Maroc → Europe
             </h3>
             <p className="text-muted-foreground mb-6">
-              Conformité UE, traçabilité et maîtrise du risque fournisseur pour importateurs européens structurés.
+              Conformité UE pour{" "}
+              <Link to="/produits/safran-maroc" className="text-secondary hover:underline">safran</Link>,{" "}
+              <Link to="/produits/huile-argan-alimentaire" className="text-secondary hover:underline">huile d'argan</Link>{" "}
+              et <Link to="/produits/huile-olive-maroc" className="text-secondary hover:underline">huile d'olive</Link>.
+              Traçabilité et maîtrise du risque fournisseur.
             </p>
             <ul className="space-y-2 mb-8 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
@@ -72,7 +81,7 @@ const ServicesOverview = () => (
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                Process strict avant commande
+                <Link to="/methode" className="hover:underline">Process strict avant commande</Link>
               </li>
             </ul>
             <Button asChild variant="europe" className="w-full">
@@ -92,7 +101,10 @@ const ServicesOverview = () => (
               Sourcing stratégique
             </h3>
             <p className="text-muted-foreground mb-6">
-              Missions cadrées pour gros importateurs, industriels et distributeurs structurés. Réduction du risque fournisseur.
+              Missions cadrées pour gros importateurs de{" "}
+              <Link to="/produits/ras-el-hanout" className="text-secondary hover:underline">ras el hanout</Link>,{" "}
+              <Link to="/produits/melanges-epices" className="text-secondary hover:underline">mélanges d'épices</Link>{" "}
+              et industriels. Réduction du risque fournisseur.
             </p>
             <ul className="space-y-2 mb-8 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">

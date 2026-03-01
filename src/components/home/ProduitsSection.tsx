@@ -1,5 +1,19 @@
-const epices = ["Cumin", "Ras el Hanout", "Gingembre", "Paprika", "Coriandre"];
-const huiles = ["Huile d'Argan Alimentaire", "Huile d'Olive Extra-Vierge"];
+import { Link } from "react-router-dom";
+
+const epices = [
+  { name: "Safran du Maroc", href: "/produits/safran-maroc" },
+  { name: "Cumin du Maroc", href: "/produits/cumin-maroc" },
+  { name: "Ras el Hanout", href: "/produits/ras-el-hanout" },
+  { name: "Gingembre en poudre", href: "/produits/gingembre-poudre" },
+  { name: "Paprika marocain", href: "/produits/paprika-marocain" },
+  { name: "Coriandre", href: "/produits/coriandre" },
+  { name: "Mélanges d'épices", href: "/produits/melanges-epices" },
+];
+
+const huiles = [
+  { name: "Huile d'Argan Alimentaire", href: "/produits/huile-argan-alimentaire" },
+  { name: "Huile d'Olive Extra-Vierge", href: "/produits/huile-olive-maroc" },
+];
 
 const ProduitsSection = () => (
   <section className="section-padding bg-background">
@@ -19,10 +33,14 @@ const ProduitsSection = () => (
                 Épices
               </h3>
               <div className="flex flex-wrap gap-2">
-                {epices.map((spice) => (
-                  <span key={spice} className="px-4 py-2 bg-paprika/10 text-paprika rounded-full text-sm font-medium">
-                    {spice}
-                  </span>
+                {epices.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="px-4 py-2 bg-paprika/10 text-paprika rounded-full text-sm font-medium hover:bg-paprika/20 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -32,10 +50,14 @@ const ProduitsSection = () => (
                 Huiles alimentaires
               </h3>
               <div className="flex flex-wrap gap-2">
-                {huiles.map((oil) => (
-                  <span key={oil} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                    {oil}
-                  </span>
+                {huiles.map((item) => (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -68,6 +90,12 @@ const ProduitsSection = () => (
             <p className="text-foreground font-medium">
               Nous accompagnons les importateurs dans leurs décisions de sourcing avec un process clair et documenté.
             </p>
+            <Link
+              to="/methode"
+              className="inline-block mt-3 text-sm text-secondary font-medium hover:underline"
+            >
+              Découvrir notre méthode →
+            </Link>
           </div>
         </div>
       </div>
