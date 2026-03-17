@@ -271,7 +271,7 @@ const ZonesExport = () => {
                   </p>
                 </div>
 
-                <Button asChild variant="secondary" className="w-full text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant">
+                <Button asChild variant="secondary" className="w-full mt-auto text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant">
                   <Link to="/contact?type=premium">
                     Demander un sourcing pour le Canada
                     <ArrowRight className="ml-2 h-4 w-4" />
