@@ -60,6 +60,12 @@ const App = () => {
             <Route path="/produits/melanges-epices" element={<MelangesEpices />} />
             <Route path="/produits/huile-argan-alimentaire" element={<HuileArgan />} />
             <Route path="/produits/huile-olive-maroc" element={<HuileOlive />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/comment-importer-epices-maroc" element={<ImporterEpicesMaroc />} />
+            <Route path="/blog/verifier-fournisseur-epices-maroc" element={<VerifierFournisseurMaroc />} />
+            <Route path="/blog/reglementation-import-alimentaire-ue-maroc" element={<ReglementationImportUE />} />
+            <Route path="/blog/safran-marocain-vs-iranien-comparatif" element={<SafranComparatif />} />
+            <Route path="/blog/huile-argan-alimentaire-guide-importateur" element={<HuileArganGuide />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/reset-password" element={<ResetPassword />} />
