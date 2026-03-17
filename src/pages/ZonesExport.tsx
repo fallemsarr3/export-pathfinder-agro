@@ -49,10 +49,10 @@ const ZonesExport = () => {
               Couverture géographique
             </span>
             <h1 className="text-primary-foreground mb-6">
-              Sourcing export depuis le Maroc vers l'Afrique et l'Europe
+              Sourcing export depuis le Maroc vers l'Afrique, l'Europe et le Canada
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              Agent de sourcing export au Maroc pour l'Afrique de l'Ouest et l'Europe. Deux zones, deux approches adaptées aux exigences locales.
+              Agent de sourcing export au Maroc pour l'Afrique de l'Ouest, l'Europe et le Canada. Trois zones, trois approches adaptées aux exigences locales.
             </p>
             <p className="text-primary-foreground/70 mt-6 leading-relaxed max-w-2xl">
               Sarr Trade Link est un agent de sourcing export basé au Maroc, spécialisé dans les épices, les huiles alimentaires et les produits agroalimentaires à forte valeur ajoutée. Notre rôle est de connecter les importateurs africains et européens avec des fournisseurs marocains rigoureusement sélectionnés. Contrairement à un négociant ou un trader, nous n'achetons ni ne revendons de marchandise : nous intervenons comme intermédiaire indépendant, chargé de la recherche de fournisseurs, de la vérification qualité, du contrôle documentaire et de la coordination logistique. Notre mission est de sécuriser chaque opération d'approvisionnement en réduisant les risques liés au sourcing international, tout en garantissant la conformité aux exigences réglementaires de chaque zone de destination – <Link to="/services#afrique" className="text-primary-foreground underline">Afrique de l'Ouest</Link> comme <Link to="/services#europe" className="text-primary-foreground underline">Union européenne</Link>.
