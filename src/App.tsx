@@ -26,6 +26,12 @@ import Coriandre from "./pages/products/Coriandre";
 import MelangesEpices from "./pages/products/MelangesEpices";
 import HuileArgan from "./pages/products/HuileArgan";
 import HuileOlive from "./pages/products/HuileOlive";
+import Blog from "./pages/Blog";
+import ImporterEpicesMaroc from "./pages/blog/ImporterEpicesMaroc";
+import VerifierFournisseurMaroc from "./pages/blog/VerifierFournisseurMaroc";
+import ReglementationImportUE from "./pages/blog/ReglementationImportUE";
+import SafranComparatif from "./pages/blog/SafranComparatif";
+import HuileArganGuide from "./pages/blog/HuileArganGuide";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
