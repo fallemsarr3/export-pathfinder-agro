@@ -307,7 +307,7 @@ const ZonesExport = () => {
                 {
                   icon: Shield,
                   title: "Cadre réglementaire favorable",
-                  description: "Accord d'association UE-Maroc, accords bilatéraux africains et procédures douanières maîtrisées."
+                  description: "Accord d'association UE-Maroc, accord de libre-échange Maroc-Canada (en négociation), accords bilatéraux africains et procédures douanières maîtrisées."
                 }
               ].map((item, i) => (
                 <div key={i} className="text-left bg-card border border-border rounded-lg p-6">
