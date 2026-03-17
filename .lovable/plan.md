@@ -1,79 +1,60 @@
 
 
-# Canonicalisation SEO : passage de `www` vers `sarrtradelink.com`
+# Plan : Améliorations SEO & CTR basées sur les données GSC
 
-## Diagnostic actuel
-
-| Element | URL actuelle | URL cible |
-|---------|-------------|-----------|
-| Canonical (index.html) | `https://www.sarrtradelink.com/` | `https://sarrtradelink.com/` |
-| Schema.org Organization | `https://www.sarrtradelink.com` | `https://sarrtradelink.com` |
-| Sitemap.xml (6 URLs) | Toutes en `www.` | Toutes sans `www` |
-| Robots.txt (sitemap) | `www.sarrtradelink.com` | `sarrtradelink.com` |
-| Pages avec Helmet | Services, ZonesExport (sans canonical) | Ajouter canonical |
-| Pages sans Helmet | Index, Methode, APropos, Contact | Ajouter Helmet + canonical |
-
-## Modifications prevues
-
-### 1. index.html - Mettre a jour la canonical et le Schema.org
-
-- Changer `<link rel="canonical" href="https://www.sarrtradelink.com/" />` vers `https://sarrtradelink.com/`
-- Changer l'URL dans le JSON-LD Organization de `https://www.sarrtradelink.com` vers `https://sarrtradelink.com`
-
-### 2. Ajouter une balise canonical sur chaque page via Helmet
-
-Les 6 pages publiques recevront chacune leur canonical exacte :
-
-| Page | Canonical |
-|------|-----------|
-| Index (`/`) | `https://sarrtradelink.com/` |
-| Services (`/services`) | `https://sarrtradelink.com/services` |
-| ZonesExport (`/zones-export`) | `https://sarrtradelink.com/zones-export` |
-| Methode (`/methode`) | `https://sarrtradelink.com/methode` |
-| APropos (`/a-propos`) | `https://sarrtradelink.com/a-propos` |
-| Contact (`/contact`) | `https://sarrtradelink.com/contact` |
-
-**Pages a modifier :**
-- **Index.tsx** : ajouter Helmet avec canonical
-- **Services.tsx** : ajouter canonical dans le Helmet existant
-- **ZonesExport.tsx** : ajouter canonical dans le Helmet existant
-- **Methode.tsx** : ajouter Helmet avec canonical (+ title/description)
-- **APropos.tsx** : ajouter Helmet avec canonical (+ title/description)
-- **Contact.tsx** : ajouter Helmet avec canonical (+ title/description)
-
-### 3. Sitemap.xml - Supprimer le `www`
-
-Remplacer toutes les 6 URLs de `https://www.sarrtradelink.com/...` vers `https://sarrtradelink.com/...`
-
-### 4. Robots.txt - Supprimer le `www`
-
-Changer la ligne Sitemap vers `https://sarrtradelink.com/sitemap.xml`
-
-### 5. Redirections 301
-
-Les redirections 301 (http vers https, www vers non-www) ne peuvent pas etre gerees dans le code de l'application. Elles doivent etre configurees au niveau de :
-- **Votre fournisseur DNS** (Cloudflare, OVH, etc.) : regle de redirection "www -> non-www"
-- **Ou votre registrar de domaine** : redirection de type dans les parametres DNS
-
-Apres publication, vous devrez configurer cette redirection dans les parametres de votre domaine.
-
-### 6. Aucun noindex
-
-Toutes les pages resteront indexables. La balise `<meta name="robots" content="index, follow" />` est deja presente dans index.html.
+Basé sur l'analyse des statistiques Google Search Console (54 impressions, 1 clic, faible visibilité en Europe), voici les améliorations concrètes a apporter.
 
 ---
 
-## Section technique
+## 1. Optimiser les meta titles et descriptions pour le CTR
 
-**Fichiers modifies :**
-- `index.html` (canonical + Schema.org URL)
-- `public/sitemap.xml` (6 URLs)
-- `public/robots.txt` (1 URL)
-- `src/pages/Index.tsx` (ajout Helmet)
-- `src/pages/Services.tsx` (ajout canonical)
-- `src/pages/ZonesExport.tsx` (ajout canonical)
-- `src/pages/Methode.tsx` (ajout Helmet complet)
-- `src/pages/APropos.tsx` (ajout Helmet complet)
-- `src/pages/Contact.tsx` (ajout Helmet complet)
+Réécrire les balises `<title>` et `meta description` de toutes les pages pour inclure des elements declencheurs de clic (devis sous 48h, fournisseurs verifies, etc.).
 
-**Total : 9 fichiers**
+**Pages concernees et nouvelles meta :**
+
+| Page | Nouveau Title | Nouvelle Description |
+|------|--------------|---------------------|
+| **Accueil** (index.html + Index.tsx) | `Agent Sourcing Maroc — Épices & Huiles Export B2B ✓ Devis 48h` | `Agent de sourcing export Maroc. Épices et huiles alimentaires certifiées pour importateurs Europe & Afrique. Fournisseurs vérifiés. Devis gratuit sous 48h.` |
+| **Services** | `Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit` | `Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h.` |
+| **Zones Export** | `Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B` | `Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié.` |
+| **Méthode** | `Méthode Sourcing Maroc — 6 Étapes, Traçabilité Complète` | `Process structuré en 6 étapes pour sécuriser vos imports d'épices et huiles depuis le Maroc. Transparence totale, livrables définis.` |
+| **À propos** | `À Propos — Agent Sourcing Agroalimentaire Maroc | Sarr Trade Link` | `Agent de sourcing export basé au Maroc. Spécialiste épices et huiles alimentaires B2B. Fournisseurs vérifiés, conformité UE garantie.` |
+| **Contact** | `Demander un Devis Gratuit — Sourcing Épices & Huiles Maroc` | `Contactez Sarr Trade Link pour un devis sourcing gratuit sous 48h. Épices et huiles alimentaires marocaines certifiées pour l'export B2B.` |
+
+Les pages produits garderont leur format existant (deja optimise).
+
+**Fichiers modifies :** `index.html`, `src/pages/Index.tsx`, `src/pages/Services.tsx`, `src/pages/ZonesExport.tsx`, `src/pages/Methode.tsx`, `src/pages/APropos.tsx`, `src/pages/Contact.tsx`
+
+---
+
+## 2. Ajouter les balises hreflang
+
+Ajouter dans `index.html` les balises hreflang pour indiquer a Google les marches cibles :
+- `fr` (default) pour les marches francophones
+- `x-default` comme fallback
+
+Ajouter egalement via React Helmet les hreflang sur chaque page individuellement.
+
+**Fichiers modifies :** `index.html`, composant `Layout.tsx` (ajout global des hreflang)
+
+---
+
+## 3. Ajouter des meta geo-targeting
+
+Ajouter des meta tags de ciblage geographique dans `index.html` :
+```html
+<meta name="geo.region" content="MA" />
+<meta name="geo.placename" content="Morocco" />
+```
+
+**Fichier modifie :** `index.html`
+
+---
+
+## Resume des modifications
+
+- **6 pages** : meta title + description reecrites pour maximiser le CTR
+- **index.html** : hreflang + geo-targeting ajoutes
+- **Layout.tsx** : hreflang dynamique par page
+- Aucun changement structurel ou de contenu visible sur le site
+
