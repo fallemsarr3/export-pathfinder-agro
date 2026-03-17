@@ -3,7 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
-export type FormType = "afrique" | "europe" | "premium";
+export type FormType = "afrique" | "europe" | "canada" | "premium";
 
 // Validation schemas
 const baseSchema = z.object({
