@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MapPin, Building2, Crown } from "lucide-react";
+import { MapPin, Building2, Crown, Leaf } from "lucide-react";
 import { useFormSubmission, FormType } from "@/hooks/useFormSubmission";
 
 const Contact = () => {
@@ -17,7 +17,7 @@ const Contact = () => {
 
   useEffect(() => {
     const type = searchParams.get("type") as FormType;
-    if (type && ["afrique", "europe", "premium"].includes(type)) {
+    if (type && ["afrique", "europe", "canada", "premium"].includes(type)) {
       setActiveForm(type);
     }
   }, [searchParams]);
@@ -59,6 +59,24 @@ const Contact = () => {
     if (success) form.reset();
   };
 
+  const handleCanadaSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    const success = await submitForm("canada", {
+      company_name: formData.get("ca-entreprise") as string,
+      contact_name: formData.get("ca-nom") as string,
+      email: formData.get("ca-email") as string,
+      products: formData.get("ca-produit") as string,
+      country: formData.get("ca-province") as string,
+      volume: formData.get("ca-volume") as string,
+      message: formData.get("ca-message") as string,
+    });
+
+    if (success) form.reset();
+  };
+
   const handlePremiumSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -80,6 +98,7 @@ const Contact = () => {
   const formTabs = [
     { id: "afrique" as FormType, label: "Afrique de l'Ouest", icon: MapPin },
     { id: "europe" as FormType, label: "Europe", icon: Building2 },
+    { id: "canada" as FormType, label: "Canada", icon: Leaf },
     { id: "premium" as FormType, label: "Premium", icon: Crown },
   ];
 
@@ -344,6 +363,113 @@ const Contact = () => {
               </div>
             )}
 
+            {/* Canada Form */}
+            {activeForm === "canada" && (
+              <div className="bg-card border border-border rounded-lg overflow-hidden">
+                <div className="h-2 bg-secondary" />
+                <div className="p-8">
+                  <div className="mb-8">
+                    <h2 className="text-2xl font-heading font-semibold text-foreground mb-2">
+                      Demande de sourcing conforme – Canada
+                    </h2>
+                    <p className="text-muted-foreground">
+                      Formulaire pour importateurs canadiens avec exigences ACIA. Consultez <Link to="/services#canada" className="text-secondary-foreground hover:underline">notre service Canada</Link> et les <Link to="/zones-export#canada" className="text-secondary-foreground hover:underline">spécificités de ce marché</Link>.
+                    </p>
+                  </div>
+
+                  <form onSubmit={handleCanadaSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="ca-entreprise">Nom de l'entreprise *</Label>
+                        <Input name="ca-entreprise" id="ca-entreprise" required placeholder="Votre entreprise" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="ca-province">Province / Pays *</Label>
+                        <Input name="ca-province" id="ca-province" required placeholder="Ex: Ontario, Québec" />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="ca-site">Site web de l'entreprise *</Label>
+                      <Input name="ca-site" id="ca-site" type="url" required placeholder="https://www.votreentreprise.ca" />
+                      <p className="text-xs text-muted-foreground">
+                        Un site web professionnel est requis pour les demandes Canada.
+                      </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="ca-nom">Nom et fonction *</Label>
+                        <Input name="ca-nom" id="ca-nom" required placeholder="Votre nom et fonction" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="ca-email">Email professionnel *</Label>
+                        <Input name="ca-email" id="ca-email" type="email" required placeholder="email@entreprise.ca" />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="ca-produit">Produit recherché *</Label>
+                        <Input name="ca-produit" id="ca-produit" required placeholder="Ex: Huile d'argan, Safran" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="ca-volume">Volume annuel estimé *</Label>
+                        <Input name="ca-volume" id="ca-volume" required placeholder="Ex: 20 tonnes/an" />
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      <Label>Documents requis *</Label>
+                      <div className="grid md:grid-cols-2 gap-3">
+                        {[
+                          "Conformité ACIA (CFIA)",
+                          "Étiquetage bilingue FR/EN",
+                          "Certificats d'analyse",
+                          "Certificats d'origine",
+                          "Certifications bio",
+                          "Fiches techniques produit"
+                        ].map((doc) => (
+                          <div key={doc} className="flex items-center space-x-2">
+                            <Checkbox id={`ca-doc-${doc}`} />
+                            <Label htmlFor={`ca-doc-${doc}`} className="text-sm font-normal cursor-pointer">
+                              {doc}
+                            </Label>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-3 p-4 bg-sage/30 rounded-lg">
+                      <Checkbox id="ca-forfait" required />
+                      <div className="space-y-1">
+                        <Label htmlFor="ca-forfait" className="font-medium cursor-pointer">
+                          J'accepte le forfait de sourcing Canada *
+                        </Label>
+                        <p className="text-sm text-muted-foreground">
+                          Le forfait de sourcing Canada couvre l'analyse de conformité ACIA et la documentation bilingue.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="ca-message">Message complémentaire</Label>
+                      <Textarea
+                        name="ca-message"
+                        id="ca-message"
+                        rows={4}
+                        placeholder="Précisions sur vos exigences réglementaires canadiennes..."
+                      />
+                    </div>
+
+                    <Button type="submit" variant="secondary" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? "Envoi en cours..." : "Envoyer la demande Canada"}
+                    </Button>
+                  </form>
+                </div>
+              </div>
+            )}
+
             {/* Premium Form */}
             {activeForm === "premium" && (
               <div className="bg-card border border-border rounded-lg overflow-hidden">
@@ -450,14 +576,14 @@ const Contact = () => {
       {/* Info Section */}
       <section className="section-padding bg-muted">
         <div className="container-page">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-foreground mb-6">
               Pourquoi des formulaires différents ?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Chaque marché a ses propres exigences. Les informations demandées sont adaptées pour qualifier précisément votre besoin et vous proposer un accompagnement sur mesure.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
               <div className="bg-card border border-border rounded-lg p-6">
                 <div className="w-2 h-2 rounded-full bg-paprika mb-3" />
                 <h3 className="font-heading font-semibold text-foreground mb-2">Afrique de l'Ouest</h3>
@@ -470,6 +596,13 @@ const Contact = () => {
                 <h3 className="font-heading font-semibold text-foreground mb-2">Europe</h3>
                 <p className="text-muted-foreground text-sm">
                   Accent sur la conformité UE, la documentation technique et les certifications requises.
+                </p>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <div className="w-2 h-2 rounded-full bg-secondary mb-3" />
+                <h3 className="font-heading font-semibold text-foreground mb-2">Canada</h3>
+                <p className="text-muted-foreground text-sm">
+                  Accent sur la conformité ACIA et l'étiquetage bilingue français/anglais obligatoire.
                 </p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6">

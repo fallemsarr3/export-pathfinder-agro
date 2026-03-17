@@ -1,0 +1,1 @@
+ALTER TYPE public.form_type ADD VALUE 'canada';
