@@ -373,7 +373,7 @@ const Contact = () => {
                       Demande de sourcing conforme – Canada
                     </h2>
                     <p className="text-muted-foreground">
-                      Formulaire pour importateurs canadiens avec exigences ACIA. Consultez <Link to="/services#canada" className="text-secondary-foreground hover:underline">notre service Canada</Link> et les <Link to="/zones-export#canada" className="text-secondary-foreground hover:underline">spécificités de ce marché</Link>.
+                      Formulaire pour importateurs canadiens avec exigences ACIA. Consultez <Link to="/services#canada" className="text-secondary hover:underline font-medium">notre service Canada</Link> et les <Link to="/zones-export#canada" className="text-secondary hover:underline font-medium">spécificités de ce marché</Link>.
                     </p>
                   </div>
 
