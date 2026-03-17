@@ -331,8 +331,100 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Canada Service */}
+      <section id="canada" className="section-padding bg-background scroll-mt-24">
+        <div className="container-page">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-4">
+                Service Canada
+              </span>
+              <h2 className="text-foreground mb-6">
+                Sourcing conforme ACIA depuis le Maroc → Canada
+              </h2>
+              
+              <div className="mb-8">
+                <h3 className="text-lg font-heading font-semibold text-foreground mb-3">
+                  Cible
+                </h3>
+                <p className="text-muted-foreground">
+                  Importateurs alimentaires canadiens, distributeurs et entreprises de transformation recherchant un approvisionnement en épices et huiles marocaines conformes aux normes de l'Agence canadienne d'inspection des aliments (ACIA / CFIA).
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-lg font-heading font-semibold text-foreground mb-3">
+                  Problèmes que nous résolvons
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    "Conformité ACIA (CFIA) : exigences sanitaires, limites de contaminants, additifs autorisés",
+                    "Étiquetage bilingue français/anglais obligatoire selon la réglementation canadienne",
+                    "Logistique longue distance : coordination CIF/DAP vers Montréal ou Toronto",
+                    "Méconnaissance des fournisseurs marocains fiables et certifiés pour le marché canadien"
+                  ].map((problem, i) => (
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                      <AlertTriangle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      {problem}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-secondary/5 rounded-lg p-8 border border-secondary/20">
+              <h3 className="text-lg font-heading font-semibold text-foreground mb-6">
+                Prestations incluses
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {[
+                  "Sourcing et vérification terrain de fournisseurs marocains conformes aux standards ACIA",
+                  "Préparation du dossier documentaire : certificats sanitaires, fiches techniques bilingues",
+                  "Coordination de l'étiquetage bilingue conforme à la Loi sur les aliments et drogues",
+                  "Suivi logistique CIF/DAP vers les ports de Montréal et Toronto"
+                ].map((service, i) => (
+                  <li key={i} className="flex items-start gap-3 text-foreground">
+                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                    {service}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mb-8">
+                <h4 className="font-semibold text-foreground mb-2">Produits concernés</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Huile d'argan alimentaire", "Huile d'olive", "Safran", "Cumin", "Ras el Hanout", "Épices en mélange"].map((product) => (
+                    <span key={product} className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">
+                      {product}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-8 p-4 bg-card rounded-lg border border-border">
+                <h4 className="font-semibold text-foreground mb-2">Rémunération</h4>
+                <p className="text-muted-foreground text-sm">
+                  Forfait de sourcing couvrant la qualification fournisseur et la conformité ACIA + commission sur commande confirmée. Conditions transparentes formalisées avant engagement.
+                </p>
+              </div>
+
+              <p className="text-sm text-muted-foreground mb-6">
+                Découvrez notre <Link to="/methode" className="text-secondary hover:underline">méthodologie de travail</Link> et les <Link to="/zones-export#canada" className="text-secondary hover:underline">spécificités du marché canadien</Link>.
+              </p>
+
+              <Button asChild variant="secondary" className="w-full text-base font-semibold px-6 py-3 h-auto">
+                <Link to="/contact?type=canada">
+                  Demander un sourcing Canada
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Premium Service */}
-      <section id="premium" className="section-padding bg-background scroll-mt-24">
+      <section id="premium" className="section-padding bg-sage/30 scroll-mt-24">
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>

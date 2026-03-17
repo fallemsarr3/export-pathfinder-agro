@@ -90,6 +90,42 @@ const ServicesOverview = () => (
           </div>
         </div>
 
+        {/* Canada */}
+        <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-elegant transition-all duration-300">
+          <div className="h-2 bg-secondary" />
+          <div className="p-8">
+            <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary rounded-full text-xs font-medium mb-4">
+              Canada
+            </span>
+            <h3 className="text-xl font-heading font-semibold text-foreground mb-3">
+              Sourcing Maroc → Canada
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Conformité ACIA pour{" "}
+              <Link to="/produits/huile-argan-alimentaire" className="text-secondary hover:underline">huile d'argan</Link>,{" "}
+              <Link to="/produits/safran-maroc" className="text-secondary hover:underline">safran</Link>{" "}
+              et épices. Étiquetage bilingue et logistique CIF.
+            </p>
+            <ul className="space-y-2 mb-8 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                Conformité ACIA (CFIA)
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                Étiquetage bilingue FR/EN
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                Logistique CIF/DAP
+              </li>
+            </ul>
+            <Button asChild variant="secondary" className="w-full">
+              <Link to="/contact?type=canada">Lancer un sourcing Canada</Link>
+            </Button>
+          </div>
+        </div>
+
         {/* Premium */}
         <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-elegant transition-all duration-300">
           <div className="h-2 bg-spice" />
