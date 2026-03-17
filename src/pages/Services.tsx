@@ -114,17 +114,17 @@ const Services = () => {
     <Layout>
       <Helmet>
         <title>Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit</title>
-        <meta name="description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h." />
-        <link rel="canonical" href="https://www.sarrtradelink.com/services" />
-        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/services" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/services" />
+        <meta name="description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE & ACIA. Services adaptés Afrique, Europe & Canada. Devis personnalisé sous 48h." />
+        <link rel="canonical" href="https://sarrtradelink.com/services" />
+        <link rel="alternate" hrefLang="fr" href="https://sarrtradelink.com/services" />
+        <link rel="alternate" hrefLang="x-default" href="https://sarrtradelink.com/services" />
         <meta property="og:title" content="Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit" />
-        <meta property="og:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h." />
-        <meta property="og:url" content="https://www.sarrtradelink.com/services" />
+        <meta property="og:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE & ACIA. Services adaptés Afrique, Europe & Canada. Devis personnalisé sous 48h." />
+        <meta property="og:url" content="https://sarrtradelink.com/services" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit" />
-        <meta name="twitter:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h." />
+        <meta name="twitter:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE & ACIA. Services adaptés Afrique, Europe & Canada. Devis personnalisé sous 48h." />
         <script type="application/ld+json">
           {JSON.stringify(servicesSchema)}
         </script>
