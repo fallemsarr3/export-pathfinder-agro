@@ -67,7 +67,7 @@ const ZonesExport = () => {
         <div className="container-page">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Afrique */}
-            <div className="bg-card border border-border rounded-lg overflow-hidden">
+            <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
               <div className="h-2 bg-paprika" />
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -77,7 +77,7 @@ const ZonesExport = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
               </div>
-              <div className="p-8 lg:p-10">
+              <div className="p-8 lg:p-10 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-paprika/10 flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-paprika" />
@@ -130,7 +130,7 @@ const ZonesExport = () => {
                 </div>
 
 
-                <Button asChild variant="afrique" className="w-full">
+                <Button asChild variant="afrique" className="w-full mt-auto text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant">
                   <Link to="/contact?type=afrique">
                     Demander un sourcing pour l'Afrique
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -140,7 +140,7 @@ const ZonesExport = () => {
             </div>
 
             {/* Europe */}
-            <div className="bg-card border border-border rounded-lg overflow-hidden">
+            <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
               <div className="h-2 bg-primary" />
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -150,7 +150,7 @@ const ZonesExport = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
               </div>
-              <div className="p-8 lg:p-10">
+              <div className="p-8 lg:p-10 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-primary" />
@@ -203,7 +203,7 @@ const ZonesExport = () => {
                 </div>
 
 
-                <Button asChild variant="europe" className="w-full">
+                <Button asChild variant="europe" className="w-full mt-auto text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant">
                   <Link to="/contact?type=europe">
                     Lancer un sourcing pour l'Europe
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -213,13 +213,13 @@ const ZonesExport = () => {
             </div>
 
             {/* Canada */}
-            <div className="bg-card border border-border rounded-lg overflow-hidden">
+            <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
               <div className="h-2 bg-secondary" />
               <div className="relative h-48 overflow-hidden">
                 <img src={canadaWarehouse} alt="Entrepôt import alimentaire au Canada — épices et huiles du Maroc" className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
               </div>
-              <div className="p-8 lg:p-10">
+              <div className="p-8 lg:p-10 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-secondary" />
@@ -271,7 +271,7 @@ const ZonesExport = () => {
                   </p>
                 </div>
 
-                <Button asChild variant="secondary" className="w-full text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant">
+                <Button asChild variant="secondary" className="w-full mt-auto text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant">
                   <Link to="/contact?type=premium">
                     Demander un sourcing pour le Canada
                     <ArrowRight className="ml-2 h-4 w-4" />
