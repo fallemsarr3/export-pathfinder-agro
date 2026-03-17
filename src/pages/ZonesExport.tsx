@@ -150,7 +150,7 @@ const ZonesExport = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
               </div>
-              <div className="p-8 lg:p-10">
+              <div className="p-8 lg:p-10 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-primary" />
