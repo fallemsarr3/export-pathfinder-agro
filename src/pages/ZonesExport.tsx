@@ -203,7 +203,7 @@ const ZonesExport = () => {
                 </div>
 
 
-                <Button asChild variant="europe" className="w-full">
+                <Button asChild variant="europe" className="w-full mt-auto text-base font-semibold px-6 py-3 h-auto shadow-soft hover:shadow-elegant">
                   <Link to="/contact?type=europe">
                     Lancer un sourcing pour l'Europe
                     <ArrowRight className="ml-2 h-4 w-4" />
