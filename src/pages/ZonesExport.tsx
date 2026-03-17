@@ -297,7 +297,7 @@ const ZonesExport = () => {
                 {
                   icon: Globe,
                   title: "Hub logistique stratégique",
-                  Hub logistique stratégique : ports de Tanger Med et Casablanca avec connexions vers Dakar, Abidjan, Anvers, Rotterdam, Marseille et Montréal.
+                  description: "Ports de Tanger Med et Casablanca : connexions maritimes vers Dakar, Abidjan, Anvers, Rotterdam, Marseille et Montréal."
                 },
                 {
                   icon: TrendingUp,
