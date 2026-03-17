@@ -140,7 +140,7 @@ const ZonesExport = () => {
             </div>
 
             {/* Europe */}
-            <div className="bg-card border border-border rounded-lg overflow-hidden">
+            <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
               <div className="h-2 bg-primary" />
               <div className="relative h-48 overflow-hidden">
                 <img 
