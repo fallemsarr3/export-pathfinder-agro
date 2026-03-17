@@ -576,14 +576,14 @@ const Contact = () => {
       {/* Info Section */}
       <section className="section-padding bg-muted">
         <div className="container-page">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-foreground mb-6">
               Pourquoi des formulaires différents ?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Chaque marché a ses propres exigences. Les informations demandées sont adaptées pour qualifier précisément votre besoin et vous proposer un accompagnement sur mesure.
             </p>
-            <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
               <div className="bg-card border border-border rounded-lg p-6">
                 <div className="w-2 h-2 rounded-full bg-paprika mb-3" />
                 <h3 className="font-heading font-semibold text-foreground mb-2">Afrique de l'Ouest</h3>
@@ -596,6 +596,13 @@ const Contact = () => {
                 <h3 className="font-heading font-semibold text-foreground mb-2">Europe</h3>
                 <p className="text-muted-foreground text-sm">
                   Accent sur la conformité UE, la documentation technique et les certifications requises.
+                </p>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6">
+                <div className="w-2 h-2 rounded-full bg-secondary mb-3" />
+                <h3 className="font-heading font-semibold text-foreground mb-2">Canada</h3>
+                <p className="text-muted-foreground text-sm">
+                  Accent sur la conformité ACIA et l'étiquetage bilingue français/anglais obligatoire.
                 </p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6">
