@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import { MapPin, ArrowRight, Globe, Shield, TrendingUp } from "lucide-react";
 import africaMarket from "@/assets/africa-market.jpg";
 import europeWarehouse from "@/assets/europe-warehouse.jpg";
+import canadaWarehouse from "@/assets/canada-warehouse.jpg";
 
 const ZonesExport = () => {
   return (
