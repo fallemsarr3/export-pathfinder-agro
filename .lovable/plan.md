@@ -1,53 +1,79 @@
 
 
-# Plan: Ajouter le Canada partout ou il doit figurer
+# Canonicalisation SEO : passage de `www` vers `sarrtradelink.com`
 
-## Constat
+## Diagnostic actuel
 
-Le Canada n'apparait que sur la page **Zones Export**. Il est absent de :
-
-1. **Page Services** (`src/pages/Services.tsx`) — 3 sections (Afrique, Europe, Premium) mais pas de section Canada
-2. **ServicesOverview sur l'Accueil** (`src/components/home/ServicesOverview.tsx`) — 3 cartes (Afrique, Europe, Premium) sans Canada
-3. **Footer** (`src/components/Footer.tsx`) — liste des services : "Sourcing Afrique", "Sourcing Europe", "Sourcing Premium" sans Canada
-4. **SEO / Schema.org** dans Services.tsx — le `servicesSchema` ItemList ne contient que 3 services, pas le Canada
-5. **FAQ Services** — la question "Intervenez-vous pour des importateurs en Afrique et en Europe ?" ne mentionne pas le Canada
+| Element | URL actuelle | URL cible |
+|---------|-------------|-----------|
+| Canonical (index.html) | `https://www.sarrtradelink.com/` | `https://sarrtradelink.com/` |
+| Schema.org Organization | `https://www.sarrtradelink.com` | `https://sarrtradelink.com` |
+| Sitemap.xml (6 URLs) | Toutes en `www.` | Toutes sans `www` |
+| Robots.txt (sitemap) | `www.sarrtradelink.com` | `sarrtradelink.com` |
+| Pages avec Helmet | Services, ZonesExport (sans canonical) | Ajouter canonical |
+| Pages sans Helmet | Index, Methode, APropos, Contact | Ajouter Helmet + canonical |
 
 ## Modifications prevues
 
-### 1. `src/pages/Services.tsx` — Ajouter une section Canada complete
+### 1. index.html - Mettre a jour la canonical et le Schema.org
 
-- Inserer une nouvelle section `#canada` entre Europe et Premium, suivant le meme format (grid 2 colonnes)
-- Couleur : `secondary` (coherent avec ZonesExport)
-- Contenu : cible (importateurs canadiens), problemes resolus (conformite ACIA, etiquetage bilingue), prestations incluses, produits concernes, remuneration
-- Bouton CTA : `variant="secondary"` avec lien `/contact?type=canada`
-- Mettre a jour le `servicesSchema` pour ajouter un 4eme service (position 4, areaServed: Canada)
-- Mettre a jour la FAQ : modifier la reponse qui mentionne "Afrique et Europe" pour inclure le Canada
-- Mettre a jour les meta descriptions pour inclure "Canada"
+- Changer `<link rel="canonical" href="https://www.sarrtradelink.com/" />` vers `https://sarrtradelink.com/`
+- Changer l'URL dans le JSON-LD Organization de `https://www.sarrtradelink.com` vers `https://sarrtradelink.com`
 
-### 2. `src/components/home/ServicesOverview.tsx` — Remplacer "Premium" par "Canada" ou ajouter une 4eme carte
+### 2. Ajouter une balise canonical sur chaque page via Helmet
 
-Passer la grille a 4 colonnes (`lg:grid-cols-4` ou `lg:grid-cols-2 xl:grid-cols-4`) et ajouter une carte Canada avec :
-- Barre couleur `bg-secondary`
-- Badge "Canada"
-- Titre "Sourcing Maroc → Canada"
-- Description courte avec liens produits
-- 3 points cles (conformite ACIA, etiquetage bilingue, Incoterms CIF/DAP)
-- Bouton `variant="secondary"` vers `/contact?type=canada`
+Les 6 pages publiques recevront chacune leur canonical exacte :
 
-### 3. `src/components/Footer.tsx` — Ajouter le lien Canada
+| Page | Canonical |
+|------|-----------|
+| Index (`/`) | `https://sarrtradelink.com/` |
+| Services (`/services`) | `https://sarrtradelink.com/services` |
+| ZonesExport (`/zones-export`) | `https://sarrtradelink.com/zones-export` |
+| Methode (`/methode`) | `https://sarrtradelink.com/methode` |
+| APropos (`/a-propos`) | `https://sarrtradelink.com/a-propos` |
+| Contact (`/contact`) | `https://sarrtradelink.com/contact` |
 
-- Ajouter `<li><Link to="/services#canada">Sourcing Canada</Link></li>` dans la liste des services (ligne 66)
+**Pages a modifier :**
+- **Index.tsx** : ajouter Helmet avec canonical
+- **Services.tsx** : ajouter canonical dans le Helmet existant
+- **ZonesExport.tsx** : ajouter canonical dans le Helmet existant
+- **Methode.tsx** : ajouter Helmet avec canonical (+ title/description)
+- **APropos.tsx** : ajouter Helmet avec canonical (+ title/description)
+- **Contact.tsx** : ajouter Helmet avec canonical (+ title/description)
 
-### 4. `src/pages/Services.tsx` — SEO updates
+### 3. Sitemap.xml - Supprimer le `www`
 
-- Ajouter le Canada dans le titre et la meta description
-- Ajouter un service Canada dans le schema ItemList
+Remplacer toutes les 6 URLs de `https://www.sarrtradelink.com/...` vers `https://sarrtradelink.com/...`
 
-## Fichiers modifies
+### 4. Robots.txt - Supprimer le `www`
 
-| Fichier | Modification |
-|---------|-------------|
-| `src/pages/Services.tsx` | Nouvelle section #canada + schema + FAQ + meta |
-| `src/components/home/ServicesOverview.tsx` | 4eme carte Canada + grille 4 colonnes |
-| `src/components/Footer.tsx` | Lien "Sourcing Canada" |
+Changer la ligne Sitemap vers `https://sarrtradelink.com/sitemap.xml`
 
+### 5. Redirections 301
+
+Les redirections 301 (http vers https, www vers non-www) ne peuvent pas etre gerees dans le code de l'application. Elles doivent etre configurees au niveau de :
+- **Votre fournisseur DNS** (Cloudflare, OVH, etc.) : regle de redirection "www -> non-www"
+- **Ou votre registrar de domaine** : redirection de type dans les parametres DNS
+
+Apres publication, vous devrez configurer cette redirection dans les parametres de votre domaine.
+
+### 6. Aucun noindex
+
+Toutes les pages resteront indexables. La balise `<meta name="robots" content="index, follow" />` est deja presente dans index.html.
+
+---
+
+## Section technique
+
+**Fichiers modifies :**
+- `index.html` (canonical + Schema.org URL)
+- `public/sitemap.xml` (6 URLs)
+- `public/robots.txt` (1 URL)
+- `src/pages/Index.tsx` (ajout Helmet)
+- `src/pages/Services.tsx` (ajout canonical)
+- `src/pages/ZonesExport.tsx` (ajout canonical)
+- `src/pages/Methode.tsx` (ajout Helmet complet)
+- `src/pages/APropos.tsx` (ajout Helmet complet)
+- `src/pages/Contact.tsx` (ajout Helmet complet)
+
+**Total : 9 fichiers**

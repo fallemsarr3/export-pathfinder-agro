@@ -18,8 +18,8 @@ const faqData = [
     answer: "Oui, nous travaillons avec des producteurs, des coopératives et des transformateurs marocains vérifiés. Chaque fournisseur fait l'objet d'un processus de qualification rigoureux : visite terrain, contrôle de capacité de production, vérification des certifications et analyse de la régularité qualité. Cette approche de sourcing export au Maroc nous permet de proposer à chaque importateur des fournisseurs adaptés à ses volumes, ses exigences qualité et sa zone d'importation, qu'il s'agisse d'épices comme le paprika et le cumin ou d'huiles alimentaires."
   },
   {
-    question: "Intervenez-vous pour des importateurs en Afrique et en Europe ?",
-    answer: "Nous accompagnons des importateurs sur deux zones principales : l'Afrique de l'Ouest et l'Europe. Pour les importateurs ouest-africains, nous proposons un sourcing export adapté avec des conditions FOB ou CFR et une documentation conforme aux exigences douanières régionales. Pour les importateurs européens, nous assurons la conformité réglementaire UE : normes HACCP, limites LMR, certifications BRC/IFS et dossier technique complet. Chaque service est calibré selon les spécificités du marché cible et le profil du fournisseur marocain sélectionné."
+    question: "Intervenez-vous pour des importateurs en Afrique, en Europe et au Canada ?",
+    answer: "Nous accompagnons des importateurs sur trois zones principales : l'Afrique de l'Ouest, l'Europe et le Canada. Pour les importateurs ouest-africains, nous proposons un sourcing export adapté avec des conditions FOB ou CFR. Pour les importateurs européens, nous assurons la conformité réglementaire UE : normes HACCP, limites LMR, certifications BRC/IFS. Pour le Canada, nous garantissons la conformité ACIA (CFIA), l'étiquetage bilingue français/anglais et la logistique CIF vers Montréal ou Toronto. Chaque service est calibré selon les spécificités du marché cible."
   },
   {
     question: "Quels types de produits agroalimentaires sourcez-vous ?",
@@ -83,6 +83,21 @@ const servicesSchema = {
     {
       "@type": "Service",
       "position": 3,
+      "name": "Sourcing conforme ACIA depuis le Maroc vers le Canada",
+      "description": "Sourcing de fournisseurs marocains conformes aux normes canadiennes ACIA (CFIA). Étiquetage bilingue, logistique CIF Montréal/Toronto, documentation douanière complète.",
+      "serviceType": "Sourcing agroalimentaire conforme ACIA",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Canada"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Sourcing Maroc Export"
+      }
+    },
+    {
+      "@type": "Service",
+      "position": 4,
       "name": "Missions stratégiques de sourcing et gestion du risque fournisseur",
       "description": "Audit de fournisseurs, recherche de sources alternatives, due diligence et sécurisation de la supply chain pour industriels agroalimentaires.",
       "serviceType": "Conseil sourcing stratégique",
@@ -99,17 +114,17 @@ const Services = () => {
     <Layout>
       <Helmet>
         <title>Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit</title>
-        <meta name="description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h." />
-        <link rel="canonical" href="https://www.sarrtradelink.com/services" />
-        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/services" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/services" />
+        <meta name="description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE & ACIA. Services adaptés Afrique, Europe & Canada. Devis personnalisé sous 48h." />
+        <link rel="canonical" href="https://sarrtradelink.com/services" />
+        <link rel="alternate" hrefLang="fr" href="https://sarrtradelink.com/services" />
+        <link rel="alternate" hrefLang="x-default" href="https://sarrtradelink.com/services" />
         <meta property="og:title" content="Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit" />
-        <meta property="og:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h." />
-        <meta property="og:url" content="https://www.sarrtradelink.com/services" />
+        <meta property="og:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE & ACIA. Services adaptés Afrique, Europe & Canada. Devis personnalisé sous 48h." />
+        <meta property="og:url" content="https://sarrtradelink.com/services" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit" />
-        <meta name="twitter:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h." />
+        <meta name="twitter:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE & ACIA. Services adaptés Afrique, Europe & Canada. Devis personnalisé sous 48h." />
         <script type="application/ld+json">
           {JSON.stringify(servicesSchema)}
         </script>
@@ -316,8 +331,100 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Canada Service */}
+      <section id="canada" className="section-padding bg-background scroll-mt-24">
+        <div className="container-page">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-4">
+                Service Canada
+              </span>
+              <h2 className="text-foreground mb-6">
+                Sourcing conforme ACIA depuis le Maroc → Canada
+              </h2>
+              
+              <div className="mb-8">
+                <h3 className="text-lg font-heading font-semibold text-foreground mb-3">
+                  Cible
+                </h3>
+                <p className="text-muted-foreground">
+                  Importateurs alimentaires canadiens, distributeurs et entreprises de transformation recherchant un approvisionnement en épices et huiles marocaines conformes aux normes de l'Agence canadienne d'inspection des aliments (ACIA / CFIA).
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-lg font-heading font-semibold text-foreground mb-3">
+                  Problèmes que nous résolvons
+                </h3>
+                <ul className="space-y-3">
+                  {[
+                    "Conformité ACIA (CFIA) : exigences sanitaires, limites de contaminants, additifs autorisés",
+                    "Étiquetage bilingue français/anglais obligatoire selon la réglementation canadienne",
+                    "Logistique longue distance : coordination CIF/DAP vers Montréal ou Toronto",
+                    "Méconnaissance des fournisseurs marocains fiables et certifiés pour le marché canadien"
+                  ].map((problem, i) => (
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                      <AlertTriangle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                      {problem}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-secondary/5 rounded-lg p-8 border border-secondary/20">
+              <h3 className="text-lg font-heading font-semibold text-foreground mb-6">
+                Prestations incluses
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {[
+                  "Sourcing et vérification terrain de fournisseurs marocains conformes aux standards ACIA",
+                  "Préparation du dossier documentaire : certificats sanitaires, fiches techniques bilingues",
+                  "Coordination de l'étiquetage bilingue conforme à la Loi sur les aliments et drogues",
+                  "Suivi logistique CIF/DAP vers les ports de Montréal et Toronto"
+                ].map((service, i) => (
+                  <li key={i} className="flex items-start gap-3 text-foreground">
+                    <CheckCircle className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                    {service}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mb-8">
+                <h4 className="font-semibold text-foreground mb-2">Produits concernés</h4>
+                <div className="flex flex-wrap gap-2">
+                  {["Huile d'argan alimentaire", "Huile d'olive", "Safran", "Cumin", "Ras el Hanout", "Épices en mélange"].map((product) => (
+                    <span key={product} className="px-3 py-1 bg-secondary/10 text-secondary rounded-full text-sm">
+                      {product}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-8 p-4 bg-card rounded-lg border border-border">
+                <h4 className="font-semibold text-foreground mb-2">Rémunération</h4>
+                <p className="text-muted-foreground text-sm">
+                  Forfait de sourcing couvrant la qualification fournisseur et la conformité ACIA + commission sur commande confirmée. Conditions transparentes formalisées avant engagement.
+                </p>
+              </div>
+
+              <p className="text-sm text-muted-foreground mb-6">
+                Découvrez notre <Link to="/methode" className="text-secondary hover:underline">méthodologie de travail</Link> et les <Link to="/zones-export#canada" className="text-secondary hover:underline">spécificités du marché canadien</Link>.
+              </p>
+
+              <Button asChild variant="secondary" className="w-full text-base font-semibold px-6 py-3 h-auto">
+                <Link to="/contact?type=canada">
+                  Demander un sourcing Canada
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Premium Service */}
-      <section id="premium" className="section-padding bg-background scroll-mt-24">
+      <section id="premium" className="section-padding bg-sage/30 scroll-mt-24">
         <div className="container-page">
           <div className="grid lg:grid-cols-2 gap-16">
             <div>

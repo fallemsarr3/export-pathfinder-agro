@@ -63,6 +63,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/services#afrique" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">Sourcing Afrique</Link></li>
               <li><Link to="/services#europe" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">Sourcing Europe</Link></li>
+              <li><Link to="/services#canada" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">Sourcing Canada</Link></li>
               <li><Link to="/services#premium" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">Sourcing Premium</Link></li>
             </ul>
           </div>
