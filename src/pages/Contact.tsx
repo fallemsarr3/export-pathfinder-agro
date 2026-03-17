@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MapPin, Building2, Crown } from "lucide-react";
+import { MapPin, Building2, Crown, Leaf } from "lucide-react";
 import { useFormSubmission, FormType } from "@/hooks/useFormSubmission";
 
 const Contact = () => {
