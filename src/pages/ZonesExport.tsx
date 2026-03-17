@@ -213,7 +213,7 @@ const ZonesExport = () => {
             </div>
 
             {/* Canada */}
-            <div className="bg-card border border-border rounded-lg overflow-hidden">
+            <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
               <div className="h-2 bg-secondary" />
               <div className="relative h-48 overflow-hidden">
                 <img src={canadaWarehouse} alt="Entrepôt import alimentaire au Canada — épices et huiles du Maroc" className="w-full h-full object-cover" loading="lazy" />
