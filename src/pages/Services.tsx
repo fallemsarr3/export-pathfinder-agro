@@ -101,8 +101,8 @@ const Services = () => {
         <title>Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit</title>
         <meta name="description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h." />
         <link rel="canonical" href="https://www.sarrtradelink.com/services" />
-        <link rel="alternate" hreflang="fr" href="https://www.sarrtradelink.com/services" />
-        <link rel="alternate" hreflang="x-default" href="https://www.sarrtradelink.com/services" />
+        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/services" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/services" />
         <meta property="og:title" content="Services Sourcing Export Maroc — Épices & Huiles B2B | Devis Gratuit" />
         <meta property="og:description" content="Sourcing fournisseurs vérifiés, contrôle qualité, conformité UE. Services adaptés Afrique & Europe. Devis personnalisé sous 48h." />
         <meta property="og:url" content="https://www.sarrtradelink.com/services" />

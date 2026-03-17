@@ -89,8 +89,8 @@ const Contact = () => {
         <title>Demander un Devis Gratuit — Sourcing Épices & Huiles Maroc</title>
         <meta name="description" content="Contactez Sarr Trade Link pour un devis sourcing gratuit sous 48h. Épices et huiles alimentaires marocaines certifiées pour l'export B2B." />
         <link rel="canonical" href="https://www.sarrtradelink.com/contact" />
-        <link rel="alternate" hreflang="fr" href="https://www.sarrtradelink.com/contact" />
-        <link rel="alternate" hreflang="x-default" href="https://www.sarrtradelink.com/contact" />
+        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/contact" />
         <meta property="og:title" content="Demander un Devis Gratuit — Sourcing Épices & Huiles Maroc" />
         <meta property="og:description" content="Contactez Sarr Trade Link pour un devis sourcing gratuit sous 48h. Épices et huiles alimentaires marocaines certifiées pour l'export B2B." />
         <meta property="og:url" content="https://www.sarrtradelink.com/contact" />

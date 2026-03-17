@@ -13,8 +13,8 @@ const APropos = () => {
         <title>À Propos — Agent Sourcing Agroalimentaire Maroc | Sarr Trade Link</title>
         <meta name="description" content="Agent de sourcing export basé au Maroc. Spécialiste épices et huiles alimentaires B2B. Fournisseurs vérifiés, conformité UE garantie." />
         <link rel="canonical" href="https://www.sarrtradelink.com/a-propos" />
-        <link rel="alternate" hreflang="fr" href="https://www.sarrtradelink.com/a-propos" />
-        <link rel="alternate" hreflang="x-default" href="https://www.sarrtradelink.com/a-propos" />
+        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/a-propos" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/a-propos" />
         <meta property="og:title" content="À Propos — Agent Sourcing Agroalimentaire Maroc | Sarr Trade Link" />
         <meta property="og:description" content="Agent de sourcing export basé au Maroc. Spécialiste épices et huiles alimentaires B2B. Fournisseurs vérifiés, conformité UE garantie." />
         <meta property="og:url" content="https://www.sarrtradelink.com/a-propos" />

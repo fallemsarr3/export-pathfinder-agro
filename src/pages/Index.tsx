@@ -15,8 +15,8 @@ const Index = () => {
         <title>Agent Sourcing Maroc — Épices & Huiles Export B2B ✓ Devis 48h</title>
         <meta name="description" content="Agent de sourcing export Maroc. Épices et huiles alimentaires certifiées pour importateurs Europe & Afrique. Fournisseurs vérifiés. Devis gratuit sous 48h." />
         <link rel="canonical" href="https://www.sarrtradelink.com/" />
-        <link rel="alternate" hreflang="fr" href="https://www.sarrtradelink.com/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.sarrtradelink.com/" />
+        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/" />
         <meta property="og:title" content="Agent Sourcing Maroc — Épices & Huiles Export B2B ✓ Devis 48h" />
         <meta property="og:description" content="Agent de sourcing export Maroc. Épices et huiles alimentaires certifiées pour importateurs Europe & Afrique. Fournisseurs vérifiés. Devis gratuit sous 48h." />
         <meta property="og:url" content="https://www.sarrtradelink.com/" />

@@ -13,8 +13,8 @@ const ZonesExport = () => {
         <title>Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B</title>
         <meta name="description" content="Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
         <link rel="canonical" href="https://www.sarrtradelink.com/zones-export" />
-        <link rel="alternate" hreflang="fr" href="https://www.sarrtradelink.com/zones-export" />
-        <link rel="alternate" hreflang="x-default" href="https://www.sarrtradelink.com/zones-export" />
+        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/zones-export" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/zones-export" />
         <meta property="og:title" content="Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B" />
         <meta property="og:description" content="Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
         <meta property="og:url" content="https://www.sarrtradelink.com/zones-export" />

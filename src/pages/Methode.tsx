@@ -74,8 +74,8 @@ const Methode = () => {
         <title>Méthode Sourcing Maroc — 6 Étapes, Traçabilité Complète</title>
         <meta name="description" content="Process structuré en 6 étapes pour sécuriser vos imports d'épices et huiles depuis le Maroc. Transparence totale, livrables définis." />
         <link rel="canonical" href="https://www.sarrtradelink.com/methode" />
-        <link rel="alternate" hreflang="fr" href="https://www.sarrtradelink.com/methode" />
-        <link rel="alternate" hreflang="x-default" href="https://www.sarrtradelink.com/methode" />
+        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/methode" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/methode" />
         <meta property="og:title" content="Méthode Sourcing Maroc — 6 Étapes, Traçabilité Complète" />
         <meta property="og:description" content="Process structuré en 6 étapes pour sécuriser vos imports d'épices et huiles depuis le Maroc. Transparence totale, livrables définis." />
         <meta property="og:url" content="https://www.sarrtradelink.com/methode" />
