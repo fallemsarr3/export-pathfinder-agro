@@ -16,7 +16,7 @@ const ServicesOverview = () => (
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
         {/* Afrique */}
         <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-elegant transition-all duration-300">
           <div className="h-2 bg-paprika" />
