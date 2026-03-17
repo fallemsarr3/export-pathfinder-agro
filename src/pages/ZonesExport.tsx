@@ -64,7 +64,7 @@ const ZonesExport = () => {
       {/* Zones Grid */}
       <section className="section-padding bg-background">
         <div className="container-page">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-3 gap-8">
             {/* Afrique */}
             <div className="bg-card border border-border rounded-lg overflow-hidden">
               <div className="h-2 bg-paprika" />
