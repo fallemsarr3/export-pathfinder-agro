@@ -59,6 +59,24 @@ const Contact = () => {
     if (success) form.reset();
   };
 
+  const handleCanadaSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    const success = await submitForm("canada", {
+      company_name: formData.get("ca-entreprise") as string,
+      contact_name: formData.get("ca-nom") as string,
+      email: formData.get("ca-email") as string,
+      products: formData.get("ca-produit") as string,
+      country: formData.get("ca-province") as string,
+      volume: formData.get("ca-volume") as string,
+      message: formData.get("ca-message") as string,
+    });
+
+    if (success) form.reset();
+  };
+
   const handlePremiumSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -80,6 +98,7 @@ const Contact = () => {
   const formTabs = [
     { id: "afrique" as FormType, label: "Afrique de l'Ouest", icon: MapPin },
     { id: "europe" as FormType, label: "Europe", icon: Building2 },
+    { id: "canada" as FormType, label: "Canada", icon: Leaf },
     { id: "premium" as FormType, label: "Premium", icon: Crown },
   ];
 
