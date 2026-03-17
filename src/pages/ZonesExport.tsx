@@ -338,10 +338,10 @@ const ZonesExport = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="font-heading font-semibold text-foreground mb-3">
-                  Travaillez-vous uniquement avec l'Afrique et l'Europe ?
+                  Quelles zones géographiques couvrez-vous ?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Actuellement, notre activité de sourcing export depuis le Maroc se concentre sur deux zones prioritaires : l'Afrique de l'Ouest (Sénégal, Côte d'Ivoire, Mali, Guinée) et l'Europe (France, Belgique, Espagne, Pays-Bas). Ces marchés représentent les débouchés les plus structurés pour les épices et huiles alimentaires marocaines, avec des flux commerciaux réguliers et des cadres réglementaires que nous maîtrisons. Si vous êtes importateur dans une autre région, nous pouvons évaluer la faisabilité d'un sourcing adapté à votre zone sur demande.
+                  Notre activité de sourcing export depuis le Maroc couvre trois zones : l'Afrique de l'Ouest (Sénégal, Côte d'Ivoire, Mali, Guinée), l'Europe (France, Belgique, Espagne, Pays-Bas) et le Canada (Québec, Ontario, Colombie-Britannique). Ces marchés représentent les débouchés les plus structurés pour les épices et huiles alimentaires marocaines, avec des flux commerciaux réguliers et des cadres réglementaires que nous maîtrisons. Si vous êtes importateur dans une autre région, nous pouvons évaluer la faisabilité d'un sourcing adapté.
                 </p>
               </div>
 
