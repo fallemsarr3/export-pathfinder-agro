@@ -67,7 +67,7 @@ const ZonesExport = () => {
         <div className="container-page">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Afrique */}
-            <div className="bg-card border border-border rounded-lg overflow-hidden">
+            <div className="bg-card border border-border rounded-lg overflow-hidden flex flex-col">
               <div className="h-2 bg-paprika" />
               <div className="relative h-48 overflow-hidden">
                 <img 
