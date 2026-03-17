@@ -83,6 +83,21 @@ const servicesSchema = {
     {
       "@type": "Service",
       "position": 3,
+      "name": "Sourcing conforme ACIA depuis le Maroc vers le Canada",
+      "description": "Sourcing de fournisseurs marocains conformes aux normes canadiennes ACIA (CFIA). Étiquetage bilingue, logistique CIF Montréal/Toronto, documentation douanière complète.",
+      "serviceType": "Sourcing agroalimentaire conforme ACIA",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Canada"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Sourcing Maroc Export"
+      }
+    },
+    {
+      "@type": "Service",
+      "position": 4,
       "name": "Missions stratégiques de sourcing et gestion du risque fournisseur",
       "description": "Audit de fournisseurs, recherche de sources alternatives, due diligence et sécurisation de la supply chain pour industriels agroalimentaires.",
       "serviceType": "Conseil sourcing stratégique",
