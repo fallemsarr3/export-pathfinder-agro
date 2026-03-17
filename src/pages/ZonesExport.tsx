@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import { MapPin, ArrowRight, Globe, Shield, TrendingUp } from "lucide-react";
 import africaMarket from "@/assets/africa-market.jpg";
 import europeWarehouse from "@/assets/europe-warehouse.jpg";
+import canadaWarehouse from "@/assets/canada-warehouse.jpg";
 
 const ZonesExport = () => {
   return (
@@ -214,8 +215,8 @@ const ZonesExport = () => {
             {/* Canada */}
             <div className="bg-card border border-border rounded-lg overflow-hidden">
               <div className="h-2 bg-secondary" />
-              <div className="relative h-48 overflow-hidden bg-secondary/10 flex items-center justify-center">
-                <Globe className="w-16 h-16 text-secondary/40" />
+              <div className="relative h-48 overflow-hidden">
+                <img src={canadaWarehouse} alt="Entrepôt import alimentaire au Canada — épices et huiles du Maroc" className="w-full h-full object-cover" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
               </div>
               <div className="p-8 lg:p-10">
