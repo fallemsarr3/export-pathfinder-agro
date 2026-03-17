@@ -10,16 +10,18 @@ const APropos = () => {
   return (
     <Layout>
       <Helmet>
-        <title>À propos – Agent de sourcing export agroalimentaire au Maroc</title>
-        <meta name="description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés pour importateurs Afrique et Europe." />
+        <title>À Propos — Agent Sourcing Agroalimentaire Maroc | Sarr Trade Link</title>
+        <meta name="description" content="Agent de sourcing export basé au Maroc. Spécialiste épices et huiles alimentaires B2B. Fournisseurs vérifiés, conformité UE garantie." />
         <link rel="canonical" href="https://www.sarrtradelink.com/a-propos" />
-        <meta property="og:title" content="À propos – Agent de sourcing export agroalimentaire au Maroc | Sarr Trade Link" />
-        <meta property="og:description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés." />
+        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/a-propos" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/a-propos" />
+        <meta property="og:title" content="À Propos — Agent Sourcing Agroalimentaire Maroc | Sarr Trade Link" />
+        <meta property="og:description" content="Agent de sourcing export basé au Maroc. Spécialiste épices et huiles alimentaires B2B. Fournisseurs vérifiés, conformité UE garantie." />
         <meta property="og:url" content="https://www.sarrtradelink.com/a-propos" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="À propos – Agent de sourcing export agroalimentaire au Maroc | Sarr Trade Link" />
-        <meta name="twitter:description" content="Agent de sourcing export basé au Maroc, spécialisé en épices et huiles alimentaires. Fournisseurs vérifiés." />
+        <meta name="twitter:title" content="À Propos — Agent Sourcing Agroalimentaire Maroc | Sarr Trade Link" />
+        <meta name="twitter:description" content="Agent de sourcing export basé au Maroc. Spécialiste épices et huiles alimentaires B2B. Fournisseurs vérifiés, conformité UE garantie." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

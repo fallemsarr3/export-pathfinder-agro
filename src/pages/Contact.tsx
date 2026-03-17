@@ -86,16 +86,18 @@ const Contact = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Contact sourcing export Maroc – Demande de sourcing</title>
-        <meta name="description" content="Contactez votre agent de sourcing export au Maroc. Formulaires adaptés par zone : Afrique de l'Ouest, Europe, missions Premium." />
+        <title>Demander un Devis Gratuit — Sourcing Épices & Huiles Maroc</title>
+        <meta name="description" content="Contactez Sarr Trade Link pour un devis sourcing gratuit sous 48h. Épices et huiles alimentaires marocaines certifiées pour l'export B2B." />
         <link rel="canonical" href="https://www.sarrtradelink.com/contact" />
-        <meta property="og:title" content="Contact sourcing export Maroc – Demande de sourcing | Sarr Trade Link" />
-        <meta property="og:description" content="Contactez votre agent de sourcing export au Maroc. Formulaires adaptés par zone." />
+        <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/contact" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/contact" />
+        <meta property="og:title" content="Demander un Devis Gratuit — Sourcing Épices & Huiles Maroc" />
+        <meta property="og:description" content="Contactez Sarr Trade Link pour un devis sourcing gratuit sous 48h. Épices et huiles alimentaires marocaines certifiées pour l'export B2B." />
         <meta property="og:url" content="https://www.sarrtradelink.com/contact" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact sourcing export Maroc – Demande de sourcing | Sarr Trade Link" />
-        <meta name="twitter:description" content="Contactez votre agent de sourcing export au Maroc. Formulaires adaptés par zone." />
+        <meta name="twitter:title" content="Demander un Devis Gratuit — Sourcing Épices & Huiles Maroc" />
+        <meta name="twitter:description" content="Contactez Sarr Trade Link pour un devis sourcing gratuit sous 48h. Épices et huiles alimentaires marocaines certifiées pour l'export B2B." />
       </Helmet>
       {/* Hero */}
       <section className="bg-primary py-20">
