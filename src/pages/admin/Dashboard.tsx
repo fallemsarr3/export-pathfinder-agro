@@ -42,6 +42,7 @@ type FormType = Database["public"]["Enums"]["form_type"];
 const formTypeConfig: Record<FormType, { label: string; icon: typeof MapPin; color: string }> = {
   afrique: { label: "Afrique", icon: MapPin, color: "bg-paprika text-white" },
   europe: { label: "Europe", icon: Building2, color: "bg-primary text-primary-foreground" },
+  canada: { label: "Canada", icon: Building2, color: "bg-secondary text-secondary-foreground" },
   premium: { label: "Premium", icon: Crown, color: "bg-spice text-white" },
 };
 

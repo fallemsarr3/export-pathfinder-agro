@@ -20,6 +20,7 @@ const baseSchema = z.object({
 const confirmationMessages: Record<FormType, string> = {
   afrique: "Votre demande a bien été reçue. Seuls les projets compatibles seront contactés.",
   europe: "Les demandes compatibles sont traitées sous 48 à 72 heures.",
+  canada: "Votre demande Canada a été reçue. Les dossiers conformes sont traités sous 48 à 72 heures.",
   premium: "Les demandes stratégiques sont étudiées individuellement."
 };
 
