@@ -18,8 +18,8 @@ const faqData = [
     answer: "Oui, nous travaillons avec des producteurs, des coopératives et des transformateurs marocains vérifiés. Chaque fournisseur fait l'objet d'un processus de qualification rigoureux : visite terrain, contrôle de capacité de production, vérification des certifications et analyse de la régularité qualité. Cette approche de sourcing export au Maroc nous permet de proposer à chaque importateur des fournisseurs adaptés à ses volumes, ses exigences qualité et sa zone d'importation, qu'il s'agisse d'épices comme le paprika et le cumin ou d'huiles alimentaires."
   },
   {
-    question: "Intervenez-vous pour des importateurs en Afrique et en Europe ?",
-    answer: "Nous accompagnons des importateurs sur deux zones principales : l'Afrique de l'Ouest et l'Europe. Pour les importateurs ouest-africains, nous proposons un sourcing export adapté avec des conditions FOB ou CFR et une documentation conforme aux exigences douanières régionales. Pour les importateurs européens, nous assurons la conformité réglementaire UE : normes HACCP, limites LMR, certifications BRC/IFS et dossier technique complet. Chaque service est calibré selon les spécificités du marché cible et le profil du fournisseur marocain sélectionné."
+    question: "Intervenez-vous pour des importateurs en Afrique, en Europe et au Canada ?",
+    answer: "Nous accompagnons des importateurs sur trois zones principales : l'Afrique de l'Ouest, l'Europe et le Canada. Pour les importateurs ouest-africains, nous proposons un sourcing export adapté avec des conditions FOB ou CFR. Pour les importateurs européens, nous assurons la conformité réglementaire UE : normes HACCP, limites LMR, certifications BRC/IFS. Pour le Canada, nous garantissons la conformité ACIA (CFIA), l'étiquetage bilingue français/anglais et la logistique CIF vers Montréal ou Toronto. Chaque service est calibré selon les spécificités du marché cible."
   },
   {
     question: "Quels types de produits agroalimentaires sourcez-vous ?",
