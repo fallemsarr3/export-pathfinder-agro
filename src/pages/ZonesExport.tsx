@@ -210,6 +210,74 @@ const ZonesExport = () => {
                 </Button>
               </div>
             </div>
+
+            {/* Canada */}
+            <div className="bg-card border border-border rounded-lg overflow-hidden">
+              <div className="h-2 bg-secondary" />
+              <div className="relative h-48 overflow-hidden bg-secondary/10 flex items-center justify-center">
+                <Globe className="w-16 h-16 text-secondary/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+              </div>
+              <div className="p-8 lg:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-secondary" />
+                  </div>
+                  <h2 className="text-2xl font-heading font-semibold text-foreground">
+                    Sourcing export vers le Canada
+                  </h2>
+                </div>
+
+                <div className="prose prose-muted max-w-none mb-8">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Le Canada représente un marché en forte croissance pour les épices et huiles alimentaires marocaines. Les importateurs canadiens – distributeurs alimentaires, épiceries fines, industriels et grossistes – recherchent des produits authentiques et traçables, avec une conformité stricte aux normes de l'ACIA (Agence canadienne d'inspection des aliments).
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Notre connaissance des exigences réglementaires canadiennes et des circuits logistiques transatlantiques permet un accompagnement complet, de la sélection du fournisseur marocain jusqu'à l'expédition CIF ou DAP vers Montréal, Toronto ou Vancouver.
+                  </p>
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold text-foreground mb-3">
+                    Exigences du marché canadien
+                  </h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Conformité ACIA : normes de sécurité alimentaire, étiquetage bilingue (français/anglais)
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Limites maximales de résidus (LMR) et normes de contaminants alignées sur le Codex Alimentarius
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Certificat phytosanitaire, certificat d'origine et dossier technique complet
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Incoterms adaptés : CIF Montréal, CIF Toronto, DAP entrepôt
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold text-foreground mb-3">
+                    Profil des acheteurs ciblés
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Importateurs alimentaires, distributeurs spécialisés, épiceries fines, industriels agroalimentaires et grossistes basés au Québec, en Ontario, en Colombie-Britannique et dans l'ensemble des provinces canadiennes.
+                  </p>
+                </div>
+
+                <Button asChild variant="cta" className="w-full">
+                  <Link to="/contact?type=premium">
+                    Demander un sourcing pour le Canada
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
