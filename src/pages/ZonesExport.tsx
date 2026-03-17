@@ -10,18 +10,18 @@ const ZonesExport = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B</title>
-        <meta name="description" content="Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
+        <title>Export Maroc → Europe, Afrique & Canada — Épices & Huiles B2B</title>
+        <meta name="description" content="Sourcing export Maroc vers Europe, Afrique de l'Ouest et Canada. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
         <link rel="canonical" href="https://www.sarrtradelink.com/zones-export" />
         <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/zones-export" />
         <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/zones-export" />
-        <meta property="og:title" content="Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B" />
-        <meta property="og:description" content="Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
+        <meta property="og:title" content="Export Maroc → Europe, Afrique & Canada — Épices & Huiles B2B" />
+        <meta property="og:description" content="Sourcing export Maroc vers Europe, Afrique de l'Ouest et Canada. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
         <meta property="og:url" content="https://www.sarrtradelink.com/zones-export" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B" />
-        <meta name="twitter:description" content="Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
+        <meta name="twitter:title" content="Export Maroc → Europe, Afrique & Canada — Épices & Huiles B2B" />
+        <meta name="twitter:description" content="Sourcing export Maroc vers Europe, Afrique de l'Ouest et Canada. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -30,7 +30,7 @@ const ZonesExport = () => {
               {
                 "@type": "Question",
                 "name": "Travaillez-vous uniquement avec l'Afrique et l'Europe ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Actuellement, notre activité de sourcing export depuis le Maroc se concentre sur deux zones : l'Afrique de l'Ouest (Sénégal, Côte d'Ivoire, Mali, Guinée) et l'Europe (France, Belgique, Espagne, Pays-Bas). Ces marchés représentent les débouchés les plus structurés pour les épices et huiles alimentaires marocaines. Si vous êtes importateur dans une autre région, nous pouvons évaluer la faisabilité d'un sourcing adapté à votre zone sur demande." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Non. Notre activité de sourcing export depuis le Maroc couvre trois zones : l'Afrique de l'Ouest, l'Europe et le Canada. Ces marchés représentent les débouchés les plus structurés pour les épices et huiles alimentaires marocaines. Si vous êtes importateur dans une autre région, nous pouvons évaluer la faisabilité d'un sourcing adapté à votre zone sur demande." }
               },
               {
                 "@type": "Question",
@@ -49,10 +49,10 @@ const ZonesExport = () => {
               Couverture géographique
             </span>
             <h1 className="text-primary-foreground mb-6">
-              Sourcing export depuis le Maroc vers l'Afrique et l'Europe
+              Sourcing export depuis le Maroc vers l'Afrique, l'Europe et le Canada
             </h1>
             <p className="text-xl text-primary-foreground/80">
-              Agent de sourcing export au Maroc pour l'Afrique de l'Ouest et l'Europe. Deux zones, deux approches adaptées aux exigences locales.
+              Agent de sourcing export au Maroc pour l'Afrique de l'Ouest, l'Europe et le Canada. Trois zones, trois approches adaptées aux exigences locales.
             </p>
             <p className="text-primary-foreground/70 mt-6 leading-relaxed max-w-2xl">
               Sarr Trade Link est un agent de sourcing export basé au Maroc, spécialisé dans les épices, les huiles alimentaires et les produits agroalimentaires à forte valeur ajoutée. Notre rôle est de connecter les importateurs africains et européens avec des fournisseurs marocains rigoureusement sélectionnés. Contrairement à un négociant ou un trader, nous n'achetons ni ne revendons de marchandise : nous intervenons comme intermédiaire indépendant, chargé de la recherche de fournisseurs, de la vérification qualité, du contrôle documentaire et de la coordination logistique. Notre mission est de sécuriser chaque opération d'approvisionnement en réduisant les risques liés au sourcing international, tout en garantissant la conformité aux exigences réglementaires de chaque zone de destination – <Link to="/services#afrique" className="text-primary-foreground underline">Afrique de l'Ouest</Link> comme <Link to="/services#europe" className="text-primary-foreground underline">Union européenne</Link>.
@@ -64,7 +64,7 @@ const ZonesExport = () => {
       {/* Zones Grid */}
       <section className="section-padding bg-background">
         <div className="container-page">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-3 gap-8">
             {/* Afrique */}
             <div className="bg-card border border-border rounded-lg overflow-hidden">
               <div className="h-2 bg-paprika" />
@@ -210,6 +210,74 @@ const ZonesExport = () => {
                 </Button>
               </div>
             </div>
+
+            {/* Canada */}
+            <div className="bg-card border border-border rounded-lg overflow-hidden">
+              <div className="h-2 bg-secondary" />
+              <div className="relative h-48 overflow-hidden bg-secondary/10 flex items-center justify-center">
+                <Globe className="w-16 h-16 text-secondary/40" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+              </div>
+              <div className="p-8 lg:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-secondary" />
+                  </div>
+                  <h2 className="text-2xl font-heading font-semibold text-foreground">
+                    Sourcing export vers le Canada
+                  </h2>
+                </div>
+
+                <div className="prose prose-muted max-w-none mb-8">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Le Canada représente un marché en forte croissance pour les épices et huiles alimentaires marocaines. Les importateurs canadiens – distributeurs alimentaires, épiceries fines, industriels et grossistes – recherchent des produits authentiques et traçables, avec une conformité stricte aux normes de l'ACIA (Agence canadienne d'inspection des aliments).
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Notre connaissance des exigences réglementaires canadiennes et des circuits logistiques transatlantiques permet un accompagnement complet, de la sélection du fournisseur marocain jusqu'à l'expédition CIF ou DAP vers Montréal, Toronto ou Vancouver.
+                  </p>
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold text-foreground mb-3">
+                    Exigences du marché canadien
+                  </h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Conformité ACIA : normes de sécurité alimentaire, étiquetage bilingue (français/anglais)
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Limites maximales de résidus (LMR) et normes de contaminants alignées sur le Codex Alimentarius
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Certificat phytosanitaire, certificat d'origine et dossier technique complet
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary">•</span>
+                      Incoterms adaptés : CIF Montréal, CIF Toronto, DAP entrepôt
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold text-foreground mb-3">
+                    Profil des acheteurs ciblés
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    Importateurs alimentaires, distributeurs spécialisés, épiceries fines, industriels agroalimentaires et grossistes basés au Québec, en Ontario, en Colombie-Britannique et dans l'ensemble des provinces canadiennes.
+                  </p>
+                </div>
+
+                <Button asChild variant="cta" className="w-full">
+                  <Link to="/contact?type=premium">
+                    Demander un sourcing pour le Canada
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -229,7 +297,7 @@ const ZonesExport = () => {
                 {
                   icon: Globe,
                   title: "Hub logistique stratégique",
-                  description: "Ports de Tanger Med et Casablanca : connexions maritimes directes vers Dakar, Abidjan, Anvers, Rotterdam et Marseille."
+                  description: "Ports de Tanger Med et Casablanca : connexions maritimes vers Dakar, Abidjan, Anvers, Rotterdam, Marseille et Montréal."
                 },
                 {
                   icon: TrendingUp,
@@ -239,7 +307,7 @@ const ZonesExport = () => {
                 {
                   icon: Shield,
                   title: "Cadre réglementaire favorable",
-                  description: "Accord d'association UE-Maroc, accords bilatéraux africains et procédures douanières maîtrisées."
+                  description: "Accord d'association UE-Maroc, accord de libre-échange Maroc-Canada (en négociation), accords bilatéraux africains et procédures douanières maîtrisées."
                 }
               ].map((item, i) => (
                 <div key={i} className="text-left bg-card border border-border rounded-lg p-6">
@@ -270,10 +338,10 @@ const ZonesExport = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="font-heading font-semibold text-foreground mb-3">
-                  Travaillez-vous uniquement avec l'Afrique et l'Europe ?
+                  Quelles zones géographiques couvrez-vous ?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Actuellement, notre activité de sourcing export depuis le Maroc se concentre sur deux zones prioritaires : l'Afrique de l'Ouest (Sénégal, Côte d'Ivoire, Mali, Guinée) et l'Europe (France, Belgique, Espagne, Pays-Bas). Ces marchés représentent les débouchés les plus structurés pour les épices et huiles alimentaires marocaines, avec des flux commerciaux réguliers et des cadres réglementaires que nous maîtrisons. Si vous êtes importateur dans une autre région, nous pouvons évaluer la faisabilité d'un sourcing adapté à votre zone sur demande.
+                  Notre activité de sourcing export depuis le Maroc couvre trois zones : l'Afrique de l'Ouest (Sénégal, Côte d'Ivoire, Mali, Guinée), l'Europe (France, Belgique, Espagne, Pays-Bas) et le Canada (Québec, Ontario, Colombie-Britannique). Ces marchés représentent les débouchés les plus structurés pour les épices et huiles alimentaires marocaines, avec des flux commerciaux réguliers et des cadres réglementaires que nous maîtrisons. Si vous êtes importateur dans une autre région, nous pouvons évaluer la faisabilité d'un sourcing adapté.
                 </p>
               </div>
 
@@ -324,7 +392,7 @@ const ZonesExport = () => {
               Vous importez depuis une autre zone ?
             </h3>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
-            Nous concentrons actuellement nos services sur l'Afrique de l'Ouest et l'Europe. Si vous êtes basé dans une autre région, contactez-nous pour évaluer la faisabilité.
+            Nous concentrons actuellement nos services sur l'Afrique de l'Ouest, l'Europe et le Canada. Si vous êtes basé dans une autre région, contactez-nous pour évaluer la faisabilité.
           </p>
           <Button asChild variant="hero" className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link to="/contact">Nous contacter</Link>
