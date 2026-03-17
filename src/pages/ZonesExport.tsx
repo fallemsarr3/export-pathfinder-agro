@@ -10,18 +10,18 @@ const ZonesExport = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B</title>
-        <meta name="description" content="Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
+        <title>Export Maroc → Europe, Afrique & Canada — Épices & Huiles B2B</title>
+        <meta name="description" content="Sourcing export Maroc vers Europe, Afrique de l'Ouest et Canada. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
         <link rel="canonical" href="https://www.sarrtradelink.com/zones-export" />
         <link rel="alternate" hrefLang="fr" href="https://www.sarrtradelink.com/zones-export" />
         <link rel="alternate" hrefLang="x-default" href="https://www.sarrtradelink.com/zones-export" />
-        <meta property="og:title" content="Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B" />
-        <meta property="og:description" content="Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
+        <meta property="og:title" content="Export Maroc → Europe, Afrique & Canada — Épices & Huiles B2B" />
+        <meta property="og:description" content="Sourcing export Maroc vers Europe, Afrique de l'Ouest et Canada. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
         <meta property="og:url" content="https://www.sarrtradelink.com/zones-export" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Export Maroc → Europe & Afrique — Épices & Huiles Alimentaires B2B" />
-        <meta name="twitter:description" content="Sourcing export Maroc vers Europe et Afrique de l'Ouest. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
+        <meta name="twitter:title" content="Export Maroc → Europe, Afrique & Canada — Épices & Huiles B2B" />
+        <meta name="twitter:description" content="Sourcing export Maroc vers Europe, Afrique de l'Ouest et Canada. Conformité documentaire, Incoterms FOB/CFR/CIF. Agent terrain vérifié." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
