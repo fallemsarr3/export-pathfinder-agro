@@ -12,14 +12,18 @@ const Index = () => {
   return (
     <Layout>
       <Helmet>
+        <title>Agent Sourcing Maroc — Épices & Huiles Export B2B ✓ Devis 48h</title>
+        <meta name="description" content="Agent de sourcing export Maroc. Épices et huiles alimentaires certifiées pour importateurs Europe & Afrique. Fournisseurs vérifiés. Devis gratuit sous 48h." />
         <link rel="canonical" href="https://www.sarrtradelink.com/" />
-        <meta property="og:title" content="Agent Sourcing Épices & Huiles Alimentaires au Maroc | Sarr Trade Link" />
-        <meta property="og:description" content="Votre partenaire de sourcing pour épices et huiles alimentaires marocaines certifiées. Export B2B Europe. Devis gratuit." />
+        <link rel="alternate" hreflang="fr" href="https://www.sarrtradelink.com/" />
+        <link rel="alternate" hreflang="x-default" href="https://www.sarrtradelink.com/" />
+        <meta property="og:title" content="Agent Sourcing Maroc — Épices & Huiles Export B2B ✓ Devis 48h" />
+        <meta property="og:description" content="Agent de sourcing export Maroc. Épices et huiles alimentaires certifiées pour importateurs Europe & Afrique. Fournisseurs vérifiés. Devis gratuit sous 48h." />
         <meta property="og:url" content="https://www.sarrtradelink.com/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Agent Sourcing Épices & Huiles Alimentaires au Maroc | Sarr Trade Link" />
-        <meta name="twitter:description" content="Votre partenaire de sourcing pour épices et huiles alimentaires marocaines certifiées. Export B2B Europe. Devis gratuit." />
+        <meta name="twitter:title" content="Agent Sourcing Maroc — Épices & Huiles Export B2B ✓ Devis 48h" />
+        <meta name="twitter:description" content="Agent de sourcing export Maroc. Épices et huiles alimentaires certifiées pour importateurs Europe & Afrique. Fournisseurs vérifiés. Devis gratuit sous 48h." />
       </Helmet>
 
       <HeroSection />

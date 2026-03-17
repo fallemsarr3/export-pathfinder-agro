@@ -71,16 +71,18 @@ const Methode = () => {
   return (
     <Layout>
       <Helmet>
-        <title>Méthode de sourcing export au Maroc – Process structuré</title>
-        <meta name="description" content="Méthode de sourcing export structurée au Maroc. 6 étapes claires pour sécuriser vos importations d'épices et huiles alimentaires vers l'Afrique et l'Europe." />
+        <title>Méthode Sourcing Maroc — 6 Étapes, Traçabilité Complète</title>
+        <meta name="description" content="Process structuré en 6 étapes pour sécuriser vos imports d'épices et huiles depuis le Maroc. Transparence totale, livrables définis." />
         <link rel="canonical" href="https://www.sarrtradelink.com/methode" />
-        <meta property="og:title" content="Méthode de sourcing export au Maroc – Process structuré | Sarr Trade Link" />
-        <meta property="og:description" content="6 étapes claires pour sécuriser vos importations d'épices et huiles alimentaires depuis le Maroc." />
+        <link rel="alternate" hreflang="fr" href="https://www.sarrtradelink.com/methode" />
+        <link rel="alternate" hreflang="x-default" href="https://www.sarrtradelink.com/methode" />
+        <meta property="og:title" content="Méthode Sourcing Maroc — 6 Étapes, Traçabilité Complète" />
+        <meta property="og:description" content="Process structuré en 6 étapes pour sécuriser vos imports d'épices et huiles depuis le Maroc. Transparence totale, livrables définis." />
         <meta property="og:url" content="https://www.sarrtradelink.com/methode" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Méthode de sourcing export au Maroc – Process structuré | Sarr Trade Link" />
-        <meta name="twitter:description" content="6 étapes claires pour sécuriser vos importations d'épices et huiles alimentaires depuis le Maroc." />
+        <meta name="twitter:title" content="Méthode Sourcing Maroc — 6 Étapes, Traçabilité Complète" />
+        <meta name="twitter:description" content="Process structuré en 6 étapes pour sécuriser vos imports d'épices et huiles depuis le Maroc. Transparence totale, livrables définis." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
