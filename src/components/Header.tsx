@@ -20,6 +20,7 @@ const navigation = [
   { name: "Services", href: "/services" },
   { name: "Zones d'export", href: "/zones-export" },
   { name: "Méthode", href: "/methode" },
+  { name: "Blog", href: "/blog" },
   { name: "À propos", href: "/a-propos" },
   { name: "Contact", href: "/contact" },
 ];
