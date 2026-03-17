@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MapPin, Building2, Crown, Leaf } from "lucide-react";
+import { MapPin, Building2, Crown } from "lucide-react";
 import { useFormSubmission, FormType } from "@/hooks/useFormSubmission";
 
 const Contact = () => {
@@ -17,7 +17,7 @@ const Contact = () => {
 
   useEffect(() => {
     const type = searchParams.get("type") as FormType;
-    if (type && ["afrique", "europe", "canada", "premium"].includes(type)) {
+    if (type && ["afrique", "europe", "premium"].includes(type)) {
       setActiveForm(type);
     }
   }, [searchParams]);
@@ -26,7 +26,7 @@ const Contact = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     const success = await submitForm("afrique", {
       company_name: formData.get("af-entreprise") as string,
       contact_name: formData.get("af-nom") as string,
@@ -35,7 +35,7 @@ const Contact = () => {
       phone: formData.get("af-telephone") as string,
       country: formData.get("af-pays") as string,
       volume: formData.get("af-volume") as string,
-      message: formData.get("af-message") as string,
+      message: formData.get("af-message") as string
     });
 
     if (success) form.reset();
@@ -45,7 +45,7 @@ const Contact = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     const success = await submitForm("europe", {
       company_name: formData.get("eu-entreprise") as string,
       contact_name: formData.get("eu-nom") as string,
@@ -53,25 +53,7 @@ const Contact = () => {
       products: formData.get("eu-produit") as string,
       country: formData.get("eu-pays") as string,
       volume: formData.get("eu-volume") as string,
-      message: formData.get("eu-message") as string,
-    });
-
-    if (success) form.reset();
-  };
-
-  const handleCanadaSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    
-    const success = await submitForm("canada", {
-      company_name: formData.get("ca-entreprise") as string,
-      contact_name: formData.get("ca-nom") as string,
-      email: formData.get("ca-email") as string,
-      products: formData.get("ca-produit") as string,
-      country: formData.get("ca-province") as string,
-      volume: formData.get("ca-volume") as string,
-      message: formData.get("ca-message") as string,
+      message: formData.get("eu-message") as string
     });
 
     if (success) form.reset();
@@ -81,7 +63,7 @@ const Contact = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     const success = await submitForm("premium", {
       company_name: formData.get("pr-entreprise") as string,
       contact_name: formData.get("pr-fonction") as string,
@@ -89,18 +71,17 @@ const Contact = () => {
       products: formData.get("pr-objectif") as string,
       country: formData.get("pr-pays") as string,
       volume: formData.get("pr-volume") as string,
-      message: formData.get("pr-message") as string,
+      message: formData.get("pr-message") as string
     });
 
     if (success) form.reset();
   };
 
   const formTabs = [
-    { id: "afrique" as FormType, label: "Afrique de l'Ouest", icon: MapPin },
-    { id: "europe" as FormType, label: "Europe", icon: Building2 },
-    { id: "canada" as FormType, label: "Canada", icon: Leaf },
-    { id: "premium" as FormType, label: "Premium", icon: Crown },
-  ];
+  { id: "afrique" as FormType, label: "Afrique de l'Ouest", icon: MapPin },
+  { id: "europe" as FormType, label: "Europe", icon: Building2 },
+  { id: "premium" as FormType, label: "Premium", icon: Crown }];
+
 
   return (
     <Layout>
@@ -141,25 +122,25 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto">
             {/* Form Tabs */}
             <div className="flex flex-wrap gap-2 mb-8 p-2 bg-sage/30 rounded-lg">
-              {formTabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveForm(tab.id)}
-                  className={`flex-1 min-w-[200px] flex items-center justify-center gap-2 px-4 py-3 rounded-md font-medium text-sm transition-all ${
-                    activeForm === tab.id
-                      ? "bg-card text-foreground shadow-soft"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
+              {formTabs.map((tab) =>
+              <button
+                key={tab.id}
+                onClick={() => setActiveForm(tab.id)}
+                className={`flex-1 min-w-[200px] flex items-center justify-center gap-2 px-4 py-3 rounded-md font-medium text-sm transition-all ${
+                activeForm === tab.id ?
+                "bg-card text-foreground shadow-soft" :
+                "text-muted-foreground hover:text-foreground"}`
+                }>
+                
                   <tab.icon className="w-4 h-4" />
                   {tab.label}
                 </button>
-              ))}
+              )}
             </div>
 
             {/* Afrique Form */}
-            {activeForm === "afrique" && (
-              <div className="bg-card border border-border rounded-lg overflow-hidden">
+            {activeForm === "afrique" &&
+            <div className="bg-card border border-border rounded-lg overflow-hidden">
                 <div className="h-2 bg-paprika" />
                 <div className="p-8">
                   <div className="mb-8">
@@ -241,11 +222,11 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="af-message">Message complémentaire</Label>
                       <Textarea
-                        name="af-message"
-                        id="af-message"
-                        rows={4}
-                        placeholder="Informations supplémentaires sur votre projet..."
-                      />
+                      name="af-message"
+                      id="af-message"
+                      rows={4}
+                      placeholder="Informations supplémentaires sur votre projet..." />
+                    
                     </div>
 
                     <Button type="submit" variant="afrique" size="lg" className="w-full" disabled={isSubmitting}>
@@ -254,11 +235,11 @@ const Contact = () => {
                   </form>
                 </div>
               </div>
-            )}
+            }
 
             {/* Europe Form */}
-            {activeForm === "europe" && (
-              <div className="bg-card border border-border rounded-lg overflow-hidden">
+            {activeForm === "europe" &&
+            <div className="bg-card border border-border rounded-lg overflow-hidden">
                 <div className="h-2 bg-primary" />
                 <div className="p-8">
                   <div className="mb-8">
@@ -316,20 +297,20 @@ const Contact = () => {
                       <Label>Documents requis *</Label>
                       <div className="grid md:grid-cols-2 gap-3">
                         {[
-                          "Fiches techniques produit",
-                          "Certificats d'analyse",
-                          "Certificats d'origine",
-                          "Attestations sanitaires",
-                          "Certifications bio",
-                          "Autres certifications"
-                        ].map((doc) => (
-                          <div key={doc} className="flex items-center space-x-2">
+                      "Fiches techniques produit",
+                      "Certificats d'analyse",
+                      "Certificats d'origine",
+                      "Attestations sanitaires",
+                      "Certifications bio",
+                      "Autres certifications"].
+                      map((doc) =>
+                      <div key={doc} className="flex items-center space-x-2">
                             <Checkbox id={`eu-doc-${doc}`} />
                             <Label htmlFor={`eu-doc-${doc}`} className="text-sm font-normal cursor-pointer">
                               {doc}
                             </Label>
                           </div>
-                        ))}
+                      )}
                       </div>
                     </div>
 
@@ -348,11 +329,11 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="eu-message">Message complémentaire</Label>
                       <Textarea
-                        name="eu-message"
-                        id="eu-message"
-                        rows={4}
-                        placeholder="Précisions sur vos exigences de conformité..."
-                      />
+                      name="eu-message"
+                      id="eu-message"
+                      rows={4}
+                      placeholder="Précisions sur vos exigences de conformité..." />
+                    
                     </div>
 
                     <Button type="submit" variant="europe" size="lg" className="w-full" disabled={isSubmitting}>
@@ -361,118 +342,11 @@ const Contact = () => {
                   </form>
                 </div>
               </div>
-            )}
-
-            {/* Canada Form */}
-            {activeForm === "canada" && (
-              <div className="bg-card border border-border rounded-lg overflow-hidden">
-                <div className="h-2 bg-secondary" />
-                <div className="p-8">
-                  <div className="mb-8">
-                    <h2 className="text-2xl font-heading font-semibold text-foreground mb-2">
-                      Demande de sourcing conforme – Canada
-                    </h2>
-                    <p className="text-muted-foreground">
-                      Formulaire pour importateurs canadiens avec exigences ACIA. Consultez <Link to="/services#canada" className="text-secondary-foreground hover:underline">notre service Canada</Link> et les <Link to="/zones-export#canada" className="text-secondary-foreground hover:underline">spécificités de ce marché</Link>.
-                    </p>
-                  </div>
-
-                  <form onSubmit={handleCanadaSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="ca-entreprise">Nom de l'entreprise *</Label>
-                        <Input name="ca-entreprise" id="ca-entreprise" required placeholder="Votre entreprise" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="ca-province">Province / Pays *</Label>
-                        <Input name="ca-province" id="ca-province" required placeholder="Ex: Ontario, Québec" />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="ca-site">Site web de l'entreprise *</Label>
-                      <Input name="ca-site" id="ca-site" type="url" required placeholder="https://www.votreentreprise.ca" />
-                      <p className="text-xs text-muted-foreground">
-                        Un site web professionnel est requis pour les demandes Canada.
-                      </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="ca-nom">Nom et fonction *</Label>
-                        <Input name="ca-nom" id="ca-nom" required placeholder="Votre nom et fonction" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="ca-email">Email professionnel *</Label>
-                        <Input name="ca-email" id="ca-email" type="email" required placeholder="email@entreprise.ca" />
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="ca-produit">Produit recherché *</Label>
-                        <Input name="ca-produit" id="ca-produit" required placeholder="Ex: Huile d'argan, Safran" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="ca-volume">Volume annuel estimé *</Label>
-                        <Input name="ca-volume" id="ca-volume" required placeholder="Ex: 20 tonnes/an" />
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <Label>Documents requis *</Label>
-                      <div className="grid md:grid-cols-2 gap-3">
-                        {[
-                          "Conformité ACIA (CFIA)",
-                          "Étiquetage bilingue FR/EN",
-                          "Certificats d'analyse",
-                          "Certificats d'origine",
-                          "Certifications bio",
-                          "Fiches techniques produit"
-                        ].map((doc) => (
-                          <div key={doc} className="flex items-center space-x-2">
-                            <Checkbox id={`ca-doc-${doc}`} />
-                            <Label htmlFor={`ca-doc-${doc}`} className="text-sm font-normal cursor-pointer">
-                              {doc}
-                            </Label>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-3 p-4 bg-sage/30 rounded-lg">
-                      <Checkbox id="ca-forfait" required />
-                      <div className="space-y-1">
-                        <Label htmlFor="ca-forfait" className="font-medium cursor-pointer">
-                          J'accepte le forfait de sourcing Canada *
-                        </Label>
-                        <p className="text-sm text-muted-foreground">
-                          Le forfait de sourcing Canada couvre l'analyse de conformité ACIA et la documentation bilingue.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="ca-message">Message complémentaire</Label>
-                      <Textarea
-                        name="ca-message"
-                        id="ca-message"
-                        rows={4}
-                        placeholder="Précisions sur vos exigences réglementaires canadiennes..."
-                      />
-                    </div>
-
-                    <Button type="submit" variant="secondary" size="lg" className="w-full" disabled={isSubmitting}>
-                      {isSubmitting ? "Envoi en cours..." : "Envoyer la demande Canada"}
-                    </Button>
-                  </form>
-                </div>
-              </div>
-            )}
+            }
 
             {/* Premium Form */}
-            {activeForm === "premium" && (
-              <div className="bg-card border border-border rounded-lg overflow-hidden">
+            {activeForm === "premium" &&
+            <div className="bg-card border border-border rounded-lg overflow-hidden">
                 <div className="h-2 bg-spice" />
                 <div className="p-8">
                   <div className="mb-8">
@@ -499,7 +373,7 @@ const Contact = () => {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="pr-site">Site web *</Label>
-                        <Input name="pr-site" id="pr-site" type="url" required placeholder="https://www.votreentreprise.com" />
+                        <Input name="pr-site" id="pr-site" type="url" required placeholder="https://www.votreentreprise.com" className="text-popover-foreground" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="pr-taille">Taille de l'entreprise *</Label>
@@ -521,12 +395,12 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="pr-objectif">Objectif stratégique *</Label>
                       <Textarea
-                        name="pr-objectif"
-                        id="pr-objectif"
-                        rows={3}
-                        required
-                        placeholder="Décrivez l'objectif de cette mission de sourcing..."
-                      />
+                      name="pr-objectif"
+                      id="pr-objectif"
+                      rows={3}
+                      required
+                      placeholder="Décrivez l'objectif de cette mission de sourcing..." />
+                    
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-6">
@@ -548,12 +422,12 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="pr-message">Message stratégique *</Label>
                       <Textarea
-                        name="pr-message"
-                        id="pr-message"
-                        rows={5}
-                        required
-                        placeholder="Contexte détaillé, enjeux, contraintes, attentes spécifiques..."
-                      />
+                      name="pr-message"
+                      id="pr-message"
+                      rows={5}
+                      required
+                      placeholder="Contexte détaillé, enjeux, contraintes, attentes spécifiques..." />
+                    
                     </div>
 
                     <div className="p-4 bg-spice/10 rounded-lg border border-spice/20">
@@ -568,7 +442,7 @@ const Contact = () => {
                   </form>
                 </div>
               </div>
-            )}
+            }
           </div>
         </div>
       </section>
@@ -576,14 +450,14 @@ const Contact = () => {
       {/* Info Section */}
       <section className="section-padding bg-muted">
         <div className="container-page">
-          <div className="max-w-5xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-foreground mb-6">
               Pourquoi des formulaires différents ?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Chaque marché a ses propres exigences. Les informations demandées sont adaptées pour qualifier précisément votre besoin et vous proposer un accompagnement sur mesure.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+            <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="bg-card border border-border rounded-lg p-6">
                 <div className="w-2 h-2 rounded-full bg-paprika mb-3" />
                 <h3 className="font-heading font-semibold text-foreground mb-2">Afrique de l'Ouest</h3>
@@ -599,13 +473,6 @@ const Contact = () => {
                 </p>
               </div>
               <div className="bg-card border border-border rounded-lg p-6">
-                <div className="w-2 h-2 rounded-full bg-secondary mb-3" />
-                <h3 className="font-heading font-semibold text-foreground mb-2">Canada</h3>
-                <p className="text-muted-foreground text-sm">
-                  Accent sur la conformité ACIA et l'étiquetage bilingue français/anglais obligatoire.
-                </p>
-              </div>
-              <div className="bg-card border border-border rounded-lg p-6">
                 <div className="w-2 h-2 rounded-full bg-spice mb-3" />
                 <h3 className="font-heading font-semibold text-foreground mb-2">Premium</h3>
                 <p className="text-muted-foreground text-sm">
@@ -616,8 +483,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>);
+
 };
 
 export default Contact;
