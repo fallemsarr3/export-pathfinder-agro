@@ -392,7 +392,7 @@ const ZonesExport = () => {
               Vous importez depuis une autre zone ?
             </h3>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
-            Nous concentrons actuellement nos services sur l'Afrique de l'Ouest et l'Europe. Si vous êtes basé dans une autre région, contactez-nous pour évaluer la faisabilité.
+            Nous concentrons actuellement nos services sur l'Afrique de l'Ouest, l'Europe et le Canada. Si vous êtes basé dans une autre région, contactez-nous pour évaluer la faisabilité.
           </p>
           <Button asChild variant="hero" className="bg-accent text-accent-foreground hover:bg-accent/90">
             <Link to="/contact">Nous contacter</Link>
