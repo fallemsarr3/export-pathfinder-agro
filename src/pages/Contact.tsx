@@ -17,7 +17,7 @@ const Contact = () => {
 
   useEffect(() => {
     const type = searchParams.get("type") as FormType;
-    if (type && ["afrique", "europe", "premium"].includes(type)) {
+    if (type && ["afrique", "europe", "canada", "premium"].includes(type)) {
       setActiveForm(type);
     }
   }, [searchParams]);
