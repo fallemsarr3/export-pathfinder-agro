@@ -12,5 +12,10 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /admin/login
+Disallow: /admin/dashboard
+Disallow: /reset-password
+Disallow: /update-password
 
 Sitemap: https://www.sarrtradelink.com/sitemap.xml
