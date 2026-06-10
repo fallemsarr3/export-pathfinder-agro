@@ -41,6 +41,7 @@ export interface FormData {
 export const useFormSubmission = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const submitForm = async (formType: FormType, data: FormData): Promise<boolean> => {
     setIsSubmitting(true);
