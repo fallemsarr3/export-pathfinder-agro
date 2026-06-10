@@ -11,43 +11,32 @@ const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [isSignUp, setIsSignUp] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { signIn, signUp, checkAdminRole } = useAuth();
+  const { signIn, checkAdminRole } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      if (isSignUp) {
-        await signUp(email, password);
-        toast({
-          title: "Compte créé",
-          description: "Votre compte a été créé. Connectez-vous maintenant.",
-        });
-        setIsSignUp(false);
-      } else {
-        const data = await signIn(email, password);
-        
-        if (data.user) {
-          const hasAdminRole = await checkAdminRole(data.user.id);
-          
-          if (hasAdminRole) {
-            toast({
-              title: "Connexion réussie",
-              description: "Bienvenue dans l'espace administration.",
-            });
-            // Force navigation with replace to ensure state is updated
-            window.location.href = "/admin/dashboard";
-          } else {
-            toast({
-              title: "Accès refusé",
-              description: "Vous n'avez pas les droits d'administration.",
-              variant: "destructive",
-            });
-          }
+      const data = await signIn(email, password);
+
+      if (data.user) {
+        const hasAdminRole = await checkAdminRole(data.user.id);
+
+        if (hasAdminRole) {
+          toast({
+            title: "Connexion réussie",
+            description: "Bienvenue dans l'espace administration.",
+          });
+          window.location.href = "/admin/dashboard";
+        } else {
+          toast({
+            title: "Accès refusé",
+            description: "Vous n'avez pas les droits d'administration.",
+            variant: "destructive",
+          });
         }
       }
     } catch (error: any) {
@@ -85,7 +74,7 @@ const AdminLogin = () => {
                 Espace Administration
               </h1>
               <p className="text-muted-foreground mt-2">
-                {isSignUp ? "Créez votre compte administrateur" : "Connectez-vous pour accéder au tableau de bord"}
+                Connectez-vous pour accéder au tableau de bord
               </p>
             </div>
 
@@ -124,25 +113,14 @@ const AdminLogin = () => {
               </div>
 
               <Button type="submit" className="w-full" disabled={isLoading}>
-                {isLoading ? "Chargement..." : isSignUp ? "Créer le compte" : "Se connecter"}
+                {isLoading ? "Chargement..." : "Se connecter"}
               </Button>
             </form>
 
-            <div className="mt-6 text-center space-y-2">
-              <button
-                type="button"
-                onClick={() => setIsSignUp(!isSignUp)}
-                className="text-sm text-primary hover:underline"
-              >
-                {isSignUp ? "Déjà un compte ? Se connecter" : "Créer un compte"}
-              </button>
-              {!isSignUp && (
-                <div>
-                  <Link to="/reset-password" className="text-sm text-muted-foreground hover:text-foreground">
-                    Mot de passe oublié ?
-                  </Link>
-                </div>
-              )}
+            <div className="mt-6 text-center">
+              <Link to="/reset-password" className="text-sm text-muted-foreground hover:text-foreground">
+                Mot de passe oublié ?
+              </Link>
             </div>
           </div>
 

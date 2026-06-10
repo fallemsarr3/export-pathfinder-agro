@@ -138,6 +138,12 @@ const AdminDashboard = () => {
       "Message",
     ];
 
+    const safeCsv = (v: unknown) => {
+      let s = String(v ?? "").replace(/"/g, '""');
+      if (/^[=+\-@|]/.test(s)) s = "'" + s;
+      return `"${s}"`;
+    };
+
     const csvData = filteredSubmissions.map((s) => [
       new Date(s.created_at).toLocaleDateString("fr-FR"),
       s.form_type,
@@ -148,12 +154,12 @@ const AdminDashboard = () => {
       s.country || "",
       s.products,
       s.volume || "",
-      (s.message || "").replace(/"/g, '""'),
+      s.message || "",
     ]);
 
     const csv = [
       headers.join(","),
-      ...csvData.map((row) => row.map((cell) => `"${cell}"`).join(",")),
+      ...csvData.map((row) => row.map(safeCsv).join(",")),
     ].join("\n");
 
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
