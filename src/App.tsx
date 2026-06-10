@@ -12,6 +12,7 @@ import Methode from "./pages/Methode";
 import APropos from "./pages/APropos";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Merci from "./pages/Merci";
 import AdminLogin from "./pages/admin/Login";
 import AdminDashboard from "./pages/admin/Dashboard";
 import ResetPassword from "./pages/ResetPassword";
@@ -66,6 +67,7 @@ const App = () => {
             <Route path="/blog/reglementation-import-alimentaire-ue-maroc" element={<ReglementationImportUE />} />
             <Route path="/blog/safran-marocain-vs-iranien-comparatif" element={<SafranComparatif />} />
             <Route path="/blog/huile-argan-alimentaire-guide-importateur" element={<HuileArganGuide />} />
+            <Route path="/merci" element={<Merci />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminDashboard />} />
             <Route path="/reset-password" element={<ResetPassword />} />
