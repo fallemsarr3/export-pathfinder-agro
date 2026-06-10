@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
@@ -41,7 +41,6 @@ export interface FormData {
 export const useFormSubmission = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  const navigate = useNavigate();
 
   const submitForm = async (formType: FormType, data: FormData): Promise<boolean> => {
     setIsSubmitting(true);
@@ -84,7 +83,7 @@ export const useFormSubmission = () => {
         form_location: "contact",
       });
 
-      navigate(`/merci?type=${formType}`);
+      window.location.assign(`/merci?type=${formType}`);
 
       return true;
     } catch (error) {
