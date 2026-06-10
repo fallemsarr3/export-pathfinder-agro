@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { trackEvent } from "@/lib/analytics";
 import { z } from "zod";
+
 
 export type FormType = "afrique" | "europe" | "canada" | "premium";
 
@@ -75,10 +78,12 @@ export const useFormSubmission = () => {
         return false;
       }
 
-      toast({
-        title: "Demande envoyée",
-        description: confirmationMessages[formType],
+      trackEvent("form_submit", {
+        form_type: formType,
+        form_location: "contact",
       });
+
+      navigate(`/merci?type=${formType}`);
 
       return true;
     } catch (error) {
